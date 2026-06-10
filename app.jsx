@@ -76,7 +76,7 @@ function Topbar({ route, go, back }) {
       )}
       <div className="crumbs">{crumbs}</div>
       <div className="spacer"></div>
-      <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+      <div className="topnav">
         <span className={"navlink " + (route.view === "landing" ? "active" : "")} onClick={() => go("landing")}>Home</span>
         <span className={"navlink " + (route.view === "groups" ? "active" : "")} onClick={() => go("groups")}>Groups</span>
         <span className={"navlink " + (route.view === "bracket" ? "active" : "")} onClick={() => go("bracket")}>Bracket</span>
@@ -89,6 +89,38 @@ function Topbar({ route, go, back }) {
         )}
       </div>
     </div>
+  );
+}
+
+/* fixed bottom tab bar — visible only on small screens (see styles.css) */
+function BottomBar({ route, go }) {
+  const headline = WC.headline();
+  const headlineLive = headline && isLiveStatus(headline.status);
+  const tabs = [
+    { key: "landing", label: "Home", active: route.view === "landing", onTap: () => go("landing") },
+    { key: "groups", label: "Groups", active: route.view === "groups", onTap: () => go("groups") },
+    { key: "bracket", label: "Bracket", active: route.view === "bracket", onTap: () => go("bracket") },
+    { key: "players", label: "Players", active: route.view === "players" || route.view === "player", onTap: () => go("players") },
+  ];
+  if (headline) {
+    tabs.push({
+      key: "live", live: headlineLive,
+      label: headlineLive ? "Live" : "Next",
+      active: route.view === "match" && route.params.num === headline.match_number,
+      onTap: () => go("match", { num: headline.match_number }),
+    });
+  }
+  return (
+    <nav className="bottombar" aria-label="Main">
+      {tabs.map((t) => (
+        <span key={t.key} className={"bnav" + (t.active ? " active" : "")} onClick={t.onTap}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+            {t.live && <span className="live-dot" style={{ background: t.active ? "var(--ink)" : "var(--sun)" }}></span>}
+            {t.label}
+          </span>
+        </span>
+      ))}
+    </nav>
   );
 }
 
@@ -147,6 +179,7 @@ function App() {
       <div className="app">
         <Topbar route={{ view: "landing", params: {} }} go={go} back={back} />
         <LoadingSplash />
+        <BottomBar route={{ view: "landing", params: {} }} go={go} />
       </div>
     );
   }
@@ -164,6 +197,7 @@ function App() {
       <Topbar route={route} go={go} back={back} />
       {body}
       <Footer />
+      <BottomBar route={route} go={go} />
     </div>
   );
 }

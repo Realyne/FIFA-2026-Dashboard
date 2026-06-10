@@ -38,12 +38,14 @@ function LiveTicker({ go }) {
       onClick={() => go("match", { num: m.match_number })}
       className="sticker lift"
       style={{
-        display: "flex", alignItems: "center", gap: 18, padding: "14px 20px", cursor: "pointer",
-        borderColor: "var(--sun-d)", background: "#fff6ee", maxWidth: 600,
+        display: "flex", alignItems: "center", flexWrap: "wrap", justifyContent: "center",
+        gap: "10px 16px", padding: "13px 16px", cursor: "pointer",
+        borderColor: "var(--sun-d)", background: "#fff6ee",
+        maxWidth: "min(600px, 100%)",
       }}
     >
       <StatusBadge match={m} />
-      <div style={{ display: "flex", alignItems: "center", gap: 12, flex: 1, justifyContent: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, justifyContent: "center", minWidth: 0 }}>
         <Flag code={ha} size={24} />
         <span className="display" style={{ fontSize: 24 }}>{ha || "TBD"}</span>
         {upcoming
@@ -53,10 +55,10 @@ function LiveTicker({ go }) {
             </span>}
         <span className="display" style={{ fontSize: 24 }}>{aa || "TBD"}</span>
         <Flag code={aa} size={24} />
+        <span className="mono" style={{ fontSize: 11, color: "var(--ink-soft)", flexShrink: 0 }}>
+          {live ? "Watch →" : upcoming ? "Preview →" : "Recap →"}
+        </span>
       </div>
-      <span className="mono" style={{ fontSize: 11, color: "var(--ink-soft)", flexShrink: 0 }}>
-        {live ? "Watch →" : upcoming ? "Preview →" : "Recap →"}
-      </span>
     </div>
   );
 }

@@ -57,10 +57,10 @@ function TimelineRow({ ev, homeCode }) {
     </div>
   );
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) 46px minmax(0,1fr)", alignItems: "center", columnGap: 12 }}>
+    <div className="tl-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) 46px minmax(0,1fr)", alignItems: "center", columnGap: 12 }}>
       <div style={{ display: "flex", justifyContent: "flex-end" }}>{isHome ? card : null}</div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className="mono" style={{ width: 42, height: 42, borderRadius: "50%", background: "var(--ink)", color: "var(--paper)",
+        <div className="mono tl-minute" style={{ width: 42, height: 42, borderRadius: "50%", background: "var(--ink)", color: "var(--paper)",
           display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: 12, border: "2px solid var(--ink)" }}>
           {ev.minute}'
         </div>
@@ -137,7 +137,7 @@ function TeamHero({ side }) {
           ? <Flag code={code} size={66} />
           : <ZClock size={30} />}
       </Sticker>
-      <div className="display" style={{ fontSize: 24, textAlign: "center", lineHeight: 1 }}>
+      <div className="display hero-team-name" style={{ fontSize: 24, textAlign: "center", lineHeight: 1 }}>
         {t ? t.name : (side.label || "TBD")}
       </div>
       <div className="mono" style={{ fontSize: 12, color: "var(--ink-soft)" }}>{code || "—"}</div>
@@ -189,7 +189,7 @@ function MatchDetail({ num, go }) {
       </div>
 
       {/* scoreline hero */}
-      <div className="sticker" style={{ padding: "28px 24px", position: "relative", marginBottom: 28, background: live ? "#fff6ee" : "var(--card)", borderColor: live ? "var(--sun-d)" : "var(--ink)" }}>
+      <div className="sticker match-hero" style={{ padding: "28px 24px", position: "relative", marginBottom: 28, background: live ? "#fff6ee" : "var(--card)", borderColor: live ? "var(--sun-d)" : "var(--ink)" }}>
         <Tape style={{ left: "50%", top: -14, marginLeft: -46, transform: "rotate(-3deg)" }} variant={live ? "sun" : "teal"} />
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <TeamHero side={m.home} />
@@ -197,7 +197,7 @@ function MatchDetail({ num, go }) {
             {!scoreKnown ? (
               <div className="display" style={{ fontSize: 30, color: "var(--ink-soft)" }}>VS</div>
             ) : (
-              <div key={`${m.home.score}-${m.away.score}`} className="display pop-score" style={{ fontSize: 62, lineHeight: 1, whiteSpace: "nowrap", color: live ? "var(--sun-d)" : "var(--ink)" }}>
+              <div key={`${m.home.score}-${m.away.score}`} className="display pop-score score-hero" style={{ fontSize: 62, lineHeight: 1, whiteSpace: "nowrap", color: live ? "var(--sun-d)" : "var(--ink)" }}>
                 {m.home.score}<span style={{ color: "var(--ink-faint)", margin: "0 8px" }}>–</span>{m.away.score}
               </div>
             )}

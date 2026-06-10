@@ -171,6 +171,7 @@ html, body {
 .topbar .crumbs a { color: var(--paper); cursor: pointer; text-decoration: none; }
 .topbar .crumbs a:hover { color: var(--amber); }
 .topbar .spacer { flex: 1; }
+.topbar .topnav { display: flex; gap: 6px; align-items: center; }
 .navlink { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--paper); cursor: pointer; padding: 6px 10px; border-radius: 20px; border: 2px solid transparent; }
 .navlink:hover { border-color: var(--amber); }
 .navlink.active { background: var(--sun); border-color: var(--sun); }
@@ -251,4 +252,35 @@ a { color: var(--sun-d); }
 @media (max-width: 560px) {
   .topbar .crumbs { display: none; }
   .wrap { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ---------- mobile nav: top links collapse into a bottom tab bar ---------- */
+.bottombar { display: none; }
+@media (max-width: 700px) {
+  .topbar { gap: 10px; padding: 10px 14px; }
+  .topbar .topnav { display: none; }
+  .app { padding-bottom: 70px; } /* room for the fixed bottom bar */
+  .bottombar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    display: flex; justify-content: space-around; align-items: stretch;
+    background: var(--ink); border-top: 3px solid var(--sun);
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px));
+  }
+  .bottombar .bnav {
+    flex: 1; max-width: 96px; font-family: var(--font-mono); font-size: 9.5px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .07em;
+    color: var(--paper); padding: 8px 2px; border-radius: 12px; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    border: 2px solid transparent; text-align: center;
+  }
+  .bottombar .bnav.active { background: var(--sun); color: var(--ink); border-color: var(--sun); }
+
+  /* tighter data displays on phones */
+  .standings-table { font-size: 11.5px; }
+  .standings-table th, .standings-table td { padding: 5px 3px !important; }
+  .tl-grid { grid-template-columns: minmax(0,1fr) 34px minmax(0,1fr) !important; column-gap: 6px !important; }
+  .tl-minute { width: 34px !important; height: 34px !important; font-size: 10px !important; }
+  .score-hero { font-size: 42px !important; }
+  .hero-team-name { font-size: 18px !important; }
+  .match-hero { padding: 20px 12px !important; }
 }

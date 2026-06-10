@@ -8,7 +8,7 @@ function StandingsTable({ group, rows, complete, go }) {
   const cellS = { padding: "6px 6px", fontSize: 12.5, whiteSpace: "nowrap" };
   const num = (v) => <td className="mono" style={{ ...cellS, textAlign: "center" }}>{v}</td>;
   return (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table className="standings-table" style={{ width: "100%", borderCollapse: "collapse" }}>
       <thead>
         <tr className="label" style={{ fontSize: 9, textAlign: "center" }}>
           <th style={{ ...cellS, textAlign: "left" }}>Team</th>
