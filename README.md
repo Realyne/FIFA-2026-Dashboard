@@ -1,7 +1,8 @@
-# World Cup 2026 Live Dashboard
+# World Cup 2026 Live Dashboard · Realyne 2026
 
 Public, live-data dashboard for the FIFA World Cup 2026 (June 11 – July 19,
-2026 · USA/Canada/Mexico · 48 teams · 104 matches).
+2026 · USA/Canada/Mexico · 48 teams · 104 matches). Built for
+**[Realyne](https://realyne.com) 2026** — deployed at `wc2026.realyne.com`.
 
 Two parts:
 

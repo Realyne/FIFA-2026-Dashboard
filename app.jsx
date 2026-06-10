@@ -101,7 +101,8 @@ function Footer() {
         {" "}&amp; Wikipedia squad lists · Flags by
         {" "}<a href="https://flagcdn.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--ink-soft)" }}>flagpedia</a>
         <br />
-        Unofficial fan project — not affiliated with FIFA or any team. Schedule shown in your local time.
+        A <a href="https://realyne.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--ink-soft)", fontWeight: 700 }}>Realyne 2026</a> project
+        · Unofficial fan site — not affiliated with FIFA or any team. Schedule shown in your local time.
       </p>
       <div style={{ marginTop: 10 }}><ConnectionDot /></div>
     </div>
