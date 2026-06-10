@@ -143,14 +143,14 @@ function Landing({ go }) {
           WebkitMaskImage: "radial-gradient(circle at 70% 30%, #000, transparent 60%)",
         }}></div>
 
-        <Sticker icon={<ZBall size={36} />} size={70} rot={-12} float="a" style={{ position: "absolute", left: "4%", top: 48, zIndex: 5 }} />
-        <Sticker icon={<ZSun size={32} />} size={58} rot={10} float="b" color="#fdf0d8" style={{ position: "absolute", left: "30%", top: 18, zIndex: 5 }} />
-        <Sticker icon={<ZPennant size={30} />} size={54} rot={-8} float="c" color="#dfeefa" style={{ position: "absolute", right: "26%", bottom: 30, zIndex: 5 }} />
-        <Sticker icon={<ZBolt size={28} />} size={50} rot={14} float="d" color="#fbe6e3" style={{ position: "absolute", right: "7%", top: 70, zIndex: 5 }} />
-        <Sticker icon={<ZTrophy size={34} />} size={62} rot={-6} float="b" color="#f6e3b0" style={{ position: "absolute", right: "13%", bottom: 90, zIndex: 5 }} />
-        <Sticker icon={<ZStar size={26} />} size={46} rot={8} float="c" color="#e3f3e7" style={{ position: "absolute", left: "12%", bottom: 60, zIndex: 5 }} />
-        <Tape style={{ left: "8%", top: 30, transform: "rotate(-8deg)" }} variant="teal" />
-        <Tape style={{ right: "20%", top: 20, transform: "rotate(7deg)" }} variant="sun" />
+        <Sticker className="hero-deco" icon={<ZBall size={36} />} size={70} rot={-12} float="a" style={{ position: "absolute", left: "4%", top: 48, zIndex: 5 }} />
+        <Sticker className="hero-deco" icon={<ZSun size={32} />} size={58} rot={10} float="b" color="#fdf0d8" style={{ position: "absolute", left: "30%", top: 18, zIndex: 5 }} />
+        <Sticker className="hero-deco" icon={<ZPennant size={30} />} size={54} rot={-8} float="c" color="#dfeefa" style={{ position: "absolute", right: "26%", bottom: 30, zIndex: 5 }} />
+        <Sticker className="hero-deco" icon={<ZBolt size={28} />} size={50} rot={14} float="d" color="#fbe6e3" style={{ position: "absolute", right: "7%", top: 70, zIndex: 5 }} />
+        <Sticker className="hero-deco" icon={<ZTrophy size={34} />} size={62} rot={-6} float="b" color="#f6e3b0" style={{ position: "absolute", right: "13%", bottom: 90, zIndex: 5 }} />
+        <Sticker className="hero-deco" icon={<ZStar size={26} />} size={46} rot={8} float="c" color="#e3f3e7" style={{ position: "absolute", left: "12%", bottom: 60, zIndex: 5 }} />
+        <Tape className="hero-deco" style={{ left: "8%", top: 30, transform: "rotate(-8deg)" }} variant="teal" />
+        <Tape className="hero-deco" style={{ right: "20%", top: 20, transform: "rotate(7deg)" }} variant="sun" />
 
         <div className="wrap" style={{ position: "relative", zIndex: 4, paddingTop: 56, paddingBottom: 48, textAlign: "center" }}>
           <div className="label" style={{ fontSize: 13, letterSpacing: ".24em", marginBottom: 14 }}>

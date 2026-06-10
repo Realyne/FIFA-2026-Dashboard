@@ -275,6 +275,9 @@ a { color: var(--sun-d); }
   }
   .bottombar .bnav.active { background: var(--sun); color: var(--ink); border-color: var(--sun); }
 
+  /* scattered hero decorations overlap text on narrow screens — drop them */
+  .hero-deco { display: none !important; }
+
   /* tighter data displays on phones */
   .standings-table { font-size: 11.5px; }
   .standings-table th, .standings-table td { padding: 5px 3px !important; }

@@ -6,8 +6,8 @@ const { useState, useEffect, useRef } = React;
 const WC = window.WC;
 
 /* ---- Tape strip ---- */
-function Tape({ style, variant }) {
-  return <div className={"tape " + (variant || "")} style={style} aria-hidden="true"></div>;
+function Tape({ style, variant, className }) {
+  return <div className={"tape " + (variant || "") + " " + (className || "")} style={style} aria-hidden="true"></div>;
 }
 
 /* ============ Simple SVG zine icons (basic shapes only) ============ */
