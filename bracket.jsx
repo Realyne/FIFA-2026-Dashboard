@@ -101,11 +101,14 @@ function ColTitle({ children }) {
 function Bracket({ go }) {
   const graphRef = useRef(null);
   const outerRef = useRef(null);
+  const scaledRef = useRef(null);
   const nodeRefs = useRef({});
   const [paths, setPaths] = useState([]);
   const [dims, setDims] = useState({ w: 2000, h: 1000 });
-  const [mode, setMode] = useState("fit");      // fit | full
+  // tiny screens default to scrollable actual size; "fit" always truly fits
+  const [mode, setMode] = useState(() => (window.innerWidth < 700 ? "full" : "fit"));
   const [scale, setScale] = useState(1);
+  const [contentH, setContentH] = useState(8 * ROW_H + 44);
 
   const halves = bracketHalves();
   const setRef = (num) => (el) => { if (el) nodeRefs.current[num] = el; };
@@ -142,21 +145,22 @@ function Bracket({ go }) {
       conns.push({ d: `M ${sx} ${a.cy} L ${midX} ${a.cy} L ${midX} ${b.cy} L ${ex} ${b.cy}`, kind: "solid" });
     });
     setPaths(conns);
-    setDims({ w: wrap.scrollWidth, h: wrap.scrollHeight });
+    // offsetWidth/Height = layout box, NOT scrollWidth (the absolutely
+    // positioned svg would inflate that and ratchet the canvas wider)
+    setDims({ w: wrap.offsetWidth, h: wrap.offsetHeight });
   };
 
   const computeScale = () => {
-    const outer = outerRef.current, wrap = graphRef.current;
-    if (!outer || !wrap) return;
-    const avail = outer.clientWidth;
-    const content = wrap.offsetWidth || 1;
-    const s = Math.min(1, avail / content);
-    // below ~0.45 the fit view is unreadable — fall back to scrolling
-    setScale(mode === "fit" && s >= 0.45 ? s : 1);
+    const outer = outerRef.current, scaled = scaledRef.current;
+    if (!outer || !scaled) return;
+    const avail = outer.clientWidth || 1;
+    setScale(mode === "fit" ? Math.min(1, avail / (scaled.offsetWidth || 1)) : 1);
+    setContentH(scaled.offsetHeight || contentH);
   };
 
   useEffect(() => {
     const tick = () => { computeScale(); measure(); };
+    tick();
     const t1 = setTimeout(tick, 60);
     const t2 = setTimeout(tick, 450);
     window.addEventListener("resize", tick);
@@ -210,7 +214,7 @@ function Bracket({ go }) {
   );
 
   const [L, R] = halves;
-  const contentW = 8 * (NODE_W + COL_GAP) + CENTER_W + COL_GAP;
+  const contentW = 8 * NODE_W + CENTER_W + 8 * COL_GAP; // 9 cols, 8 gaps
 
   return (
     <div className="rise">
@@ -225,14 +229,15 @@ function Bracket({ go }) {
         </div>
       </div>
 
-      <div ref={outerRef} style={{ overflowX: scale < 1 ? "hidden" : "auto", paddingBottom: 30 }}>
+      <div ref={outerRef} style={{ overflowX: mode === "fit" ? "hidden" : "auto", paddingBottom: 30 }}>
+        {/* sizing box: takes the SCALED footprint so it centers + clips right */}
         <div style={{
-          width: scale < 1 ? "100%" : "max-content",
-          height: scale < 1 ? (colH + 60) * scale : undefined,
+          width: mode === "fit" ? Math.floor(contentW * scale) : "max-content",
+          height: mode === "fit" ? Math.ceil(contentH * scale) : undefined,
           margin: "0 auto",
-          padding: scale < 1 ? 0 : "0 24px",
+          padding: mode === "fit" ? 0 : "0 24px",
         }}>
-          <div style={{ transform: `scale(${scale})`, transformOrigin: "top center", width: contentW, margin: "0 auto" }}>
+          <div ref={scaledRef} style={{ transform: `scale(${scale})`, transformOrigin: "top left", width: contentW }}>
             {/* column headers */}
             <div style={{ display: "flex", gap: COL_GAP, marginBottom: 10 }}>
               <div style={{ width: NODE_W }}><ColTitle>R32</ColTitle></div>
