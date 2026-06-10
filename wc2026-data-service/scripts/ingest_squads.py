@@ -204,8 +204,8 @@ def main() -> int:
                  name=excluded.name, shirt_number=excluded.shirt_number,
                  dob=excluded.dob, position=excluded.position,
                  club=excluded.club, club_country=excluded.club_country,
-                 caps=COALESCE(players.caps, excluded.caps),
-                 intl_goals=COALESCE(players.intl_goals, excluded.intl_goals),
+                 caps=COALESCE(excluded.caps, players.caps),
+                 intl_goals=COALESCE(excluded.intl_goals, players.intl_goals),
                  fifa_profile_url=COALESCE(players.fifa_profile_url, excluded.fifa_profile_url)
             """,
             (pid, p["name"], p["fifa_code"], p["shirt_number"], p["dob"],

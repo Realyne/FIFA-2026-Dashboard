@@ -3,7 +3,9 @@
 
 Per player: QID, DOB sanity-check, national-team caps (P1350) and goals
 (P1351) taken from the P54 statement for the NATIONAL team (never a club),
-and past World Cup participations (P1344).
+and past World Cup participations (P1344). Caps/goals only FILL NULLs —
+the Wikipedia squad lists (ingest_squads.py) are fresher during the
+tournament and always take precedence.
 
 Wikimedia etiquette: batched VALUES queries (~40 labels), descriptive
 User-Agent, sleep between requests, retry with backoff on 429/5xx.
@@ -219,8 +221,8 @@ def main() -> int:
             conn.execute(
                 """UPDATE players SET
                      wikidata_qid=?,
-                     caps=COALESCE(?, caps),
-                     intl_goals=COALESCE(?, intl_goals),
+                     caps=COALESCE(caps, ?),
+                     intl_goals=COALESCE(intl_goals, ?),
                      past_world_cups=?,
                      fetched_at=?, source='wikidata'
                    WHERE player_id=?""",
