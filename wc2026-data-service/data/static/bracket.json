@@ -1,0 +1,1308 @@
+[
+ {
+  "match_number": 1,
+  "round": "group",
+  "group": "A",
+  "home_slot": "MEX",
+  "away_slot": "RSA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-11T19:00:00Z",
+  "venue_id": "azteca"
+ },
+ {
+  "match_number": 2,
+  "round": "group",
+  "group": "A",
+  "home_slot": "KOR",
+  "away_slot": "CZE",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-12T02:00:00Z",
+  "venue_id": "akron"
+ },
+ {
+  "match_number": 3,
+  "round": "group",
+  "group": "B",
+  "home_slot": "CAN",
+  "away_slot": "BIH",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-12T19:00:00Z",
+  "venue_id": "bmo"
+ },
+ {
+  "match_number": 4,
+  "round": "group",
+  "group": "D",
+  "home_slot": "USA",
+  "away_slot": "PAR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-13T01:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 5,
+  "round": "group",
+  "group": "B",
+  "home_slot": "QAT",
+  "away_slot": "SUI",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-13T19:00:00Z",
+  "venue_id": "levis"
+ },
+ {
+  "match_number": 6,
+  "round": "group",
+  "group": "C",
+  "home_slot": "BRA",
+  "away_slot": "MAR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-13T22:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 7,
+  "round": "group",
+  "group": "C",
+  "home_slot": "HAI",
+  "away_slot": "SCO",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-14T01:00:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 8,
+  "round": "group",
+  "group": "D",
+  "home_slot": "AUS",
+  "away_slot": "TUR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-14T04:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 9,
+  "round": "group",
+  "group": "E",
+  "home_slot": "GER",
+  "away_slot": "CUW",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-14T17:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 10,
+  "round": "group",
+  "group": "F",
+  "home_slot": "NED",
+  "away_slot": "JPN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-14T20:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 11,
+  "round": "group",
+  "group": "E",
+  "home_slot": "CIV",
+  "away_slot": "ECU",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-14T23:00:00Z",
+  "venue_id": "lincoln"
+ },
+ {
+  "match_number": 12,
+  "round": "group",
+  "group": "F",
+  "home_slot": "SWE",
+  "away_slot": "TUN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-15T02:00:00Z",
+  "venue_id": "bbva"
+ },
+ {
+  "match_number": 13,
+  "round": "group",
+  "group": "H",
+  "home_slot": "ESP",
+  "away_slot": "CPV",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-15T16:00:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 14,
+  "round": "group",
+  "group": "G",
+  "home_slot": "BEL",
+  "away_slot": "EGY",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-15T19:00:00Z",
+  "venue_id": "lumen"
+ },
+ {
+  "match_number": 15,
+  "round": "group",
+  "group": "H",
+  "home_slot": "KSA",
+  "away_slot": "URU",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-15T22:00:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 16,
+  "round": "group",
+  "group": "G",
+  "home_slot": "IRN",
+  "away_slot": "NZL",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-16T01:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 17,
+  "round": "group",
+  "group": "I",
+  "home_slot": "FRA",
+  "away_slot": "SEN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-16T19:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 18,
+  "round": "group",
+  "group": "I",
+  "home_slot": "IRQ",
+  "away_slot": "NOR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-16T22:00:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 19,
+  "round": "group",
+  "group": "J",
+  "home_slot": "ARG",
+  "away_slot": "ALG",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-17T01:00:00Z",
+  "venue_id": "arrowhead"
+ },
+ {
+  "match_number": 20,
+  "round": "group",
+  "group": "J",
+  "home_slot": "AUT",
+  "away_slot": "JOR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-17T04:00:00Z",
+  "venue_id": "levis"
+ },
+ {
+  "match_number": 21,
+  "round": "group",
+  "group": "K",
+  "home_slot": "POR",
+  "away_slot": "COD",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-17T17:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 22,
+  "round": "group",
+  "group": "L",
+  "home_slot": "ENG",
+  "away_slot": "CRO",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-17T20:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 23,
+  "round": "group",
+  "group": "L",
+  "home_slot": "GHA",
+  "away_slot": "PAN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-17T23:00:00Z",
+  "venue_id": "bmo"
+ },
+ {
+  "match_number": 24,
+  "round": "group",
+  "group": "K",
+  "home_slot": "UZB",
+  "away_slot": "COL",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-18T02:00:00Z",
+  "venue_id": "azteca"
+ },
+ {
+  "match_number": 25,
+  "round": "group",
+  "group": "A",
+  "home_slot": "CZE",
+  "away_slot": "RSA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-18T16:00:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 26,
+  "round": "group",
+  "group": "B",
+  "home_slot": "SUI",
+  "away_slot": "BIH",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-18T19:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 27,
+  "round": "group",
+  "group": "B",
+  "home_slot": "CAN",
+  "away_slot": "QAT",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-18T22:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 28,
+  "round": "group",
+  "group": "A",
+  "home_slot": "MEX",
+  "away_slot": "KOR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-19T01:00:00Z",
+  "venue_id": "akron"
+ },
+ {
+  "match_number": 29,
+  "round": "group",
+  "group": "D",
+  "home_slot": "USA",
+  "away_slot": "AUS",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-19T19:00:00Z",
+  "venue_id": "lumen"
+ },
+ {
+  "match_number": 30,
+  "round": "group",
+  "group": "C",
+  "home_slot": "SCO",
+  "away_slot": "MAR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-19T22:00:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 31,
+  "round": "group",
+  "group": "C",
+  "home_slot": "BRA",
+  "away_slot": "HAI",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-20T00:30:00Z",
+  "venue_id": "lincoln"
+ },
+ {
+  "match_number": 32,
+  "round": "group",
+  "group": "D",
+  "home_slot": "TUR",
+  "away_slot": "PAR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-20T03:00:00Z",
+  "venue_id": "levis"
+ },
+ {
+  "match_number": 33,
+  "round": "group",
+  "group": "F",
+  "home_slot": "NED",
+  "away_slot": "SWE",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-20T17:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 34,
+  "round": "group",
+  "group": "E",
+  "home_slot": "GER",
+  "away_slot": "CIV",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-20T20:00:00Z",
+  "venue_id": "bmo"
+ },
+ {
+  "match_number": 35,
+  "round": "group",
+  "group": "E",
+  "home_slot": "ECU",
+  "away_slot": "CUW",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-21T00:00:00Z",
+  "venue_id": "arrowhead"
+ },
+ {
+  "match_number": 36,
+  "round": "group",
+  "group": "F",
+  "home_slot": "TUN",
+  "away_slot": "JPN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-21T04:00:00Z",
+  "venue_id": "bbva"
+ },
+ {
+  "match_number": 37,
+  "round": "group",
+  "group": "H",
+  "home_slot": "ESP",
+  "away_slot": "KSA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-21T16:00:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 38,
+  "round": "group",
+  "group": "G",
+  "home_slot": "BEL",
+  "away_slot": "IRN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-21T19:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 39,
+  "round": "group",
+  "group": "H",
+  "home_slot": "URU",
+  "away_slot": "CPV",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-21T22:00:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 40,
+  "round": "group",
+  "group": "G",
+  "home_slot": "NZL",
+  "away_slot": "EGY",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-22T01:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 41,
+  "round": "group",
+  "group": "J",
+  "home_slot": "ARG",
+  "away_slot": "AUT",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-22T17:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 42,
+  "round": "group",
+  "group": "I",
+  "home_slot": "FRA",
+  "away_slot": "IRQ",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-22T21:00:00Z",
+  "venue_id": "lincoln"
+ },
+ {
+  "match_number": 43,
+  "round": "group",
+  "group": "I",
+  "home_slot": "NOR",
+  "away_slot": "SEN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-23T00:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 44,
+  "round": "group",
+  "group": "J",
+  "home_slot": "JOR",
+  "away_slot": "ALG",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-23T03:00:00Z",
+  "venue_id": "levis"
+ },
+ {
+  "match_number": 45,
+  "round": "group",
+  "group": "K",
+  "home_slot": "POR",
+  "away_slot": "UZB",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-23T17:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 46,
+  "round": "group",
+  "group": "L",
+  "home_slot": "ENG",
+  "away_slot": "GHA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-23T20:00:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 47,
+  "round": "group",
+  "group": "L",
+  "home_slot": "PAN",
+  "away_slot": "CRO",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-23T23:00:00Z",
+  "venue_id": "bmo"
+ },
+ {
+  "match_number": 48,
+  "round": "group",
+  "group": "K",
+  "home_slot": "COL",
+  "away_slot": "COD",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-24T02:00:00Z",
+  "venue_id": "akron"
+ },
+ {
+  "match_number": 49,
+  "round": "group",
+  "group": "B",
+  "home_slot": "BIH",
+  "away_slot": "QAT",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-24T19:00:00Z",
+  "venue_id": "lumen"
+ },
+ {
+  "match_number": 50,
+  "round": "group",
+  "group": "B",
+  "home_slot": "SUI",
+  "away_slot": "CAN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-24T19:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 51,
+  "round": "group",
+  "group": "C",
+  "home_slot": "MAR",
+  "away_slot": "HAI",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-24T22:00:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 52,
+  "round": "group",
+  "group": "C",
+  "home_slot": "SCO",
+  "away_slot": "BRA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-24T22:00:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 53,
+  "round": "group",
+  "group": "A",
+  "home_slot": "CZE",
+  "away_slot": "MEX",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-25T01:00:00Z",
+  "venue_id": "azteca"
+ },
+ {
+  "match_number": 54,
+  "round": "group",
+  "group": "A",
+  "home_slot": "RSA",
+  "away_slot": "KOR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-25T01:00:00Z",
+  "venue_id": "bbva"
+ },
+ {
+  "match_number": 55,
+  "round": "group",
+  "group": "E",
+  "home_slot": "CUW",
+  "away_slot": "CIV",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-25T20:00:00Z",
+  "venue_id": "lincoln"
+ },
+ {
+  "match_number": 56,
+  "round": "group",
+  "group": "E",
+  "home_slot": "ECU",
+  "away_slot": "GER",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-25T20:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 57,
+  "round": "group",
+  "group": "F",
+  "home_slot": "JPN",
+  "away_slot": "SWE",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-25T23:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 58,
+  "round": "group",
+  "group": "F",
+  "home_slot": "TUN",
+  "away_slot": "NED",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-25T23:00:00Z",
+  "venue_id": "arrowhead"
+ },
+ {
+  "match_number": 59,
+  "round": "group",
+  "group": "D",
+  "home_slot": "PAR",
+  "away_slot": "AUS",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-26T02:00:00Z",
+  "venue_id": "levis"
+ },
+ {
+  "match_number": 60,
+  "round": "group",
+  "group": "D",
+  "home_slot": "TUR",
+  "away_slot": "USA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-26T02:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 61,
+  "round": "group",
+  "group": "I",
+  "home_slot": "NOR",
+  "away_slot": "FRA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-26T19:00:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 62,
+  "round": "group",
+  "group": "I",
+  "home_slot": "SEN",
+  "away_slot": "IRQ",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-26T19:00:00Z",
+  "venue_id": "bmo"
+ },
+ {
+  "match_number": 63,
+  "round": "group",
+  "group": "H",
+  "home_slot": "CPV",
+  "away_slot": "KSA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T00:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 64,
+  "round": "group",
+  "group": "H",
+  "home_slot": "URU",
+  "away_slot": "ESP",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T00:00:00Z",
+  "venue_id": "akron"
+ },
+ {
+  "match_number": 65,
+  "round": "group",
+  "group": "G",
+  "home_slot": "EGY",
+  "away_slot": "IRN",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T03:00:00Z",
+  "venue_id": "lumen"
+ },
+ {
+  "match_number": 66,
+  "round": "group",
+  "group": "G",
+  "home_slot": "NZL",
+  "away_slot": "BEL",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T03:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 67,
+  "round": "group",
+  "group": "L",
+  "home_slot": "CRO",
+  "away_slot": "GHA",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T21:00:00Z",
+  "venue_id": "lincoln"
+ },
+ {
+  "match_number": 68,
+  "round": "group",
+  "group": "L",
+  "home_slot": "PAN",
+  "away_slot": "ENG",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T21:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 69,
+  "round": "group",
+  "group": "K",
+  "home_slot": "COL",
+  "away_slot": "POR",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T23:30:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 70,
+  "round": "group",
+  "group": "K",
+  "home_slot": "COD",
+  "away_slot": "UZB",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-27T23:30:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 71,
+  "round": "group",
+  "group": "J",
+  "home_slot": "ALG",
+  "away_slot": "AUT",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-28T02:00:00Z",
+  "venue_id": "arrowhead"
+ },
+ {
+  "match_number": 72,
+  "round": "group",
+  "group": "J",
+  "home_slot": "JOR",
+  "away_slot": "ARG",
+  "feeds_into": null,
+  "kickoff_utc": "2026-06-28T02:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 73,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "A",
+   "rank": 2
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "B",
+   "rank": 2
+  },
+  "feeds_into": 90,
+  "kickoff_utc": "2026-06-28T19:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 74,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "E",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "F"
+   ]
+  },
+  "feeds_into": 89,
+  "kickoff_utc": "2026-06-29T20:30:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 75,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "F",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "C",
+   "rank": 2
+  },
+  "feeds_into": 90,
+  "kickoff_utc": "2026-06-30T01:00:00Z",
+  "venue_id": "bbva"
+ },
+ {
+  "match_number": 76,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "C",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "F",
+   "rank": 2
+  },
+  "feeds_into": 91,
+  "kickoff_utc": "2026-06-29T17:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 77,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "I",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "C",
+    "D",
+    "F",
+    "G",
+    "H"
+   ]
+  },
+  "feeds_into": 89,
+  "kickoff_utc": "2026-06-30T21:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 78,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "E",
+   "rank": 2
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "I",
+   "rank": 2
+  },
+  "feeds_into": 91,
+  "kickoff_utc": "2026-06-30T17:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 79,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "A",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "C",
+    "E",
+    "F",
+    "H",
+    "I"
+   ]
+  },
+  "feeds_into": 92,
+  "kickoff_utc": "2026-07-01T01:00:00Z",
+  "venue_id": "azteca"
+ },
+ {
+  "match_number": 80,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "L",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "E",
+    "H",
+    "I",
+    "J",
+    "K"
+   ]
+  },
+  "feeds_into": 92,
+  "kickoff_utc": "2026-07-01T16:00:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 81,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "D",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "B",
+    "E",
+    "F",
+    "I",
+    "J"
+   ]
+  },
+  "feeds_into": 94,
+  "kickoff_utc": "2026-07-02T00:00:00Z",
+  "venue_id": "levis"
+ },
+ {
+  "match_number": 82,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "G",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "A",
+    "E",
+    "H",
+    "I",
+    "J"
+   ]
+  },
+  "feeds_into": 94,
+  "kickoff_utc": "2026-07-01T20:00:00Z",
+  "venue_id": "lumen"
+ },
+ {
+  "match_number": 83,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "K",
+   "rank": 2
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "L",
+   "rank": 2
+  },
+  "feeds_into": 93,
+  "kickoff_utc": "2026-07-02T23:00:00Z",
+  "venue_id": "bmo"
+ },
+ {
+  "match_number": 84,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "H",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "J",
+   "rank": 2
+  },
+  "feeds_into": 93,
+  "kickoff_utc": "2026-07-02T19:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 85,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "B",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "E",
+    "F",
+    "G",
+    "I",
+    "J"
+   ]
+  },
+  "feeds_into": 96,
+  "kickoff_utc": "2026-07-03T03:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 86,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "J",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "H",
+   "rank": 2
+  },
+  "feeds_into": 95,
+  "kickoff_utc": "2026-07-03T22:00:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 87,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "K",
+   "rank": 1
+  },
+  "away_slot": {
+   "type": "third_place_pool",
+   "groups": [
+    "D",
+    "E",
+    "I",
+    "J",
+    "L"
+   ]
+  },
+  "feeds_into": 96,
+  "kickoff_utc": "2026-07-04T01:30:00Z",
+  "venue_id": "arrowhead"
+ },
+ {
+  "match_number": 88,
+  "round": "r32",
+  "group": null,
+  "home_slot": {
+   "type": "group_rank",
+   "group": "D",
+   "rank": 2
+  },
+  "away_slot": {
+   "type": "group_rank",
+   "group": "G",
+   "rank": 2
+  },
+  "feeds_into": 95,
+  "kickoff_utc": "2026-07-03T18:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 89,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 74
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 77
+  },
+  "feeds_into": 97,
+  "kickoff_utc": "2026-07-04T21:00:00Z",
+  "venue_id": "lincoln"
+ },
+ {
+  "match_number": 90,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 73
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 75
+  },
+  "feeds_into": 97,
+  "kickoff_utc": "2026-07-04T17:00:00Z",
+  "venue_id": "nrg"
+ },
+ {
+  "match_number": 91,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 76
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 78
+  },
+  "feeds_into": 99,
+  "kickoff_utc": "2026-07-05T20:00:00Z",
+  "venue_id": "metlife"
+ },
+ {
+  "match_number": 92,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 79
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 80
+  },
+  "feeds_into": 99,
+  "kickoff_utc": "2026-07-06T00:00:00Z",
+  "venue_id": "azteca"
+ },
+ {
+  "match_number": 93,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 83
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 84
+  },
+  "feeds_into": 98,
+  "kickoff_utc": "2026-07-06T19:00:00Z",
+  "venue_id": "att"
+ },
+ {
+  "match_number": 94,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 81
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 82
+  },
+  "feeds_into": 98,
+  "kickoff_utc": "2026-07-07T00:00:00Z",
+  "venue_id": "lumen"
+ },
+ {
+  "match_number": 95,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 86
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 88
+  },
+  "feeds_into": 100,
+  "kickoff_utc": "2026-07-07T16:00:00Z",
+  "venue_id": "mercedes"
+ },
+ {
+  "match_number": 96,
+  "round": "r16",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 85
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 87
+  },
+  "feeds_into": 100,
+  "kickoff_utc": "2026-07-07T20:00:00Z",
+  "venue_id": "bcplace"
+ },
+ {
+  "match_number": 97,
+  "round": "qf",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 89
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 90
+  },
+  "feeds_into": 101,
+  "kickoff_utc": "2026-07-09T20:00:00Z",
+  "venue_id": "gillette"
+ },
+ {
+  "match_number": 98,
+  "round": "qf",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 93
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 94
+  },
+  "feeds_into": 101,
+  "kickoff_utc": "2026-07-10T19:00:00Z",
+  "venue_id": "sofi"
+ },
+ {
+  "match_number": 99,
+  "round": "qf",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 91
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 92
+  },
+  "feeds_into": 102,
+  "kickoff_utc": "2026-07-11T21:00:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 100,
+  "round": "qf",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 95
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 96
+  },
+  "feeds_into": 102,
+  "kickoff_utc": "2026-07-12T01:00:00Z",
+  "venue_id": "arrowhead"
+ },
+ {
+  "match_number": 101,
+  "round": "sf",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 97
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 98
+  },
+  "feeds_into": 104,
+  "kickoff_utc": "2026-07-14T19:00:00Z",
+  "venue_id": "att",
+  "feeds_into_loser": 103
+ },
+ {
+  "match_number": 102,
+  "round": "sf",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 99
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 100
+  },
+  "feeds_into": 104,
+  "kickoff_utc": "2026-07-15T19:00:00Z",
+  "venue_id": "mercedes",
+  "feeds_into_loser": 103
+ },
+ {
+  "match_number": 103,
+  "round": "third_place",
+  "group": null,
+  "home_slot": {
+   "type": "match_loser",
+   "match_number": 101
+  },
+  "away_slot": {
+   "type": "match_loser",
+   "match_number": 102
+  },
+  "feeds_into": null,
+  "kickoff_utc": "2026-07-18T21:00:00Z",
+  "venue_id": "hardrock"
+ },
+ {
+  "match_number": 104,
+  "round": "final",
+  "group": null,
+  "home_slot": {
+   "type": "match_winner",
+   "match_number": 101
+  },
+  "away_slot": {
+   "type": "match_winner",
+   "match_number": 102
+  },
+  "feeds_into": null,
+  "kickoff_utc": "2026-07-19T19:00:00Z",
+  "venue_id": "metlife"
+ }
+]

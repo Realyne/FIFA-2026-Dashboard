@@ -1,0 +1,35 @@
+# Production compose — API bound to localhost only; Nginx proxies /api/wc/.
+# Run from the remote deploy dir: docker compose -f docker-compose.prod.yml up --build -d
+
+services:
+  api:
+    build:
+      context: ./wc2026-data-service
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:${API_PORT:-8100}:8000"
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      DATA_PROVIDER: ${DATA_PROVIDER:-espn}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-*}
+      FOOTBALL_DATA_TOKEN: ${FOOTBALL_DATA_TOKEN:-}
+      POLL_ENABLED: ${POLL_ENABLED:-1}
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --save 300 1 --appendonly no
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  redis-data:

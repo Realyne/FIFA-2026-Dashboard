@@ -1,0 +1,36 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# --- Python (wc2026-data-service) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- secrets / local config ---
+.env
+.env.*
+!.env.example
+
+# --- runtime artifacts ---
+# unknown-shape payload dumps from the ESPN parser
+wc2026-data-service/debug/
+# SQLite player directory is a regenerable cache (rebuild: ingest_squads.py
+# + enrich_wikidata.py); deploy.sh rsyncs it, git doesn't carry it
+wc2026-data-service/db/*.sqlite
+wc2026-data-service/db/*.sqlite-journal
+wc2026-data-service/db/wikidata_review.txt
+!wc2026-data-service/db/.gitkeep
+
+# --- tooling artifacts ---
+.playwright-cli/
+node_modules/
+*.log

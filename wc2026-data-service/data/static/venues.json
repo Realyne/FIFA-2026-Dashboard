@@ -1,0 +1,146 @@
+[
+ {
+  "id": "att",
+  "name": "AT&T Stadium",
+  "fifa_name": "Dallas Stadium",
+  "city": "Dallas (Arlington)",
+  "country": "USA",
+  "capacity": 94000,
+  "tz": "America/Chicago"
+ },
+ {
+  "id": "azteca",
+  "name": "Estadio Azteca",
+  "fifa_name": "Mexico City Stadium",
+  "city": "Mexico City",
+  "country": "Mexico",
+  "capacity": 93000,
+  "tz": "America/Mexico_City"
+ },
+ {
+  "id": "metlife",
+  "name": "MetLife Stadium",
+  "fifa_name": "New York New Jersey Stadium",
+  "city": "New York/New Jersey (East Rutherford)",
+  "country": "USA",
+  "capacity": 82500,
+  "tz": "America/New_York"
+ },
+ {
+  "id": "mercedes",
+  "name": "Mercedes-Benz Stadium",
+  "fifa_name": "Atlanta Stadium",
+  "city": "Atlanta",
+  "country": "USA",
+  "capacity": 75000,
+  "tz": "America/New_York"
+ },
+ {
+  "id": "arrowhead",
+  "name": "Arrowhead Stadium",
+  "fifa_name": "Kansas City Stadium",
+  "city": "Kansas City",
+  "country": "USA",
+  "capacity": 73000,
+  "tz": "America/Chicago"
+ },
+ {
+  "id": "nrg",
+  "name": "NRG Stadium",
+  "fifa_name": "Houston Stadium",
+  "city": "Houston",
+  "country": "USA",
+  "capacity": 72000,
+  "tz": "America/Chicago"
+ },
+ {
+  "id": "levis",
+  "name": "Levi's Stadium",
+  "fifa_name": "San Francisco Bay Area Stadium",
+  "city": "San Francisco Bay Area (Santa Clara)",
+  "country": "USA",
+  "capacity": 71000,
+  "tz": "America/Los_Angeles"
+ },
+ {
+  "id": "sofi",
+  "name": "SoFi Stadium",
+  "fifa_name": "Los Angeles Stadium",
+  "city": "Los Angeles (Inglewood)",
+  "country": "USA",
+  "capacity": 70000,
+  "tz": "America/Los_Angeles"
+ },
+ {
+  "id": "lincoln",
+  "name": "Lincoln Financial Field",
+  "fifa_name": "Philadelphia Stadium",
+  "city": "Philadelphia",
+  "country": "USA",
+  "capacity": 69000,
+  "tz": "America/New_York"
+ },
+ {
+  "id": "lumen",
+  "name": "Lumen Field",
+  "fifa_name": "Seattle Stadium",
+  "city": "Seattle",
+  "country": "USA",
+  "capacity": 69000,
+  "tz": "America/Los_Angeles"
+ },
+ {
+  "id": "gillette",
+  "name": "Gillette Stadium",
+  "fifa_name": "Boston Stadium",
+  "city": "Boston (Foxborough)",
+  "country": "USA",
+  "capacity": 65000,
+  "tz": "America/New_York"
+ },
+ {
+  "id": "hardrock",
+  "name": "Hard Rock Stadium",
+  "fifa_name": "Miami Stadium",
+  "city": "Miami (Miami Gardens)",
+  "country": "USA",
+  "capacity": 65000,
+  "tz": "America/New_York"
+ },
+ {
+  "id": "bcplace",
+  "name": "BC Place",
+  "fifa_name": "BC Place Vancouver",
+  "city": "Vancouver",
+  "country": "Canada",
+  "capacity": 54000,
+  "tz": "America/Vancouver"
+ },
+ {
+  "id": "bbva",
+  "name": "Estadio BBVA",
+  "fifa_name": "Estadio Monterrey",
+  "city": "Monterrey (Guadalupe)",
+  "country": "Mexico",
+  "capacity": 53500,
+  "tz": "America/Monterrey"
+ },
+ {
+  "id": "akron",
+  "name": "Estadio Akron",
+  "fifa_name": "Estadio Guadalajara",
+  "city": "Guadalajara (Zapopan)",
+  "country": "Mexico",
+  "capacity": 52000,
+  "tz": "America/Mexico_City"
+ },
+ {
+  "id": "bmo",
+  "name": "BMO Field",
+  "fifa_name": "Toronto Stadium",
+  "city": "Toronto",
+  "country": "Canada",
+  "capacity": 45000,
+  "tz": "America/Toronto"
+ }
+]

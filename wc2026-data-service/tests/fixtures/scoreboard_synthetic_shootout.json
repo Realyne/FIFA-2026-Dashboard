@@ -1,0 +1,43 @@
+{
+ "events": [
+  {
+   "id": "999001",
+   "date": "2026-07-19T19:00Z",
+   "name": "Argentina vs France",
+   "status": {
+    "displayClock": "120'",
+    "clock": 7200.0,
+    "type": {"id": "28", "name": "STATUS_FINAL_PEN", "state": "post", "completed": true, "description": "Final after penalties", "detail": "FT-Pens", "shortDetail": "FT-Pens"}
+   },
+   "competitions": [
+    {
+     "id": "999001",
+     "competitors": [
+      {"homeAway": "home", "score": "3", "shootoutScore": 4, "team": {"id": "202", "abbreviation": "ARG", "displayName": "Argentina"}},
+      {"homeAway": "away", "score": "3", "shootoutScore": 2, "team": {"id": "478", "abbreviation": "FRA", "displayName": "France"}}
+     ],
+     "status": {"type": {"name": "STATUS_FINAL_PEN", "state": "post", "completed": true}}
+    }
+   ]
+  },
+  {
+   "id": "999002",
+   "date": "2026-07-14T19:00Z",
+   "name": "Live with stoppage",
+   "status": {
+    "displayClock": "90'+3'",
+    "clock": 5580.0,
+    "type": {"id": "2", "name": "STATUS_SECOND_HALF", "state": "in", "completed": false, "description": "Second Half", "detail": "90'+3'", "shortDetail": "90'+3'"}
+   },
+   "competitions": [
+    {
+     "id": "999002",
+     "competitors": [
+      {"homeAway": "home", "score": "1", "team": {"id": "164", "abbreviation": "ESP", "displayName": "Spain"}},
+      {"homeAway": "away", "score": "1", "team": {"id": "448", "abbreviation": "ENG", "displayName": "England"}}
+     ]
+    }
+   ]
+  }
+ ]
+}

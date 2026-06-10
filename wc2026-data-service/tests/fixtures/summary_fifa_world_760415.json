@@ -1,0 +1,4407 @@
+{
+ "boxscore": {
+  "form": [
+   {
+    "displayOrder": 1,
+    "team": {
+     "id": "203",
+     "uid": "s:600~t:203",
+     "displayName": "Mexico",
+     "abbreviation": "MEX",
+     "links": [
+      {
+       "href": "https://www.espn.com/soccer/team/_/id/203/mexico",
+       "text": "Clubhouse"
+      },
+      {
+       "href": "https://www.espn.com/soccer/team/fixtures/_/id/203/mexico",
+       "text": "Fixtures"
+      }
+     ],
+     "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+     "logos": [
+      {
+       "href": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+       "width": 500,
+       "height": 500,
+       "alt": "",
+       "rel": [
+        "full",
+        "default"
+       ],
+       "lastUpdated": "2023-10-25T16:19Z"
+      },
+      {
+       "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/mex.png",
+       "width": 500,
+       "height": 500,
+       "alt": "",
+       "rel": [
+        "full",
+        "dark"
+       ],
+       "lastUpdated": "2023-10-25T16:22Z"
+      }
+     ]
+    },
+    "events": [
+     {
+      "id": "401861776",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401861776/serbia-mexico",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-06-05T02:00Z",
+      "score": "5-1",
+      "homeTeamId": "203",
+      "awayTeamId": "6757",
+      "homeTeamScore": "5",
+      "awayTeamScore": "1",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "W",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "6757",
+       "uid": "s:600~t:6757",
+       "displayName": "Serbia",
+       "abbreviation": "SRB",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/6757/serbia",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/6757/serbia",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sba.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/sba.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-11-13T17:41Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/sba.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-11-13T17:42Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/sba.png"
+     },
+     {
+      "id": "401861775",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401861775/australia-mexico",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-05-31T02:00Z",
+      "score": "1-0",
+      "homeTeamId": "203",
+      "awayTeamId": "628",
+      "homeTeamScore": "1",
+      "awayTeamScore": "0",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "W",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "628",
+       "uid": "s:600~t:628",
+       "displayName": "Australia",
+       "abbreviation": "AUS",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/628/australia",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/628/australia",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:19Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/aus.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:22Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png"
+     },
+     {
+      "id": "401861774",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401861774/ghana-mexico",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-05-23T02:00Z",
+      "score": "2-0",
+      "homeTeamId": "203",
+      "awayTeamId": "4469",
+      "homeTeamScore": "2",
+      "awayTeamScore": "0",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "W",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "4469",
+       "uid": "s:600~t:4469",
+       "displayName": "Ghana",
+       "abbreviation": "GHA",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/4469/ghana",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/4469/ghana",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/gha.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png"
+     },
+     {
+      "id": "762264",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/762264/belgium-mexico",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-04-01T01:00Z",
+      "score": "1-1",
+      "homeTeamId": "203",
+      "awayTeamId": "459",
+      "homeTeamScore": "1",
+      "awayTeamScore": "1",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "D",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "459",
+       "uid": "s:600~t:459",
+       "displayName": "Belgium",
+       "abbreviation": "BEL",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/459/belgium",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/459/belgium",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:19Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/bel.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:22Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png"
+     },
+     {
+      "id": "762263",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/762263/portugal-mexico",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-03-29T01:00Z",
+      "score": "0-0",
+      "homeTeamId": "203",
+      "awayTeamId": "482",
+      "homeTeamScore": "0",
+      "awayTeamScore": "0",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "D",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "482",
+       "uid": "s:600~t:482",
+       "displayName": "Portugal",
+       "abbreviation": "POR",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/482/portugal",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/482/portugal",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:19Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/por.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:22Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png"
+     }
+    ]
+   },
+   {
+    "displayOrder": 2,
+    "team": {
+     "id": "467",
+     "uid": "s:600~t:467",
+     "displayName": "South Africa",
+     "abbreviation": "RSA",
+     "links": [
+      {
+       "href": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+       "text": "Clubhouse"
+      },
+      {
+       "href": "https://www.espn.com/soccer/team/fixtures/_/id/467/south-africa",
+       "text": "Fixtures"
+      }
+     ],
+     "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+     "logos": [
+      {
+       "href": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+       "width": 500,
+       "height": 500,
+       "alt": "",
+       "rel": [
+        "full",
+        "default"
+       ],
+       "lastUpdated": "2023-10-25T16:21Z"
+      },
+      {
+       "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/rsa.png",
+       "width": 500,
+       "height": 500,
+       "alt": "",
+       "rel": [
+        "full",
+        "dark"
+       ],
+       "lastUpdated": "2023-10-25T16:21Z"
+      }
+     ]
+    },
+    "events": [
+     {
+      "id": "401875160",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401875160/south-africa-jamaica",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "@",
+      "gameDate": "2026-06-06T21:00Z",
+      "score": "1-0",
+      "homeTeamId": "1038",
+      "awayTeamId": "467",
+      "homeTeamScore": "0",
+      "awayTeamScore": "1",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "W",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "1038",
+       "uid": "s:600~t:1038",
+       "displayName": "Jamaica",
+       "abbreviation": "JAM",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/1038/jamaica",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/1038/jamaica",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/jam.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/jam.png"
+     },
+     {
+      "id": "401871131",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401871131/nicaragua-south-africa",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-05-29T16:00Z",
+      "score": "0-0",
+      "homeTeamId": "467",
+      "awayTeamId": "2658",
+      "homeTeamScore": "0",
+      "awayTeamScore": "0",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "D",
+      "competitionName": "2026 International Friendly",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly",
+      "opponent": {
+       "id": "2658",
+       "uid": "s:600~t:2658",
+       "displayName": "Nicaragua",
+       "abbreviation": "NCA",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/2658/nicaragua",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/2658/nicaragua",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nca.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/nca.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2018-06-05T12:06Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/nca.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2018-06-05T12:06Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/nca.png"
+     },
+     {
+      "id": "401860542",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401860542/panama-south-africa",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-03-31T17:30Z",
+      "score": "2-1",
+      "homeTeamId": "467",
+      "awayTeamId": "2659",
+      "homeTeamScore": "1",
+      "awayTeamScore": "2",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "L",
+      "competitionName": "2026 International Friendly",
+      "opponent": {
+       "id": "2659",
+       "uid": "s:600~t:2659",
+       "displayName": "Panama",
+       "abbreviation": "PAN",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/2659/panama",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/2659/panama",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/pan.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly"
+     },
+     {
+      "id": "401860541",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/401860541/panama-south-africa",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-03-27T17:00Z",
+      "score": "1-1",
+      "homeTeamId": "467",
+      "awayTeamId": "2659",
+      "homeTeamScore": "1",
+      "awayTeamScore": "1",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "gameResult": "D",
+      "competitionName": "2026 International Friendly",
+      "opponent": {
+       "id": "2659",
+       "uid": "s:600~t:2659",
+       "displayName": "Panama",
+       "abbreviation": "PAN",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/2659/panama",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/2659/panama",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/pan.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+      "leagueName": "International Friendly",
+      "leagueAbbreviation": "Men's International Friendly"
+     },
+     {
+      "id": "732172",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/match/_/gameId/732172/cameroon-south-africa",
+        "text": "Summary"
+       }
+      ],
+      "atVs": "vs",
+      "gameDate": "2026-01-04T19:00Z",
+      "score": "2-1",
+      "homeTeamId": "467",
+      "awayTeamId": "656",
+      "homeTeamScore": "1",
+      "awayTeamScore": "2",
+      "homeAggregateScore": "0",
+      "awayAggregateScore": "0",
+      "homeShootoutScore": "0",
+      "awayShootoutScore": "0",
+      "homeTeamAdvance": "false",
+      "awayTeamAdvance": "true",
+      "gameResult": "L",
+      "matchNote": "Cameroon advances.",
+      "competitionName": "2025 Africa Cup of Nations",
+      "roundName": "Round of 16",
+      "opponent": {
+       "id": "656",
+       "uid": "s:600~t:656",
+       "displayName": "Cameroon",
+       "abbreviation": "CMR",
+       "links": [
+        {
+         "href": "https://www.espn.com/soccer/team/_/id/656/cameroon",
+         "text": "Clubhouse"
+        },
+        {
+         "href": "https://www.espn.com/soccer/team/fixtures/_/id/656/cameroon",
+         "text": "Fixtures"
+        }
+       ],
+       "logo": "https://a.espncdn.com/i/teamlogos/countries/500/crm.png",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/crm.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:20Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/crm.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ]
+      },
+      "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/crm.png",
+      "leagueName": "Africa Cup of Nations",
+      "leagueAbbreviation": "Africa Cup of Nations"
+     }
+    ]
+   }
+  ],
+  "teams": [
+   {
+    "team": {
+     "id": "203",
+     "uid": "s:600~t:203",
+     "slug": "mex",
+     "location": "Mexico",
+     "name": "Mexico",
+     "abbreviation": "MEX",
+     "displayName": "Mexico",
+     "shortDisplayName": "Mexico",
+     "color": "006847",
+     "alternateColor": "ffffff",
+     "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png"
+    },
+    "statistics": [],
+    "displayOrder": 1,
+    "homeAway": "home"
+   },
+   {
+    "team": {
+     "id": "467",
+     "uid": "s:600~t:467",
+     "slug": "rsa",
+     "location": "South Africa",
+     "name": "South Africa",
+     "abbreviation": "RSA",
+     "displayName": "South Africa",
+     "shortDisplayName": "South Africa",
+     "color": "087d5a",
+     "alternateColor": "fbb516",
+     "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png"
+    },
+    "statistics": [],
+    "displayOrder": 2,
+    "homeAway": "away"
+   }
+  ]
+ },
+ "format": {
+  "regulation": {
+   "periods": 2,
+   "displayName": "Half",
+   "slug": "half",
+   "clock": 2700.0
+  }
+ },
+ "gameInfo": {
+  "venue": {
+   "id": "1672",
+   "guid": "bc4b4883-4262-3924-8d8c-de2ef91ba8ae",
+   "fullName": "Estadio Banorte",
+   "shortName": "Estadio Banorte",
+   "address": {
+    "city": "Mexico City",
+    "country": "Mexico"
+   },
+   "images": []
+  }
+ },
+ "headToHeadGames": [
+  {
+   "team": {
+    "id": "203",
+    "uid": "s:600~t:203",
+    "displayName": "Mexico",
+    "abbreviation": "MEX",
+    "links": [
+     {
+      "href": "https://www.espn.com/soccer/team/_/id/203/mexico",
+      "text": "Clubhouse"
+     },
+     {
+      "href": "https://www.espn.com/soccer/team/fixtures/_/id/203/mexico",
+      "text": "Fixtures"
+     }
+    ],
+    "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+      "width": 500,
+      "height": 500,
+      "alt": "",
+      "rel": [
+       "full",
+       "default"
+      ],
+      "lastUpdated": "2023-10-25T16:19Z"
+     },
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/mex.png",
+      "width": 500,
+      "height": 500,
+      "alt": "",
+      "rel": [
+       "full",
+       "dark"
+      ],
+      "lastUpdated": "2023-10-25T16:22Z"
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "264031",
+     "links": [
+      {
+       "href": "https://www.espn.com/soccer/match/_/gameId/264031/mexico-south-africa",
+       "text": "Summary"
+      }
+     ],
+     "atVs": "@",
+     "gameDate": "2010-06-11T14:00Z",
+     "score": "1-1",
+     "homeTeamId": "467",
+     "awayTeamId": "203",
+     "homeTeamScore": "1",
+     "awayTeamScore": "1",
+     "homeAggregateScore": "0",
+     "awayAggregateScore": "0",
+     "homeShootoutScore": "0",
+     "awayShootoutScore": "0",
+     "gameResult": "D",
+     "competitionName": "2010 FIFA World Cup",
+     "roundName": "Group Stage",
+     "leagueName": "FIFA World Cup",
+     "leagueAbbreviation": "FIFA World Cup",
+     "opponent": {
+      "id": "467",
+      "uid": "s:600~t:467",
+      "displayName": "South Africa",
+      "abbreviation": "RSA",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+        "text": "Clubhouse"
+       },
+       {
+        "href": "https://www.espn.com/soccer/team/fixtures/_/id/467/south-africa",
+        "text": "Fixtures"
+       }
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+      "logos": [
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+         "full",
+         "default"
+        ],
+        "lastUpdated": "2023-10-25T16:21Z"
+       },
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/rsa.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+         "full",
+         "dark"
+        ],
+        "lastUpdated": "2023-10-25T16:21Z"
+       }
+      ]
+     },
+     "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png"
+    },
+    {
+     "id": "186479",
+     "links": [
+      {
+       "href": "https://www.espn.com/soccer/match/_/gameId/186479/mexico-south-africa",
+       "text": "Summary"
+      }
+     ],
+     "atVs": "@",
+     "gameDate": "2005-07-09T02:00Z",
+     "score": "2-1",
+     "homeTeamId": "467",
+     "awayTeamId": "203",
+     "homeTeamScore": "2",
+     "awayTeamScore": "1",
+     "homeAggregateScore": "0",
+     "awayAggregateScore": "0",
+     "homeShootoutScore": "0",
+     "awayShootoutScore": "0",
+     "gameResult": "L",
+     "competitionName": "2005 Gold Cup",
+     "roundName": "Group Stage 2005",
+     "opponent": {
+      "id": "467",
+      "uid": "s:600~t:467",
+      "displayName": "South Africa",
+      "abbreviation": "RSA",
+      "links": [
+       {
+        "href": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+        "text": "Clubhouse"
+       },
+       {
+        "href": "https://www.espn.com/soccer/team/fixtures/_/id/467/south-africa",
+        "text": "Fixtures"
+       }
+      ],
+      "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+      "logos": [
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+         "full",
+         "default"
+        ],
+        "lastUpdated": "2023-10-25T16:21Z"
+       },
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/rsa.png",
+        "width": 500,
+        "height": 500,
+        "alt": "",
+        "rel": [
+         "full",
+         "dark"
+        ],
+        "lastUpdated": "2023-10-25T16:21Z"
+       }
+      ]
+     },
+     "opponentLogo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+     "leagueName": "Concacaf Gold Cup",
+     "leagueAbbreviation": "Gold Cup"
+    }
+   ]
+  }
+ ],
+ "broadcasts": [
+  {
+   "type": {
+    "id": "1",
+    "shortName": "TV",
+    "longName": "Television",
+    "slug": "television"
+   },
+   "market": {},
+   "media": {
+    "callLetters": "FOX",
+    "name": "FOX",
+    "shortName": "FOX"
+   },
+   "lang": "en",
+   "region": "us",
+   "isNational": false
+  },
+  {
+   "type": {
+    "id": "1",
+    "shortName": "TV",
+    "longName": "Television",
+    "slug": "television"
+   },
+   "market": {},
+   "media": {
+    "callLetters": "Tele",
+    "name": "Telemundo",
+    "shortName": "Tele"
+   },
+   "lang": "en",
+   "region": "us",
+   "isNational": false
+  },
+  {
+   "type": {
+    "id": "4",
+    "shortName": "STREAMING",
+    "longName": "Streaming",
+    "slug": "streaming"
+   },
+   "market": {},
+   "media": {
+    "callLetters": "Peacock",
+    "name": "Peacock",
+    "shortName": "Peacock"
+   },
+   "lang": "en",
+   "region": "us",
+   "isNational": false
+  }
+ ],
+ "pickcenter": [
+  {
+   "provider": {
+    "id": "100",
+    "name": "DraftKings",
+    "priority": 1,
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+      "rel": [
+       "light"
+      ]
+     },
+     {
+      "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+      "rel": [
+       "dark"
+      ]
+     }
+    ]
+   },
+   "details": "MEX -1.5",
+   "overUnder": 2.5,
+   "spread": -1.5,
+   "overOdds": 115.0,
+   "underOdds": -145.0,
+   "awayTeamOdds": {
+    "favorite": false,
+    "underdog": true,
+    "moneyLine": 750,
+    "spreadOdds": -170.0,
+    "team": {
+     "id": "467",
+     "uid": "s:600~t:467",
+     "location": "South Africa",
+     "name": "South Africa",
+     "abbreviation": "RSA",
+     "displayName": "South Africa",
+     "shortDisplayName": "South Africa",
+     "color": "087d5a",
+     "isActive": true,
+     "links": [
+      {
+       "language": "en-US",
+       "rel": [
+        "clubhouse",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+       "text": "Clubhouse",
+       "shortText": "Clubhouse",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "stats",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/stats/_/id/467/south-africa",
+       "text": "Stats",
+       "shortText": "Stats",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "schedule",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/fixtures/_/id/467/south-africa",
+       "text": "Fixtures",
+       "shortText": "Fixtures",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "results",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/results/_/id/467/south-africa",
+       "text": "Results",
+       "shortText": "Results",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "standings",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/standings/_/league/fifa.world",
+       "text": "Standings",
+       "shortText": "Standings",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "squad",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/squad/_/id/467/south-africa",
+       "text": "Squad",
+       "shortText": "Squad",
+       "isExternal": false,
+       "isPremium": false
+      }
+     ]
+    },
+    "favoriteAtOpen": false
+   },
+   "homeTeamOdds": {
+    "favorite": true,
+    "underdog": false,
+    "moneyLine": -245,
+    "spreadOdds": 125.0,
+    "team": {
+     "id": "203",
+     "uid": "s:600~t:203",
+     "location": "Mexico",
+     "name": "Mexico",
+     "abbreviation": "MEX",
+     "displayName": "Mexico",
+     "shortDisplayName": "Mexico",
+     "color": "006847",
+     "isActive": true,
+     "links": [
+      {
+       "language": "en-US",
+       "rel": [
+        "clubhouse",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/_/id/203/mexico",
+       "text": "Clubhouse",
+       "shortText": "Clubhouse",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "stats",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/stats/_/id/203/mexico",
+       "text": "Stats",
+       "shortText": "Stats",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "schedule",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/fixtures/_/id/203/mexico",
+       "text": "Fixtures",
+       "shortText": "Fixtures",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "results",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/results/_/id/203/mexico",
+       "text": "Results",
+       "shortText": "Results",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "standings",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/standings/_/league/fifa.world",
+       "text": "Standings",
+       "shortText": "Standings",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "squad",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/squad/_/id/203/mexico",
+       "text": "Squad",
+       "shortText": "Squad",
+       "isExternal": false,
+       "isPremium": false
+      }
+     ]
+    },
+    "favoriteAtOpen": true
+   },
+   "drawOdds": {
+    "moneyLine": 360.0
+   },
+   "links": [
+    {
+     "language": "en-US",
+     "rel": [
+      "home",
+      "desktop",
+      "bets",
+      "draftkings"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_1",
+     "text": "Home Bet",
+     "shortText": "Home Bet",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "home",
+       "betType": "straight"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "away",
+      "desktop",
+      "bets",
+      "draftkings"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_3",
+     "text": "Away Bet",
+     "shortText": "Away Bet",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "away",
+       "betType": "straight"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "draw",
+      "desktop",
+      "bets",
+      "draftkings"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_2",
+     "text": "Draw Bet",
+     "shortText": "Draw Bet",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "draw",
+       "betType": "straight"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "homeSpread",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932N150_1",
+     "text": "Home Point Spread",
+     "shortText": "Home Point Spread",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "none",
+       "betType": "straight",
+       "betDetails": "Spread:MEX-1.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "awaySpread",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932P150_3",
+     "text": "Away Point Spread",
+     "shortText": "Away Point Spread",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "none",
+       "betType": "straight",
+       "betDetails": "Spread:RSA+1.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "over",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879O250_1",
+     "text": "Over Odds",
+     "shortText": "Over Odds",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "over",
+       "betType": "straight",
+       "betDetails": "Over:2.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "under",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879U250_3",
+     "text": "Under Odds",
+     "shortText": "Under Odds",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "under",
+       "betType": "straight",
+       "betDetails": "Under:2.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "game",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384",
+     "text": "Game",
+     "shortText": "Game",
+     "isExternal": true,
+     "isPremium": false
+    }
+   ],
+   "moneyline": {
+    "displayName": "Moneyline",
+    "shortDisplayName": "ML",
+    "home": {
+     "close": {
+      "odds": "-245",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "home",
+        "desktop",
+        "bets",
+        "draftkings"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_1",
+       "text": "Home Bet",
+       "shortText": "Home Bet",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "home",
+         "betType": "straight"
+        }
+       }
+      }
+     },
+     "open": {
+      "odds": "-170"
+     }
+    },
+    "away": {
+     "close": {
+      "odds": "+750",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "away",
+        "desktop",
+        "bets",
+        "draftkings"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_3",
+       "text": "Away Bet",
+       "shortText": "Away Bet",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "away",
+         "betType": "straight"
+        }
+       }
+      }
+     },
+     "open": {
+      "odds": "+500"
+     }
+    },
+    "draw": {
+     "close": {
+      "odds": "+360",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "draw",
+        "desktop",
+        "bets",
+        "draftkings"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_2",
+       "text": "Draw Bet",
+       "shortText": "Draw Bet",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "draw",
+         "betType": "straight"
+        }
+       }
+      }
+     },
+     "open": {
+      "odds": "+295"
+     }
+    }
+   },
+   "pointSpread": {
+    "displayName": "Spread",
+    "shortDisplayName": "Spread",
+    "home": {
+     "close": {
+      "line": "-1.5",
+      "odds": "+125",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "homeSpread",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932N150_1",
+       "text": "Home Point Spread",
+       "shortText": "Home Point Spread",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "none",
+         "betType": "straight",
+         "betDetails": "Spread:MEX-1.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "-0.5",
+      "odds": "-195"
+     }
+    },
+    "away": {
+     "close": {
+      "line": "+1.5",
+      "odds": "-170",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "awaySpread",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932P150_3",
+       "text": "Away Point Spread",
+       "shortText": "Away Point Spread",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "none",
+         "betType": "straight",
+         "betDetails": "Spread:RSA+1.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "+0.5",
+      "odds": "+125"
+     }
+    }
+   },
+   "total": {
+    "displayName": "Total",
+    "shortDisplayName": "Total",
+    "over": {
+     "close": {
+      "line": "o2.5",
+      "odds": "+115",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "over",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879O250_1",
+       "text": "Over Odds",
+       "shortText": "Over Odds",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "over",
+         "betType": "straight",
+         "betDetails": "Over:2.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "o2.5",
+      "odds": "-105"
+     }
+    },
+    "under": {
+     "close": {
+      "line": "u2.5",
+      "odds": "-145",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "under",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879U250_3",
+       "text": "Under Odds",
+       "shortText": "Under Odds",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "under",
+         "betType": "straight",
+         "betDetails": "Under:2.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "u2.5",
+      "odds": "-130"
+     }
+    }
+   },
+   "link": {
+    "language": "en-US",
+    "rel": [
+     "odds",
+     "desktop",
+     "event"
+    ],
+    "href": "https://www.espn.com/soccer/odds/_/gameId/760415",
+    "text": "See More Odds and Props",
+    "shortText": "Odds",
+    "isExternal": false,
+    "isPremium": false
+   },
+   "header": {
+    "logo": {
+     "dark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-square-off.svg",
+     "light": "https://a.espncdn.com/i/espnbet/espn-bet-square-off.svg",
+     "exclusivesLogoDark": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg",
+     "exclusivesLogoLight": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg"
+    },
+    "text": "Game Odds"
+   },
+   "footer": {
+    "disclaimer": "GAMBLING PROBLEM? CALL 1-800-GAMBLER or 1-800-MY-RESET, (800) 327-5050 or visit gamblinghelplinema.org (MA). Call 877-8-HOPENY/text HOPENY (467369) (NY). Call 888-789-7777/visit ccpg.org (CT), or visit www.mdgamblinghelp.org (MD), 1-800-981-0023 (PR). 21+ and present in most states. (18+ DC/KY/NH/PR/WY). Void in ONT. Eligibility restrictions apply. Terms: draftkings.com/sportsbook. On behalf of Boot Hill Casino (KS). Pass-thru of per wager tax may apply in IL."
+   }
+  }
+ ],
+ "odds": [
+  {
+   "provider": {
+    "id": "100",
+    "name": "DraftKings",
+    "priority": 1,
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+      "rel": [
+       "light"
+      ]
+     },
+     {
+      "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+      "rel": [
+       "dark"
+      ]
+     }
+    ]
+   },
+   "details": "MEX -1.5",
+   "overUnder": 2.5,
+   "spread": -1.5,
+   "overOdds": 115.0,
+   "underOdds": -145.0,
+   "awayTeamOdds": {
+    "favorite": false,
+    "underdog": true,
+    "moneyLine": 750,
+    "spreadOdds": -170.0,
+    "team": {
+     "id": "467",
+     "uid": "s:600~t:467",
+     "location": "South Africa",
+     "name": "South Africa",
+     "abbreviation": "RSA",
+     "displayName": "South Africa",
+     "shortDisplayName": "South Africa",
+     "color": "087d5a",
+     "isActive": true,
+     "links": [
+      {
+       "language": "en-US",
+       "rel": [
+        "clubhouse",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+       "text": "Clubhouse",
+       "shortText": "Clubhouse",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "stats",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/stats/_/id/467/south-africa",
+       "text": "Stats",
+       "shortText": "Stats",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "schedule",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/fixtures/_/id/467/south-africa",
+       "text": "Fixtures",
+       "shortText": "Fixtures",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "results",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/results/_/id/467/south-africa",
+       "text": "Results",
+       "shortText": "Results",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "standings",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/standings/_/league/fifa.world",
+       "text": "Standings",
+       "shortText": "Standings",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "squad",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/squad/_/id/467/south-africa",
+       "text": "Squad",
+       "shortText": "Squad",
+       "isExternal": false,
+       "isPremium": false
+      }
+     ]
+    },
+    "favoriteAtOpen": false
+   },
+   "homeTeamOdds": {
+    "favorite": true,
+    "underdog": false,
+    "moneyLine": -245,
+    "spreadOdds": 125.0,
+    "team": {
+     "id": "203",
+     "uid": "s:600~t:203",
+     "location": "Mexico",
+     "name": "Mexico",
+     "abbreviation": "MEX",
+     "displayName": "Mexico",
+     "shortDisplayName": "Mexico",
+     "color": "006847",
+     "isActive": true,
+     "links": [
+      {
+       "language": "en-US",
+       "rel": [
+        "clubhouse",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/_/id/203/mexico",
+       "text": "Clubhouse",
+       "shortText": "Clubhouse",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "stats",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/stats/_/id/203/mexico",
+       "text": "Stats",
+       "shortText": "Stats",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "schedule",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/fixtures/_/id/203/mexico",
+       "text": "Fixtures",
+       "shortText": "Fixtures",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "results",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/results/_/id/203/mexico",
+       "text": "Results",
+       "shortText": "Results",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "standings",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/standings/_/league/fifa.world",
+       "text": "Standings",
+       "shortText": "Standings",
+       "isExternal": false,
+       "isPremium": false
+      },
+      {
+       "language": "en-US",
+       "rel": [
+        "squad",
+        "desktop",
+        "team"
+       ],
+       "href": "https://www.espn.com/soccer/team/squad/_/id/203/mexico",
+       "text": "Squad",
+       "shortText": "Squad",
+       "isExternal": false,
+       "isPremium": false
+      }
+     ]
+    },
+    "favoriteAtOpen": true
+   },
+   "drawOdds": {
+    "moneyLine": 360.0
+   },
+   "links": [
+    {
+     "language": "en-US",
+     "rel": [
+      "home",
+      "desktop",
+      "bets",
+      "draftkings"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_1",
+     "text": "Home Bet",
+     "shortText": "Home Bet",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "home",
+       "betType": "straight"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "away",
+      "desktop",
+      "bets",
+      "draftkings"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_3",
+     "text": "Away Bet",
+     "shortText": "Away Bet",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "away",
+       "betType": "straight"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "draw",
+      "desktop",
+      "bets",
+      "draftkings"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_2",
+     "text": "Draw Bet",
+     "shortText": "Draw Bet",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "draw",
+       "betType": "straight"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "homeSpread",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932N150_1",
+     "text": "Home Point Spread",
+     "shortText": "Home Point Spread",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "none",
+       "betType": "straight",
+       "betDetails": "Spread:MEX-1.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "awaySpread",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932P150_3",
+     "text": "Away Point Spread",
+     "shortText": "Away Point Spread",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "none",
+       "betType": "straight",
+       "betDetails": "Spread:RSA+1.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "over",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879O250_1",
+     "text": "Over Odds",
+     "shortText": "Over Odds",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "over",
+       "betType": "straight",
+       "betDetails": "Over:2.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "under",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879U250_3",
+     "text": "Under Odds",
+     "shortText": "Under Odds",
+     "isExternal": true,
+     "isPremium": false,
+     "tracking": {
+      "campaign": "betting-integrations",
+      "tags": {
+       "league": "fifa.world",
+       "sport": "soccer",
+       "gameId": 760415,
+       "betSide": "under",
+       "betType": "straight",
+       "betDetails": "Under:2.5"
+      }
+     }
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "game",
+      "desktop",
+      "bets"
+     ],
+     "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384",
+     "text": "Game",
+     "shortText": "Game",
+     "isExternal": true,
+     "isPremium": false
+    }
+   ],
+   "moneyline": {
+    "displayName": "Moneyline",
+    "shortDisplayName": "ML",
+    "home": {
+     "close": {
+      "odds": "-245",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "home",
+        "desktop",
+        "bets",
+        "draftkings"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_1",
+       "text": "Home Bet",
+       "shortText": "Home Bet",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "home",
+         "betType": "straight"
+        }
+       }
+      }
+     },
+     "open": {
+      "odds": "-170"
+     }
+    },
+    "away": {
+     "close": {
+      "odds": "+750",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "away",
+        "desktop",
+        "bets",
+        "draftkings"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_3",
+       "text": "Away Bet",
+       "shortText": "Away Bet",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "away",
+         "betType": "straight"
+        }
+       }
+      }
+     },
+     "open": {
+      "odds": "+500"
+     }
+    },
+    "draw": {
+     "close": {
+      "odds": "+360",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "draw",
+        "desktop",
+        "bets",
+        "draftkings"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_2",
+       "text": "Draw Bet",
+       "shortText": "Draw Bet",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "draw",
+         "betType": "straight"
+        }
+       }
+      }
+     },
+     "open": {
+      "odds": "+295"
+     }
+    }
+   },
+   "pointSpread": {
+    "displayName": "Spread",
+    "shortDisplayName": "Spread",
+    "home": {
+     "close": {
+      "line": "-1.5",
+      "odds": "+125",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "homeSpread",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932N150_1",
+       "text": "Home Point Spread",
+       "shortText": "Home Point Spread",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "none",
+         "betType": "straight",
+         "betDetails": "Spread:MEX-1.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "-0.5",
+      "odds": "-195"
+     }
+    },
+    "away": {
+     "close": {
+      "line": "+1.5",
+      "odds": "-170",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "awaySpread",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC82518932P150_3",
+       "text": "Away Point Spread",
+       "shortText": "Away Point Spread",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "none",
+         "betType": "straight",
+         "betDetails": "Spread:RSA+1.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "+0.5",
+      "odds": "+125"
+     }
+    }
+   },
+   "total": {
+    "displayName": "Total",
+    "shortDisplayName": "Total",
+    "over": {
+     "close": {
+      "line": "o2.5",
+      "odds": "+115",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "over",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879O250_1",
+       "text": "Over Odds",
+       "shortText": "Over Odds",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "over",
+         "betType": "straight",
+         "betDetails": "Over:2.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "o2.5",
+      "odds": "-105"
+     }
+    },
+    "under": {
+     "close": {
+      "line": "u2.5",
+      "odds": "-145",
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "under",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU82518879U250_3",
+       "text": "Under Odds",
+       "shortText": "Under Odds",
+       "isExternal": true,
+       "isPremium": false,
+       "tracking": {
+        "campaign": "betting-integrations",
+        "tags": {
+         "league": "fifa.world",
+         "sport": "soccer",
+         "gameId": 760415,
+         "betSide": "under",
+         "betType": "straight",
+         "betDetails": "Under:2.5"
+        }
+       }
+      }
+     },
+     "open": {
+      "line": "u2.5",
+      "odds": "-130"
+     }
+    }
+   },
+   "link": {
+    "language": "en-US",
+    "rel": [
+     "odds",
+     "desktop",
+     "event"
+    ],
+    "href": "https://www.espn.com/soccer/odds/_/gameId/760415",
+    "text": "See More Odds and Props",
+    "shortText": "Odds",
+    "isExternal": false,
+    "isPremium": false
+   },
+   "header": {
+    "logo": {
+     "dark": "https://a.espncdn.com/i/espnbet/dark/espn-bet-square-off.svg",
+     "light": "https://a.espncdn.com/i/espnbet/espn-bet-square-off.svg",
+     "exclusivesLogoDark": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg",
+     "exclusivesLogoLight": "https://a.espncdn.com/i/espnbet/espn-bet-square-mint.svg"
+    },
+    "text": "Game Odds"
+   },
+   "footer": {
+    "disclaimer": "GAMBLING PROBLEM? CALL 1-800-GAMBLER or 1-800-MY-RESET, (800) 327-5050 or visit gamblinghelplinema.org (MA). Call 877-8-HOPENY/text HOPENY (467369) (NY). Call 888-789-7777/visit ccpg.org (CT), or visit www.mdgamblinghelp.org (MD), 1-800-981-0023 (PR). 21+ and present in most states. (18+ DC/KY/NH/PR/WY). Void in ONT. Eligibility restrictions apply. Terms: draftkings.com/sportsbook. On behalf of Boot Hill Casino (KS). Pass-thru of per wager tax may apply in IL."
+   }
+  }
+ ],
+ "hasOdds": false,
+ "rosters": [
+  {
+   "homeAway": "home",
+   "winner": false,
+   "team": {
+    "id": "203",
+    "abbreviation": "MEX",
+    "displayName": "Mexico",
+    "color": "006847",
+    "alternateColor": "ffffff",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+      "width": 500,
+      "height": 500,
+      "alt": "",
+      "rel": [
+       "full",
+       "default"
+      ],
+      "lastUpdated": "2023-10-25T16:19Z"
+     },
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/mex.png",
+      "width": 500,
+      "height": 500,
+      "alt": "",
+      "rel": [
+       "full",
+       "dark"
+      ],
+      "lastUpdated": "2023-10-25T16:22Z"
+     }
+    ]
+   }
+  },
+  {
+   "homeAway": "away",
+   "winner": false,
+   "team": {
+    "id": "467",
+    "abbreviation": "RSA",
+    "displayName": "South Africa",
+    "color": "087d5a",
+    "alternateColor": "fbb516",
+    "logos": [
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+      "width": 500,
+      "height": 500,
+      "alt": "",
+      "rel": [
+       "full",
+       "default"
+      ],
+      "lastUpdated": "2023-10-25T16:21Z"
+     },
+     {
+      "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/rsa.png",
+      "width": 500,
+      "height": 500,
+      "alt": "",
+      "rel": [
+       "full",
+       "dark"
+      ],
+      "lastUpdated": "2023-10-25T16:21Z"
+     }
+    ]
+   }
+  }
+ ],
+ "news": {
+  "header": "FIFA World Cup News",
+  "link": {
+   "language": "en",
+   "rel": [
+    "index",
+    "desktop",
+    "league"
+   ],
+   "href": "https://www.espn.com/football/worldcup/",
+   "text": "All FIFA World Cup News",
+   "shortText": "All News",
+   "isExternal": false,
+   "isPremium": false
+  },
+  "articles": [
+   {
+    "id": 49014028,
+    "nowId": "1-49014028",
+    "contentKey": "49014028-1-293-1",
+    "dataSourceIdentifier": "0d349db1af03f",
+    "type": "Media",
+    "headline": "Tuchel: England can't be World Cup favourites",
+    "description": "Thomas Tuchel says England can't be favourites because there are \"proven winners\" at the 2026 FIFA World Cup.",
+    "lastModified": "2026-06-09T22:38:42Z",
+    "published": "2026-06-09T22:38:42Z",
+    "images": [
+     {
+      "name": "Tuchel: England can't be World Cup favourites",
+      "caption": "Thomas Tuchel says England can't be favourites because there are \"proven winners\" at the 2026 FIFA World Cup.",
+      "alt": "",
+      "height": 324,
+      "width": 576,
+      "url": "https://a.espncdn.com/media/motion/2026/0609/dm_260609_COM_SOC_Presser_Tuchel_England_cant_be_World_Cup_favourites__20260609_GLOBAL/dm_260609_COM_SOC_Presser_Tuchel_England_cant_be_World_Cup_favourites__20260609_GLOBAL.jpg"
+     }
+    ],
+    "categories": [
+     {
+      "id": 72576,
+      "type": "team",
+      "uid": "s:600~t:448",
+      "guid": "217dee4e-6974-a197-49a2-afda6e1788c9",
+      "description": "England",
+      "sportId": 600,
+      "teamId": 448,
+      "team": {
+       "id": 448,
+       "description": "England",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/448/england"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/448/england"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 33303,
+      "type": "league",
+      "uid": "s:600~l:606",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2",
+      "description": "FIFA World Cup",
+      "sportId": 600,
+      "leagueId": 4,
+      "league": {
+       "id": 606,
+       "description": "FIFA World Cup",
+       "abbreviation": "FIFA World Cup",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 81497,
+      "type": "league",
+      "uid": "s:600",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259",
+      "description": "Soccer",
+      "sportId": 600,
+      "leagueId": 600,
+      "league": {
+       "id": 600,
+       "description": "Soccer",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "type": "event",
+      "uid": "s:600~l:3922~e:401860829",
+      "guid": "97a8811f-b57a-31d3-9f78-4d79336037dc",
+      "description": "Costa Rica @ England",
+      "eventId": 401860829,
+      "event": {
+       "id": 401860829,
+       "sport": "soccer",
+       "league": "fifa.friendly",
+       "description": "Costa Rica @ England"
+      }
+     },
+     {
+      "type": "guid",
+      "guid": "217dee4e-6974-a197-49a2-afda6e1788c9"
+     },
+     {
+      "type": "guid",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2"
+     },
+     {
+      "type": "guid",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259"
+     },
+     {
+      "type": "guid",
+      "guid": "97a8811f-b57a-31d3-9f78-4d79336037dc"
+     }
+    ],
+    "premium": false,
+    "links": {
+     "web": {
+      "href": "https://www.espn.com/video/clip/_/id/49014028/england-world-cup-favourites",
+      "self": {
+       "href": "https://www.espn.com/video/clip/_/id/49014028/england-world-cup-favourites",
+       "dsi": {
+        "href": "https://www.espn.com/video/clip?id=0d349db1af03f"
+       }
+      }
+     },
+     "api": {
+      "self": {
+       "href": "https://content.core.api.espn.com/v1/video/clips/49014028"
+      },
+      "artwork": {
+       "href": "https://artwork.api.espn.com/artwork/collections/media/ee45060a-8d18-4b9b-a2c7-ddb505fb9fc0"
+      }
+     },
+     "sportscenter": {
+      "href": "sportscenter://x-callback-url/showVideo?videoID=49014028&videoDSI=0d349db1af03f"
+     }
+    }
+   },
+   {
+    "id": 49003238,
+    "nowId": "1-49003238",
+    "contentKey": "49003238-1-6-1",
+    "dataSourceIdentifier": "6519fc9f12e84",
+    "type": "Story",
+    "headline": "Who are the oldest and youngest men to score at the World Cup?",
+    "description": "Pel\u00e9 is the youngest player to score in World Cup history. Check out which other players made the list of oldest and youngest goal scorers.",
+    "lastModified": "2026-06-09T21:07:56Z",
+    "published": "2026-06-09T21:07:56Z",
+    "images": [
+     {
+      "dataSourceIdentifier": "d14815930c934",
+      "id": 49011185,
+      "type": "header",
+      "name": "Pel\u00e9 [608x342]",
+      "caption": "Pel\u00e9 became the youngest goal scorer in World Cup history at 17.",
+      "alt": "Pel\u00e9",
+      "credit": "AP Photo, file",
+      "height": 342,
+      "width": 608,
+      "url": "https://a.espncdn.com/photo/2026/0609/r1670338_608x342_16-9.jpg"
+     }
+    ],
+    "categories": [
+     {
+      "id": 81497,
+      "type": "league",
+      "uid": "s:600",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259",
+      "description": "Soccer",
+      "sportId": 600,
+      "leagueId": 600,
+      "league": {
+       "id": 600,
+       "description": "Soccer",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 33303,
+      "type": "league",
+      "uid": "s:600~l:606",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2",
+      "description": "FIFA World Cup",
+      "sportId": 600,
+      "leagueId": 4,
+      "league": {
+       "id": 606,
+       "description": "FIFA World Cup",
+       "abbreviation": "FIFA World Cup",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 752886,
+      "type": "topic",
+      "guid": "de9705bb-c4dd-3e78-baab-08950b290d46",
+      "description": "seo explainer",
+      "sportId": 0,
+      "topicId": 4265
+     },
+     {
+      "id": 72570,
+      "type": "team",
+      "uid": "s:600~t:203",
+      "guid": "9e213fae-5b9d-d331-8b4b-33abdaf57b4f",
+      "description": "Mexico",
+      "sportId": 600,
+      "teamId": 203,
+      "team": {
+       "id": 203,
+       "description": "Mexico",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/203/mexico"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/203/mexico"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 72571,
+      "type": "team",
+      "uid": "s:600~t:205",
+      "guid": "2a051c42-4444-8263-799a-6cdd866bd8f7",
+      "description": "Brazil",
+      "sportId": 600,
+      "teamId": 205,
+      "team": {
+       "id": 205,
+       "description": "Brazil",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/205/brazil"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/205/brazil"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 72576,
+      "type": "team",
+      "uid": "s:600~t:448",
+      "guid": "217dee4e-6974-a197-49a2-afda6e1788c9",
+      "description": "England",
+      "sportId": 600,
+      "teamId": 448,
+      "team": {
+       "id": 448,
+       "description": "England",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/448/england"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/448/england"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 72587,
+      "type": "team",
+      "uid": "s:600~t:482",
+      "guid": "12433baf-649d-7f4f-7233-6db63a5f62f4",
+      "description": "Portugal",
+      "sportId": 600,
+      "teamId": 482,
+      "team": {
+       "id": 482,
+       "description": "Portugal",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/482/portugal"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/482/portugal"
+         }
+        }
+       }
+      }
+     },
+     {
+      "type": "guid",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259"
+     },
+     {
+      "type": "guid",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2"
+     },
+     {
+      "type": "guid",
+      "guid": "de9705bb-c4dd-3e78-baab-08950b290d46"
+     },
+     {
+      "type": "guid",
+      "guid": "9e213fae-5b9d-d331-8b4b-33abdaf57b4f"
+     },
+     {
+      "type": "guid",
+      "guid": "2a051c42-4444-8263-799a-6cdd866bd8f7"
+     },
+     {
+      "type": "guid",
+      "guid": "217dee4e-6974-a197-49a2-afda6e1788c9"
+     },
+     {
+      "type": "guid",
+      "guid": "12433baf-649d-7f4f-7233-6db63a5f62f4"
+     }
+    ],
+    "premium": false,
+    "links": {
+     "web": {
+      "href": "https://www.espn.com/soccer/story/_/id/49003238/who-oldest-youngest-men-score-world-cup"
+     },
+     "mobile": {
+      "href": "http://m.espn.go.com/soccer/story?storyId=49003238"
+     },
+     "api": {
+      "self": {
+       "href": "https://content.core.api.espn.com/v1/sports/news/49003238"
+      }
+     },
+     "app": {
+      "sportscenter": {
+       "href": "sportscenter://x-callback-url/showStory?uid=49003238"
+      }
+     }
+    },
+    "byline": "ESPN"
+   },
+   {
+    "id": 49012966,
+    "nowId": "1-49012966",
+    "contentKey": "49012966-1-5-1",
+    "dataSourceIdentifier": "cce260567b200",
+    "type": "HeadlineNews",
+    "headline": "Thomas Tuchel on England: 'We are not the favourites' for World Cup",
+    "description": "Thomas Tuchel has said England cannot be considered among the favourites to win the World Cup but insisted his players \"dare to dream\" of lifting the game's biggest prize.",
+    "lastModified": "2026-06-09T22:39:37Z",
+    "published": "2026-06-09T22:39:37Z",
+    "images": [
+     {
+      "dataSourceIdentifier": "09f9136438687",
+      "id": 49012972,
+      "type": "header",
+      "name": "Thomas Tuchel [1296x729]",
+      "alt": "Thomas Tuchel speaks at a news conference.",
+      "credit": "(Photo by Bradley Collyer/PA Images via Getty Images)",
+      "height": 729,
+      "width": 1296,
+      "url": "https://a.espncdn.com/photo/2026/0609/r1670457_1296x729_16-9.jpg"
+     },
+     {
+      "type": "Media",
+      "name": "Tuchel: England can't be World Cup favourites",
+      "caption": "Thomas Tuchel says England can't be favourites because there are \"proven winners\" at the 2026 FIFA World Cup.",
+      "height": 324,
+      "width": 576,
+      "url": "https://a.espncdn.com/media/motion/2026/0609/dm_260609_COM_SOC_Presser_Tuchel_England_cant_be_World_Cup_favourites__20260609_GLOBAL/dm_260609_COM_SOC_Presser_Tuchel_England_cant_be_World_Cup_favourites__20260609_GLOBAL.jpg"
+     }
+    ],
+    "categories": [
+     {
+      "id": 81497,
+      "type": "league",
+      "uid": "s:600",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259",
+      "description": "Soccer",
+      "sportId": 600,
+      "leagueId": 600,
+      "league": {
+       "id": 600,
+       "description": "Soccer",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 409224,
+      "type": "topic",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe",
+      "description": "news",
+      "sportId": 0,
+      "topicId": 781
+     },
+     {
+      "id": 72576,
+      "type": "team",
+      "uid": "s:600~t:448",
+      "guid": "217dee4e-6974-a197-49a2-afda6e1788c9",
+      "description": "England",
+      "sportId": 600,
+      "teamId": 448,
+      "team": {
+       "id": 448,
+       "description": "England",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/448/england"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/448/england"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 33303,
+      "type": "league",
+      "uid": "s:600~l:606",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2",
+      "description": "FIFA World Cup",
+      "sportId": 600,
+      "leagueId": 4,
+      "league": {
+       "id": 606,
+       "description": "FIFA World Cup",
+       "abbreviation": "FIFA World Cup",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 696285,
+      "type": "contributor",
+      "guid": "a1a120f9-cadb-3124-93ed-c3f8c7ac3a6b",
+      "description": "James Olley",
+      "slug": "james-olley",
+      "contributor": {
+       "id": 3853,
+       "description": "James Olley"
+      }
+     },
+     {
+      "type": "guid",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259"
+     },
+     {
+      "type": "guid",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe"
+     },
+     {
+      "type": "guid",
+      "guid": "217dee4e-6974-a197-49a2-afda6e1788c9"
+     },
+     {
+      "type": "guid",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2"
+     },
+     {
+      "type": "guid",
+      "guid": "a1a120f9-cadb-3124-93ed-c3f8c7ac3a6b"
+     }
+    ],
+    "premium": false,
+    "links": {
+     "web": {
+      "href": "https://www.espn.com/soccer/story/_/id/49012966/thomas-tuchel-england-not-favourites-world-cup"
+     },
+     "mobile": {
+      "href": "http://m.espn.go.com/soccer/story?storyId=49012966"
+     },
+     "api": {
+      "self": {
+       "href": "https://content.core.api.espn.com/v1/sports/news/49012966"
+      }
+     },
+     "app": {
+      "sportscenter": {
+       "href": "sportscenter://x-callback-url/showStory?uid=49012966"
+      }
+     }
+    },
+    "byline": "James Olley"
+   },
+   {
+    "id": 49012798,
+    "nowId": "1-49012798",
+    "contentKey": "49012798-1-5-1",
+    "dataSourceIdentifier": "a12fca1a2d428",
+    "type": "HeadlineNews",
+    "headline": "Roldan: USMNT can't be 'too honest' against 'savvy' Paraguay",
+    "description": "After their last meeting with Paraguay ended in a near-brawl, the USMNT is steeling itself for another fiery match in Friday's World Cup opener.",
+    "lastModified": "2026-06-09T20:37:59Z",
+    "published": "2026-06-09T20:37:59Z",
+    "images": [
+     {
+      "dataSourceIdentifier": "56563d43514f0",
+      "id": 49012909,
+      "type": "header",
+      "name": "Alex Freeman vs Paraguay [1296x729]",
+      "caption": "Tempers flared at the end of the USMNT's friendly with Paraguay last November.",
+      "alt": "Alexander Freeman #16 of United States fights with Paraguay players during the second half at Subaru Park on November 15, 2025 in Chester, Pennsylvania.",
+      "credit": "Vincent Carchietta/Getty Images",
+      "height": 729,
+      "width": 1296,
+      "url": "https://a.espncdn.com/photo/2026/0609/r1670456_1296x729_16-9.jpg"
+     },
+     {
+      "type": "Media",
+      "name": "Morgan: World Cup quarterfinals would be a huge success for the USMNT",
+      "caption": "Alex Morgan speaks about the expectations for the USMNT at the 2026 World Cup.",
+      "height": 324,
+      "width": 576,
+      "url": "https://a.espncdn.com/media/motion/2026/0609/dm_260609_COM_SOC_Interview_Morgan_World_Cup_quarterfinals_would_be_a_huge_success_for_the_USMNT_20260609/dm_260609_COM_SOC_Interview_Morgan_World_Cup_quarterfinals_would_be_a_huge_success_for_the_USMNT_20260609.jpg"
+     }
+    ],
+    "categories": [
+     {
+      "id": 81497,
+      "type": "league",
+      "uid": "s:600",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259",
+      "description": "Soccer",
+      "sportId": 600,
+      "leagueId": 600,
+      "league": {
+       "id": 600,
+       "description": "Soccer",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 409224,
+      "type": "topic",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe",
+      "description": "news",
+      "sportId": 0,
+      "topicId": 781
+     },
+     {
+      "id": 72593,
+      "type": "team",
+      "uid": "s:600~t:660",
+      "guid": "e6b65d49-258c-b730-b7db-df75c6b1f714",
+      "description": "United States",
+      "sportId": 600,
+      "teamId": 660,
+      "team": {
+       "id": 660,
+       "description": "United States",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/660/united-states"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/660/united-states"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 33303,
+      "type": "league",
+      "uid": "s:600~l:606",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2",
+      "description": "FIFA World Cup",
+      "sportId": 600,
+      "leagueId": 4,
+      "league": {
+       "id": 606,
+       "description": "FIFA World Cup",
+       "abbreviation": "FIFA World Cup",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 72573,
+      "type": "team",
+      "uid": "s:600~t:210",
+      "guid": "67227b21-5b19-9dd2-b805-534045f412f9",
+      "description": "Paraguay",
+      "sportId": 600,
+      "teamId": 210,
+      "team": {
+       "id": 210,
+       "description": "Paraguay",
+       "links": {
+        "web": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/210/paraguay"
+         }
+        },
+        "mobile": {
+         "teams": {
+          "href": "https://www.espn.com/soccer/team/_/id/210/paraguay"
+         }
+        }
+       }
+      }
+     },
+     {
+      "type": "guid",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259"
+     },
+     {
+      "type": "guid",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe"
+     },
+     {
+      "type": "guid",
+      "guid": "e6b65d49-258c-b730-b7db-df75c6b1f714"
+     },
+     {
+      "type": "guid",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2"
+     },
+     {
+      "type": "guid",
+      "guid": "67227b21-5b19-9dd2-b805-534045f412f9"
+     }
+    ],
+    "premium": false,
+    "links": {
+     "web": {
+      "href": "https://www.espn.com/soccer/story/_/id/49012798/cristian-roldan-usa-paraguay-2026-world-cup-savvy"
+     },
+     "mobile": {
+      "href": "http://m.espn.go.com/soccer/story?storyId=49012798"
+     },
+     "api": {
+      "self": {
+       "href": "https://content.core.api.espn.com/v1/sports/news/49012798"
+      }
+     },
+     "app": {
+      "sportscenter": {
+       "href": "sportscenter://x-callback-url/showStory?uid=49012798"
+      }
+     }
+    },
+    "byline": "Sam Borden"
+   },
+   {
+    "id": 49002985,
+    "nowId": "1-49002985",
+    "contentKey": "49002985-1-5-1",
+    "dataSourceIdentifier": "894248272a2d8",
+    "type": "HeadlineNews",
+    "headline": "Somali referee for World Cup denied entry into United States",
+    "description": "Somali referee Omar Artan has been denied entry into the United States after getting selected to officiate in the World Cup.",
+    "lastModified": "2026-06-09T20:18:14Z",
+    "published": "2026-06-09T20:18:14Z",
+    "images": [],
+    "categories": [
+     {
+      "id": 81497,
+      "type": "league",
+      "uid": "s:600",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259",
+      "description": "Soccer",
+      "sportId": 600,
+      "leagueId": 600,
+      "league": {
+       "id": 600,
+       "description": "Soccer",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 33303,
+      "type": "league",
+      "uid": "s:600~l:606",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2",
+      "description": "FIFA World Cup",
+      "sportId": 600,
+      "leagueId": 4,
+      "league": {
+       "id": 606,
+       "description": "FIFA World Cup",
+       "abbreviation": "FIFA World Cup",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 409224,
+      "type": "topic",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe",
+      "description": "news",
+      "sportId": 0,
+      "topicId": 781
+     },
+     {
+      "type": "guid",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259"
+     },
+     {
+      "type": "guid",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2"
+     },
+     {
+      "type": "guid",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe"
+     }
+    ],
+    "premium": false,
+    "links": {
+     "web": {
+      "href": "https://www.espn.com/soccer/story/_/id/49002985/somali-referee-world-cup-denied-entry-united-states"
+     },
+     "mobile": {
+      "href": "http://m.espn.go.com/soccer/story?storyId=49002985"
+     },
+     "api": {
+      "self": {
+       "href": "https://content.core.api.espn.com/v1/sports/news/49002985"
+      }
+     },
+     "app": {
+      "sportscenter": {
+       "href": "sportscenter://x-callback-url/showStory?uid=49002985"
+      }
+     }
+    },
+    "byline": "ESPN News Services"
+   },
+   {
+    "id": 49012713,
+    "nowId": "1-49012713",
+    "contentKey": "49012713-1-5-1",
+    "dataSourceIdentifier": "200809016ce35",
+    "type": "HeadlineNews",
+    "headline": "Texas joins N.Y., N.J., California in probes over FIFA World Cup ticket practices",
+    "description": "The Texas Attorney General's Office said it has opened an investigation into FIFA's World Cup ticket sale practices following complaints alleging fans were misled about seat locations for matches to be played in Dallas and Houston.",
+    "lastModified": "2026-06-09T20:16:28Z",
+    "published": "2026-06-09T20:16:28Z",
+    "images": [
+     {
+      "dataSourceIdentifier": "9d82bcb622ea0",
+      "id": 47277345,
+      "type": "header",
+      "name": "AT&T Stadium [1296x729]",
+      "caption": "England and Croatia will kick off their World Cup campaigns at AT&T Stadium in Texas.",
+      "credit": "William Purnell/Icon Sportswire via Getty Images",
+      "height": 729,
+      "width": 1296,
+      "url": "https://a.espncdn.com/photo/2025/1211/r1588135_1296x729_16-9.jpg"
+     },
+     {
+      "dataSourceIdentifier": "f7a8a55a3dc9b",
+      "id": 47466081,
+      "type": "header",
+      "name": "at&t stadium [1296x729]",
+      "caption": "General view outside the stadium, home of the Dallas Cowboys and host venue for the FIFA World Cup 2026,  ahead of the CONCACAF Gold Cup Group D match between United States and Haiti at AT&T Stadium on June 22, 2025 in Arlington, Texas.",
+      "credit": "Catherine Ivill -- AMA/Getty Images",
+      "height": 729,
+      "width": 1296,
+      "url": "https://a.espncdn.com/photo/2025/1231/r1595416_1296x729_16-9.jpg"
+     },
+     {
+      "type": "Media",
+      "name": "U.S. Soccer CEO's message to fans concerned by ticket prices",
+      "caption": "U.S. Soccer Federation CEO JT Batson says his message to fans is \"there are all sorts of ways\" to feel a part of the World Cup, amid concern over ticket prices.",
+      "height": 324,
+      "width": 576,
+      "url": "https://a.espncdn.com/media/motion/2026/0608/dm_260608_US_Soccer_CEOs_message_to_fans_concerned_by_ticket_prices/dm_260608_US_Soccer_CEOs_message_to_fans_concerned_by_ticket_prices.jpg"
+     }
+    ],
+    "categories": [
+     {
+      "id": 81497,
+      "type": "league",
+      "uid": "s:600",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259",
+      "description": "Soccer",
+      "sportId": 600,
+      "leagueId": 600,
+      "league": {
+       "id": 600,
+       "description": "Soccer",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "id": 409224,
+      "type": "topic",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe",
+      "description": "news",
+      "sportId": 0,
+      "topicId": 781
+     },
+     {
+      "id": 33303,
+      "type": "league",
+      "uid": "s:600~l:606",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2",
+      "description": "FIFA World Cup",
+      "sportId": 600,
+      "leagueId": 4,
+      "league": {
+       "id": 606,
+       "description": "FIFA World Cup",
+       "abbreviation": "FIFA World Cup",
+       "links": {
+        "web": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        },
+        "mobile": {
+         "leagues": {
+          "href": "https://www.espn.com/soccer/worldcup/"
+         }
+        }
+       }
+      }
+     },
+     {
+      "type": "guid",
+      "guid": "119cfa41-71d4-39bf-a790-6273a52b0259"
+     },
+     {
+      "type": "guid",
+      "guid": "52313677-19f8-b106-ec91-d8d17e6087fe"
+     },
+     {
+      "type": "guid",
+      "guid": "34f478c4-cf9a-35da-abd5-33db021e09d2"
+     }
+    ],
+    "premium": false,
+    "links": {
+     "web": {
+      "href": "https://www.espn.com/soccer/story/_/id/49012713/texas-joins-ny-nj-california-probes-fifa-world-cup-ticket-prices"
+     },
+     "mobile": {
+      "href": "http://m.espn.go.com/soccer/story?storyId=49012713"
+     },
+     "api": {
+      "self": {
+       "href": "https://content.core.api.espn.com/v1/sports/news/49012713"
+      }
+     },
+     "app": {
+      "sportscenter": {
+       "href": "sportscenter://x-callback-url/showStory?uid=49012713"
+      }
+     }
+    },
+    "byline": "ESPN news services"
+   }
+  ]
+ },
+ "videos": [
+  {
+   "id": 48964080,
+   "cerebroId": "6a215553c94931399340a79f",
+   "source": "espn",
+   "headline": "Will Mexico or South Korea top Group A at the World Cup?",
+   "description": "Gab & Juls debate who will win Group A between Mexico, South Korea, Czechia and South Africa at the FIFA World Cup.",
+   "lastModified": "2026-06-04T10:38:03Z",
+   "originalPublishDate": "2026-06-04T10:37:08Z",
+   "duration": 74,
+   "timeRestrictions": {
+    "embargoDate": "2026-06-04T10:34:45Z",
+    "expirationDate": "2027-06-07T10:34:45Z"
+   },
+   "deviceRestrictions": {
+    "type": "whitelist",
+    "devices": [
+     "settop",
+     "tablet",
+     "handset",
+     "ipad",
+     "desktop"
+    ]
+   },
+   "thumbnail": "https://a.espncdn.com/media/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL.jpg",
+   "links": {
+    "web": {
+     "href": "https://www.espn.com/video/clip/_/id/48964080/will-mexico-south-korea-top-group-world-cup",
+     "self": {
+      "href": "https://www.espn.com/video/clip/_/id/48964080/will-mexico-south-korea-top-group-world-cup",
+      "dsi": {
+       "href": "https://www.espn.com/video/clip?id=8357f8799a7ab"
+      }
+     }
+    },
+    "mobile": {
+     "href": "https://watch.auth.api.espn.com/video/auth/brightcove/f57699d0-6662-4d40-8033-dcd01a89b1e4/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/48964080/will-mexico-south-korea-top-group-world-cup",
+     "source": {
+      "href": "https://media.video-cdn.espn.com/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL.mp4"
+     },
+     "alert": {
+      "href": "https://m.espn.com/general/video/videoAlert?vid=48964080"
+     },
+     "streaming": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/f57699d0-6662-4d40-8033-dcd01a89b1e4/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/48964080/will-mexico-south-korea-top-group-world-cup"
+     },
+     "progressiveDownload": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/f57699d0-6662-4d40-8033-dcd01a89b1e4/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/48964080/will-mexico-south-korea-top-group-world-cup"
+     }
+    },
+    "api": {
+     "self": {
+      "href": "https://content.core.api.espn.com/v1/video/clips/48964080"
+     },
+     "artwork": {
+      "href": "https://artwork.api.espn.com/artwork/collections/media/f57699d0-6662-4d40-8033-dcd01a89b1e4"
+     }
+    },
+    "source": {
+     "href": "https://media.video-cdn.espn.com/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL_360p30_1464k.mp4",
+     "mezzanine": {
+      "href": "https://media.video-origin.espn.com/espnvideo/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL.mp4"
+     },
+     "flash": {
+      "href": "https://media.video-cdn.espn.com/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL.smil"
+     },
+     "hds": {
+      "href": "https://hds.video-cdn.espn.com/z/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL_rel.smil/manifest.f4m"
+     },
+     "HLS": {
+      "href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/playlist.m3u8",
+      "HD": {
+       "href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/playlist.m3u8"
+      },
+      "cmaf": {
+       "href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/playlist.m3u8"
+      },
+      "shield": {
+       "href": "https://watch.auth.api.espn.com/video/auth/media/f57699d0-6662-4d40-8033-dcd01a89b1e4/asset"
+      }
+     },
+     "HD": {
+      "href": "https://media.video-cdn.espn.com/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL_720p30_2896k.mp4"
+     },
+     "full": {
+      "href": "https://media.video-cdn.espn.com/motion/2026/0604/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL/dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL_360p30_1464k.mp4"
+     }
+    },
+    "sportscenter": {
+     "href": "sportscenter://x-callback-url/showVideo?videoID=48964080&videoDSI=8357f8799a7ab"
+    }
+   },
+   "ad": {
+    "sport": "Soccer",
+    "bundle": "espnfc"
+   },
+   "tracking": {
+    "sportName": "soccer",
+    "leagueName": "FIFA World Cup",
+    "coverageType": "Analysis",
+    "trackingName": "COM_SOC Analysis (Will Mexico or South Korea top Group A at the World Cup?) 2026/06/04 GLOBAL",
+    "trackingId": "dm_260604_COM_SOC_Analysis_Will__Mexico_or_South_Korea_top_Group_A_at_the_World_Cup_20260604_GLOBAL"
+   }
+  }
+ ],
+ "header": {
+  "id": "760415",
+  "uid": "s:600~l:606~e:760415",
+  "season": {
+   "year": 2026,
+   "current": true,
+   "type": 13802,
+   "name": "2026 FIFA World Cup, Group Stage"
+  },
+  "timeValid": true,
+  "competitions": [
+   {
+    "id": "760415",
+    "uid": "s:600~l:606~e:760415~c:760415",
+    "date": "2026-06-11T19:00Z",
+    "neutralSite": false,
+    "conferenceCompetition": false,
+    "boxscoreAvailable": true,
+    "commentaryAvailable": false,
+    "liveAvailable": false,
+    "onWatchESPN": false,
+    "recent": false,
+    "wallclockAvailable": false,
+    "boxscoreSource": "full",
+    "playByPlaySource": "full",
+    "competitors": [
+     {
+      "id": "203",
+      "uid": "s:600~t:203",
+      "order": 0,
+      "homeAway": "home",
+      "winner": false,
+      "team": {
+       "id": "203",
+       "guid": "9e213fae-5b9d-d331-8b4b-33abdaf57b4f",
+       "uid": "s:600~t:203",
+       "location": "Mexico",
+       "name": "Mexico",
+       "abbreviation": "MEX",
+       "displayName": "Mexico",
+       "shortDisplayName": "Mexico",
+       "color": "006847",
+       "alternateColor": "ffffff",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:19Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/mex.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:22Z"
+        }
+       ],
+       "links": [
+        {
+         "rel": [
+          "clubhouse",
+          "desktop",
+          "team"
+         ],
+         "href": "https://www.espn.com/soccer/team/_/id/203/mexico",
+         "text": "Clubhouse"
+        }
+       ],
+       "form": "WWWDD"
+      },
+      "record": [
+       {
+        "type": "total",
+        "summary": "0-0-0",
+        "displayValue": "0-0-0"
+       },
+       {
+        "type": "points",
+        "summary": "0",
+        "displayValue": "0"
+       }
+      ],
+      "groups": {
+       "abbreviation": "Group A"
+      },
+      "possession": false
+     },
+     {
+      "id": "467",
+      "uid": "s:600~t:467",
+      "order": 1,
+      "homeAway": "away",
+      "winner": false,
+      "team": {
+       "id": "467",
+       "guid": "d4889543-c668-800d-56fa-542c10023978",
+       "uid": "s:600~t:467",
+       "location": "South Africa",
+       "name": "South Africa",
+       "abbreviation": "RSA",
+       "displayName": "South Africa",
+       "shortDisplayName": "South Africa",
+       "color": "087d5a",
+       "alternateColor": "fbb516",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        },
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500-dark/rsa.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "dark"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ],
+       "links": [
+        {
+         "rel": [
+          "clubhouse",
+          "desktop",
+          "team"
+         ],
+         "href": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+         "text": "Clubhouse"
+        }
+       ],
+       "form": "WDLDL"
+      },
+      "record": [
+       {
+        "type": "total",
+        "summary": "0-0-0",
+        "displayValue": "0-0-0"
+       },
+       {
+        "type": "points",
+        "summary": "0",
+        "displayValue": "0"
+       }
+      ],
+      "groups": {
+       "abbreviation": "Group A"
+      },
+      "possession": false
+     }
+    ],
+    "notes": [],
+    "status": {
+     "type": {
+      "id": "1",
+      "name": "STATUS_SCHEDULED",
+      "state": "pre",
+      "completed": false,
+      "description": "Scheduled",
+      "detail": "Thu, June 11th at 3:00 PM EDT",
+      "shortDetail": "6/11 - 3:00 PM EDT"
+     }
+    },
+    "broadcasts": [
+     {
+      "type": {
+       "id": "1",
+       "shortName": "TV"
+      },
+      "market": {},
+      "media": {
+       "shortName": "FOX"
+      },
+      "lang": "en",
+      "region": "us",
+      "isNational": false
+     },
+     {
+      "type": {
+       "id": "1",
+       "shortName": "TV"
+      },
+      "market": {},
+      "media": {
+       "shortName": "Tele"
+      },
+      "lang": "en",
+      "region": "us",
+      "isNational": false
+     },
+     {
+      "type": {
+       "id": "4",
+       "shortName": "STREAMING"
+      },
+      "market": {},
+      "media": {
+       "shortName": "Peacock"
+      },
+      "lang": "en",
+      "region": "us",
+      "isNational": false
+     }
+    ],
+    "groups": {
+     "id": "1",
+     "name": "Group 1",
+     "abbreviation": "Group 1"
+    },
+    "isFinal": false,
+    "isThirdPlace": false,
+    "boxscoreMinutes": false,
+    "shotMapAvailable": true
+   }
+  ],
+  "links": [
+   {
+    "rel": [
+     "summary",
+     "desktop",
+     "event"
+    ],
+    "href": "https://www.espn.com/soccer/match/_/gameId/760415/south-africa-mexico",
+    "text": "Summary",
+    "shortText": "Summary",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "rel": [
+     "stats",
+     "desktop",
+     "event"
+    ],
+    "href": "https://www.espn.com/soccer/matchstats/_/gameId/760415",
+    "text": "Statistics",
+    "shortText": "Statistics",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "rel": [
+     "videos",
+     "desktop",
+     "event"
+    ],
+    "href": "https://www.espn.com/soccer/video/_/gameId/760415",
+    "text": "Videos",
+    "shortText": "Videos",
+    "isExternal": false,
+    "isPremium": false
+   }
+  ],
+  "league": {
+   "id": "606",
+   "uid": "s:600~l:606",
+   "name": "FIFA World Cup",
+   "abbreviation": "FIFA World Cup",
+   "midsizeName": "FIFA.WORLD",
+   "slug": "fifa.world",
+   "isTournament": true,
+   "links": [
+    {
+     "rel": [
+      "index",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/worldcup/",
+     "text": "Index"
+    },
+    {
+     "rel": [
+      "schedule",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/schedule/_/league/fifa.world",
+     "text": "Schedule"
+    },
+    {
+     "rel": [
+      "schedule",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:606&section=scores",
+     "text": "Schedule"
+    },
+    {
+     "rel": [
+      "standings",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/table/_/league/fifa.world",
+     "text": "Standings"
+    },
+    {
+     "rel": [
+      "scores",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/scoreboard/_/league/fifa.world",
+     "text": "Scores"
+    },
+    {
+     "rel": [
+      "scores",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:606&section=scores",
+     "text": "Scores"
+    },
+    {
+     "rel": [
+      "stats",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/stats/_/league/fifa.world",
+     "text": "Stats"
+    },
+    {
+     "rel": [
+      "teams",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/teams/_/league/fifa.world",
+     "text": "Teams"
+    }
+   ],
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/leaguelogos/soccer/500/4.png",
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/4.png",
+     "rel": [
+      "full",
+      "dark"
+     ]
+    }
+   ]
+  },
+  "linksv4": [
+   {
+    "rel": [
+     "summary",
+     "desktop",
+     "event"
+    ],
+    "href": "https://www.espn.com/soccer/match/_/gameId/760415/south-africa-mexico",
+    "text": "Gamecast",
+    "shortText": "Summary",
+    "isExternal": false,
+    "isPremium": false
+   }
+  ]
+ },
+ "wallclockAvailable": false,
+ "meta": {
+  "gp_topic": "gp-soccer-fifa.world-760415",
+  "gameSwitcherEnabled": true,
+  "picker_topic": "picker-soccer-fifa.world",
+  "gameState": "pre"
+ },
+ "standings": {
+  "fullViewLink": {
+   "text": "Full Table",
+   "href": "https://www.espn.com/soccer/table/_/league/fifa.world"
+  },
+  "header": "FIFA World Cup Standings",
+  "groups": [
+   {
+    "standings": {
+     "entries": [
+      {
+       "team": "Mexico",
+       "link": "https://www.espn.com/soccer/team/_/id/203/mexico",
+       "id": "203",
+       "uid": "s:600~t:203",
+       "stats": [
+        {
+         "name": "gamesPlayed",
+         "displayName": "Games Played",
+         "shortDisplayName": "GP",
+         "description": "Number of Games Played",
+         "abbreviation": "GP",
+         "type": "gamesplayed",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "losses",
+         "displayName": "Losses",
+         "shortDisplayName": "L",
+         "description": "Losses",
+         "abbreviation": "L",
+         "type": "losses",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "pointDifferential",
+         "displayName": "Goal Difference",
+         "shortDisplayName": "GD",
+         "description": "Goal Difference",
+         "abbreviation": "GD",
+         "type": "pointdifferential",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "points",
+         "displayName": "Points",
+         "shortDisplayName": "P",
+         "description": "Points",
+         "abbreviation": "P",
+         "type": "points",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "ties",
+         "displayName": "Draws",
+         "shortDisplayName": "D",
+         "description": "Draws",
+         "abbreviation": "D",
+         "type": "ties",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "wins",
+         "displayName": "Wins",
+         "shortDisplayName": "W",
+         "description": "Wins",
+         "abbreviation": "W",
+         "type": "wins",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "rank",
+         "displayName": "Rank",
+         "shortDisplayName": "Rank",
+         "description": "Rank",
+         "abbreviation": "R",
+         "type": "rank",
+         "value": 1.0,
+         "displayValue": "1"
+        },
+        {
+         "id": "0",
+         "name": "overall",
+         "abbreviation": "Total",
+         "displayName": "Overall",
+         "shortDisplayName": "OVER",
+         "description": "Overall Record",
+         "type": "total",
+         "summary": "0-0-0",
+         "displayValue": "0-0-0"
+        }
+       ],
+       "logo": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:19Z"
+        }
+       ]
+      },
+      {
+       "team": "South Africa",
+       "link": "https://www.espn.com/soccer/team/_/id/467/south-africa",
+       "id": "467",
+       "uid": "s:600~t:467",
+       "stats": [
+        {
+         "name": "gamesPlayed",
+         "displayName": "Games Played",
+         "shortDisplayName": "GP",
+         "description": "Number of Games Played",
+         "abbreviation": "GP",
+         "type": "gamesplayed",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "losses",
+         "displayName": "Losses",
+         "shortDisplayName": "L",
+         "description": "Losses",
+         "abbreviation": "L",
+         "type": "losses",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "pointDifferential",
+         "displayName": "Goal Difference",
+         "shortDisplayName": "GD",
+         "description": "Goal Difference",
+         "abbreviation": "GD",
+         "type": "pointdifferential",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "points",
+         "displayName": "Points",
+         "shortDisplayName": "P",
+         "description": "Points",
+         "abbreviation": "P",
+         "type": "points",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "ties",
+         "displayName": "Draws",
+         "shortDisplayName": "D",
+         "description": "Draws",
+         "abbreviation": "D",
+         "type": "ties",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "wins",
+         "displayName": "Wins",
+         "shortDisplayName": "W",
+         "description": "Wins",
+         "abbreviation": "W",
+         "type": "wins",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "rank",
+         "displayName": "Rank",
+         "shortDisplayName": "Rank",
+         "description": "Rank",
+         "abbreviation": "R",
+         "type": "rank",
+         "value": 2.0,
+         "displayValue": "2"
+        },
+        {
+         "id": "0",
+         "name": "overall",
+         "abbreviation": "Total",
+         "displayName": "Overall",
+         "shortDisplayName": "OVER",
+         "description": "Overall Record",
+         "type": "total",
+         "summary": "0-0-0",
+         "displayValue": "0-0-0"
+        }
+       ],
+       "logo": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:21Z"
+        }
+       ]
+      },
+      {
+       "team": "South Korea",
+       "link": "https://www.espn.com/soccer/team/_/id/451/south-korea",
+       "id": "451",
+       "uid": "s:600~t:451",
+       "stats": [
+        {
+         "name": "gamesPlayed",
+         "displayName": "Games Played",
+         "shortDisplayName": "GP",
+         "description": "Number of Games Played",
+         "abbreviation": "GP",
+         "type": "gamesplayed",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "losses",
+         "displayName": "Losses",
+         "shortDisplayName": "L",
+         "description": "Losses",
+         "abbreviation": "L",
+         "type": "losses",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "pointDifferential",
+         "displayName": "Goal Difference",
+         "shortDisplayName": "GD",
+         "description": "Goal Difference",
+         "abbreviation": "GD",
+         "type": "pointdifferential",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "points",
+         "displayName": "Points",
+         "shortDisplayName": "P",
+         "description": "Points",
+         "abbreviation": "P",
+         "type": "points",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "ties",
+         "displayName": "Draws",
+         "shortDisplayName": "D",
+         "description": "Draws",
+         "abbreviation": "D",
+         "type": "ties",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "wins",
+         "displayName": "Wins",
+         "shortDisplayName": "W",
+         "description": "Wins",
+         "abbreviation": "W",
+         "type": "wins",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "rank",
+         "displayName": "Rank",
+         "shortDisplayName": "Rank",
+         "description": "Rank",
+         "abbreviation": "R",
+         "type": "rank",
+         "value": 3.0,
+         "displayValue": "3"
+        },
+        {
+         "id": "0",
+         "name": "overall",
+         "abbreviation": "Total",
+         "displayName": "Overall",
+         "shortDisplayName": "OVER",
+         "description": "Overall Record",
+         "type": "total",
+         "summary": "0-0-0",
+         "displayValue": "0-0-0"
+        }
+       ],
+       "logo": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2018-06-05T12:06Z"
+        }
+       ]
+      },
+      {
+       "team": "Czechia",
+       "link": "https://www.espn.com/soccer/team/_/id/450/czechia",
+       "id": "450",
+       "uid": "s:600~t:450",
+       "stats": [
+        {
+         "name": "gamesPlayed",
+         "displayName": "Games Played",
+         "shortDisplayName": "GP",
+         "description": "Number of Games Played",
+         "abbreviation": "GP",
+         "type": "gamesplayed",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "losses",
+         "displayName": "Losses",
+         "shortDisplayName": "L",
+         "description": "Losses",
+         "abbreviation": "L",
+         "type": "losses",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "pointDifferential",
+         "displayName": "Goal Difference",
+         "shortDisplayName": "GD",
+         "description": "Goal Difference",
+         "abbreviation": "GD",
+         "type": "pointdifferential",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "points",
+         "displayName": "Points",
+         "shortDisplayName": "P",
+         "description": "Points",
+         "abbreviation": "P",
+         "type": "points",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "ties",
+         "displayName": "Draws",
+         "shortDisplayName": "D",
+         "description": "Draws",
+         "abbreviation": "D",
+         "type": "ties",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "wins",
+         "displayName": "Wins",
+         "shortDisplayName": "W",
+         "description": "Wins",
+         "abbreviation": "W",
+         "type": "wins",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "rank",
+         "displayName": "Rank",
+         "shortDisplayName": "Rank",
+         "description": "Rank",
+         "abbreviation": "R",
+         "type": "rank",
+         "value": 4.0,
+         "displayValue": "4"
+        },
+        {
+         "id": "0",
+         "name": "overall",
+         "abbreviation": "Total",
+         "displayName": "Overall",
+         "shortDisplayName": "OVER",
+         "description": "Overall Record",
+         "type": "total",
+         "summary": "0-0-0",
+         "displayValue": "0-0-0"
+        }
+       ],
+       "logo": [
+        {
+         "href": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+         "width": 500,
+         "height": 500,
+         "alt": "",
+         "rel": [
+          "full",
+          "default"
+         ],
+         "lastUpdated": "2023-10-25T16:20Z"
+        }
+       ]
+      }
+     ]
+    },
+    "header": "FIFA World Cup Standings",
+    "href": "https://www.espn.com/soccer/table/_/league/fifa.world"
+   }
+  ]
+ }
+}
