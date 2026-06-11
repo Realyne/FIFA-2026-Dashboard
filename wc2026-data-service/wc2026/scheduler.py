@@ -156,6 +156,7 @@ class Poller:
         for n, st in states.items():
             if not st.espn_event_id:
                 continue
+            final_poll = False
             # in-window upcoming matches too: lineups publish before kickoff
             if st.status in ("live", "ht", "et", "pens") or n in window_nums:
                 pass
@@ -164,10 +165,13 @@ class Poller:
                 cached = await cache.get_json(self.redis, f"wc:match:{n}")
                 if cached is not None and cached.get("status") == "finished":
                     continue
+                # must run on THIS cycle: the poller may go idle for 30min
+                # right after FT, and the live-TTL cache dies in 90s
+                final_poll = True
             else:
                 continue
             last = self._last_summary.get(n, 0.0)
-            if now.timestamp() - last < POLL_SUMMARY:
+            if not final_poll and now.timestamp() - last < POLL_SUMMARY:
                 continue
             self._last_summary[n] = now.timestamp()
             try:

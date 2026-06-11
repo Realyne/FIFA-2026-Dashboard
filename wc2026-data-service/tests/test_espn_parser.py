@@ -27,7 +27,9 @@ def test_parse_real_wc_scoreboard(provider):
     assert len(states) == 2
     by_teams = {frozenset((s.home.fifa_code, s.away.fifa_code)): s for s in states}
     opener = by_teams[frozenset(("MEX", "RSA"))]
-    assert opener.status == "upcoming"
+    # fixture captured after FT of the real opener (MEX 2-0 RSA)
+    assert opener.status == "finished"
+    assert (opener.home.score, opener.away.score) == (2, 0)
     assert opener.espn_event_id == "760415"
     assert opener.kickoff_utc == "2026-06-11T19:00:00Z"
 

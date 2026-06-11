@@ -125,21 +125,21 @@
      "uid": "s:600~l:606~e:760415~c:760415",
      "date": "2026-06-11T19:00Z",
      "startDate": "2026-06-11T19:00Z",
-     "attendance": 0,
+     "attendance": 80824,
      "timeValid": true,
      "recent": true,
      "status": {
-      "clock": 1080.0,
-      "displayClock": "18'",
-      "period": 1,
+      "clock": 5400.0,
+      "displayClock": "90'+8'",
+      "period": 2,
       "type": {
-       "id": "25",
-       "name": "STATUS_FIRST_HALF",
-       "state": "in",
-       "completed": false,
-       "description": "First Half",
-       "detail": "18'",
-       "shortDetail": "18'"
+       "id": "28",
+       "name": "STATUS_FULL_TIME",
+       "state": "post",
+       "completed": true,
+       "description": "Full Time",
+       "detail": "FT",
+       "shortDetail": "FT"
       }
      },
      "venue": {
@@ -221,14 +221,15 @@
        "type": "team",
        "order": 0,
        "homeAway": "home",
-       "winner": false,
-       "form": "WWWDD",
-       "score": "1",
+       "winner": true,
+       "advance": true,
+       "form": "WWWWD",
+       "score": "2",
        "records": [
         {
          "name": "All Splits",
          "type": "total",
-         "summary": "0-0-0",
+         "summary": "1-0-0",
          "abbreviation": "Total"
         }
        ],
@@ -307,42 +308,42 @@
         {
          "name": "foulsCommitted",
          "abbreviation": "FC",
-         "displayValue": "1"
+         "displayValue": "12"
         },
         {
          "name": "wonCorners",
          "abbreviation": "CW",
-         "displayValue": "2"
+         "displayValue": "3"
         },
         {
          "name": "goalAssists",
          "abbreviation": "A",
-         "displayValue": "0"
+         "displayValue": "2"
         },
         {
          "name": "possessionPct",
          "abbreviation": "PP",
-         "displayValue": "56"
+         "displayValue": "60.5"
         },
         {
          "name": "shotAssists",
          "abbreviation": "SHAST",
-         "displayValue": "2"
+         "displayValue": "13"
         },
         {
          "name": "shotsOnTarget",
          "abbreviation": "SOG",
-         "displayValue": "2"
+         "displayValue": "4"
         },
         {
          "name": "totalGoals",
          "abbreviation": "G",
-         "displayValue": "1"
+         "displayValue": "2"
         },
         {
          "name": "totalShots",
          "abbreviation": "SHOT",
-         "displayValue": "5"
+         "displayValue": "16"
         }
        ]
       },
@@ -353,13 +354,14 @@
        "order": 1,
        "homeAway": "away",
        "winner": false,
-       "form": "WDLDL",
+       "advance": false,
+       "form": "LWDLD",
        "score": "0",
        "records": [
         {
          "name": "All Splits",
          "type": "total",
-         "summary": "0-0-0",
+         "summary": "0-0-1",
          "abbreviation": "Total"
         }
        ],
@@ -438,12 +440,12 @@
         {
          "name": "foulsCommitted",
          "abbreviation": "FC",
-         "displayValue": "4"
+         "displayValue": "11"
         },
         {
          "name": "wonCorners",
          "abbreviation": "CW",
-         "displayValue": "0"
+         "displayValue": "1"
         },
         {
          "name": "goalAssists",
@@ -453,17 +455,17 @@
         {
          "name": "possessionPct",
          "abbreviation": "PP",
-         "displayValue": "44"
+         "displayValue": "39.5"
         },
         {
          "name": "shotAssists",
          "abbreviation": "SHAST",
-         "displayValue": "0"
+         "displayValue": "2"
         },
         {
          "name": "shotsOnTarget",
          "abbreviation": "SOG",
-         "displayValue": "0"
+         "displayValue": "2"
         },
         {
          "name": "totalGoals",
@@ -473,293 +475,368 @@
         {
          "name": "totalShots",
          "abbreviation": "SHOT",
-         "displayValue": "0"
+         "displayValue": "3"
         }
        ]
       }
      ],
-     "details": [],
-     "odds": [
+     "details": [
       {
-       "overUnder": 2.5,
-       "link": {
-        "language": "en-US",
-        "rel": [
-         "game",
-         "desktop",
-         "bets"
-        ],
-        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384",
-        "text": "Game",
-        "shortText": "Game",
-        "isExternal": true,
-        "isPremium": false,
-        "isHidden": false
+       "type": {
+        "id": "70",
+        "text": "Goal"
        },
-       "provider": {
-        "id": "100",
-        "name": "DraftKings",
-        "priority": 1,
-        "displayName": "DraftKings",
-        "logos": [
-         {
-          "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
-          "rel": [
-           "light"
-          ]
+       "clock": {
+        "value": 513.0,
+        "displayValue": "9'"
+       },
+       "team": {
+        "id": "203"
+       },
+       "scoreValue": 1,
+       "scoringPlay": true,
+       "redCard": false,
+       "yellowCard": false,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "233075",
+         "displayName": "Juli\u00e1n Qui\u00f1ones",
+         "shortName": "J. Qui\u00f1ones",
+         "fullName": "Juli\u00e1n Qui\u00f1ones",
+         "jersey": "16",
+         "team": {
+          "id": "203"
          },
-         {
-          "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
-          "rel": [
-           "dark"
-          ]
-         }
-        ]
-       },
-       "drawOdds": {
-        "moneyLine": 330,
-        "link": {
-         "language": "en-US",
-         "rel": [
-          "draw",
-          "desktop",
-          "bets",
-          "draftkings"
+         "links": [
+          {
+           "rel": [
+            "playercard",
+            "desktop",
+            "athlete"
+           ],
+           "href": "https://www.espn.com/soccer/player/_/id/233075/julian-quinones",
+           "isHidden": false
+          }
          ],
-         "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML82504739_2",
-         "text": "Draw Bet",
-         "shortText": "Draw Bet",
-         "isExternal": true,
-         "isPremium": false,
-         "isHidden": false
+         "position": "LM"
         }
+       ]
+      },
+      {
+       "type": {
+        "id": "94",
+        "text": "Yellow Card"
        },
-       "total": {
-        "displayName": "Total",
-        "shortDisplayName": "Total",
-        "over": {
-         "open": {
-          "line": "o2.5",
-          "odds": "-105"
+       "clock": {
+        "value": 981.0,
+        "displayValue": "17'"
+       },
+       "team": {
+        "id": "467"
+       },
+       "scoreValue": 0,
+       "scoringPlay": false,
+       "redCard": false,
+       "yellowCard": true,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "256691",
+         "displayName": "Teboho Mokoena",
+         "shortName": "T. Mokoena",
+         "fullName": "Teboho Mokoena",
+         "jersey": "4",
+         "team": {
+          "id": "467"
          },
-         "close": {
-          "line": "o2.5",
-          "odds": "+130"
-         },
-         "current": {
-          "line": "o2.5",
-          "odds": "-129",
-          "link": {
+         "links": [
+          {
            "rel": [
-            "over",
-            "bets"
+            "playercard",
+            "desktop",
+            "athlete"
            ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU84979112O250_1",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "over",
-             "betType": "straight",
-             "betDetails": "Over:2.5"
-            }
-           }
+           "href": "https://www.espn.com/soccer/player/_/id/256691/teboho-mokoena",
+           "isHidden": false
           }
-         }
-        },
-        "under": {
-         "open": {
-          "line": "u2.5",
-          "odds": "-130"
-         },
-         "close": {
-          "line": "u2.5",
-          "odds": "-160"
-         },
-         "current": {
-          "line": "u2.5",
-          "odds": "+109",
-          "link": {
-           "rel": [
-            "under",
-            "bets"
-           ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0OU84979112U250_3",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "under",
-             "betType": "straight",
-             "betDetails": "Under:2.5"
-            }
-           }
-          }
-         }
+         ],
+         "position": "CM-R"
         }
+       ]
+      },
+      {
+       "type": {
+        "id": "94",
+        "text": "Yellow Card"
        },
-       "pointSpread": {
-        "displayName": "Spread",
-        "shortDisplayName": "Spread",
-        "home": {
-         "open": {
-          "line": "-0.5",
-          "odds": "-195"
+       "clock": {
+        "value": 1356.0,
+        "displayValue": "23'"
+       },
+       "team": {
+        "id": "203"
+       },
+       "scoreValue": 0,
+       "scoringPlay": false,
+       "redCard": false,
+       "yellowCard": true,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "303577",
+         "displayName": "Brian Guti\u00e9rrez",
+         "shortName": "B. Guti\u00e9rrez",
+         "fullName": "Brian Guti\u00e9rrez",
+         "jersey": "26",
+         "team": {
+          "id": "203"
          },
-         "close": {
-          "line": "-1.5",
-          "odds": "+140"
-         },
-         "current": {
-          "line": "-1.5",
-          "odds": "-165",
-          "link": {
+         "headshot": "https://a.espncdn.com/i/headshots/soccer/players/full/303577.png",
+         "links": [
+          {
            "rel": [
-            "homeSpread",
-            "bets"
+            "playercard",
+            "desktop",
+            "athlete"
            ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC84979113N150_1",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "home",
-             "betType": "straight",
-             "betDetails": "Spread:MEX-1.5"
-            }
-           }
+           "href": "https://www.espn.com/soccer/player/_/id/303577/brian-gutierrez",
+           "isHidden": false
           }
-         }
-        },
-        "away": {
-         "open": {
-          "line": "+0.5",
-          "odds": "+125"
-         },
-         "close": {
-          "line": "+1.5",
-          "odds": "-195"
-         },
-         "current": {
-          "line": "+1.5",
-          "odds": "+115",
-          "link": {
-           "rel": [
-            "awaySpread",
-            "bets"
-           ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0HC84979113P150_3",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "away",
-             "betType": "straight",
-             "betDetails": "Spread:RSA+1.5"
-            }
-           }
-          }
-         }
+         ],
+         "position": "CM-R"
         }
+       ]
+      },
+      {
+       "type": {
+        "id": "93",
+        "text": "Red Card"
        },
-       "moneyline": {
-        "displayName": "Moneyline",
-        "shortDisplayName": "ML",
-        "home": {
-         "open": {
-          "odds": "-170"
+       "clock": {
+        "value": 2940.0,
+        "displayValue": "49'"
+       },
+       "team": {
+        "id": "467"
+       },
+       "scoreValue": 0,
+       "scoringPlay": false,
+       "redCard": true,
+       "yellowCard": false,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "228595",
+         "displayName": "Sphephelo Sithole",
+         "shortName": "S. Sithole",
+         "fullName": "Sphephelo Sithole",
+         "jersey": "13",
+         "team": {
+          "id": "467"
          },
-         "close": {
-          "odds": "-230"
-         },
-         "current": {
-          "odds": "-1000",
-          "link": {
+         "links": [
+          {
            "rel": [
-            "home",
-            "bets"
+            "playercard",
+            "desktop",
+            "athlete"
            ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML84930095_1",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "home",
-             "betType": "straight"
-            }
-           }
+           "href": "https://www.espn.com/soccer/player/_/id/228595/sphephelo-sithole",
+           "isHidden": false
           }
-         }
-        },
-        "away": {
-         "open": {
-          "odds": "+500"
-         },
-         "close": {
-          "odds": "+750"
-         },
-         "current": {
-          "odds": "+2800",
-          "link": {
-           "rel": [
-            "away",
-            "bets"
-           ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML84930095_3",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "away",
-             "betType": "straight"
-            }
-           }
-          }
-         }
-        },
-        "draw": {
-         "open": {
-          "odds": "+295"
-         },
-         "close": {
-          "odds": "+330"
-         },
-         "current": {
-          "odds": "+750",
-          "link": {
-           "rel": [
-            "draw",
-            "bets"
-           ],
-           "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F33260384%3Foutcomes%3D0ML84930095_2",
-           "tracking": {
-            "campaign": "betting-integrations",
-            "tags": {
-             "league": "fifa.world",
-             "sport": "soccer",
-             "gameId": 760415,
-             "betSide": "draw",
-             "betType": "straight"
-            }
-           }
-          }
-         }
+         ],
+         "position": "CM"
         }
+       ]
+      },
+      {
+       "type": {
+        "id": "137",
+        "text": "Goal - Header"
        },
-       "details": "MEX -230"
+       "clock": {
+        "value": 3996.0,
+        "displayValue": "67'"
+       },
+       "team": {
+        "id": "203"
+       },
+       "scoreValue": 1,
+       "scoringPlay": true,
+       "redCard": false,
+       "yellowCard": false,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "167060",
+         "displayName": "Ra\u00fal Jim\u00e9nez",
+         "shortName": "R. Jim\u00e9nez",
+         "fullName": "Ra\u00fal Jim\u00e9nez",
+         "jersey": "9",
+         "team": {
+          "id": "203"
+         },
+         "links": [
+          {
+           "rel": [
+            "playercard",
+            "desktop",
+            "athlete"
+           ],
+           "href": "https://www.espn.com/soccer/player/_/id/167060/raul-jimenez",
+           "isHidden": false
+          }
+         ],
+         "position": "F"
+        }
+       ]
+      },
+      {
+       "type": {
+        "id": "94",
+        "text": "Yellow Card"
+       },
+       "clock": {
+        "value": 4396.0,
+        "displayValue": "74'"
+       },
+       "team": {
+        "id": "467"
+       },
+       "scoreValue": 0,
+       "scoringPlay": false,
+       "redCard": false,
+       "yellowCard": true,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "266125",
+         "displayName": "Nkosinathi Sibisi",
+         "shortName": "N. Sibisi",
+         "fullName": "Nkosinathi Sibisi",
+         "jersey": "19",
+         "team": {
+          "id": "467"
+         },
+         "links": [
+          {
+           "rel": [
+            "playercard",
+            "desktop",
+            "athlete"
+           ],
+           "href": "https://www.espn.com/soccer/player/_/id/266125/nkosinathi-sibisi",
+           "isHidden": false
+          }
+         ],
+         "position": "CD-R"
+        }
+       ]
+      },
+      {
+       "type": {
+        "id": "93",
+        "text": "Red Card"
+       },
+       "clock": {
+        "value": 5003.0,
+        "displayValue": "84'"
+       },
+       "team": {
+        "id": "467"
+       },
+       "scoreValue": 0,
+       "scoringPlay": false,
+       "redCard": true,
+       "yellowCard": false,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "157046",
+         "displayName": "Themba Zwane",
+         "shortName": "T. Zwane",
+         "fullName": "Themba Zwane",
+         "jersey": "11",
+         "team": {
+          "id": "467"
+         },
+         "links": [
+          {
+           "rel": [
+            "playercard",
+            "desktop",
+            "athlete"
+           ],
+           "href": "https://www.espn.com/soccer/player/_/id/157046/themba-zwane",
+           "isHidden": false
+          }
+         ],
+         "position": "SUB"
+        }
+       ]
+      },
+      {
+       "type": {
+        "id": "93",
+        "text": "Red Card"
+       },
+       "clock": {
+        "value": 5400.0,
+        "displayValue": "90'+2'"
+       },
+       "team": {
+        "id": "203"
+       },
+       "scoreValue": 0,
+       "scoringPlay": false,
+       "redCard": true,
+       "yellowCard": false,
+       "penaltyKick": false,
+       "ownGoal": false,
+       "shootout": false,
+       "athletesInvolved": [
+        {
+         "id": "224323",
+         "displayName": "C\u00e9sar Montes",
+         "shortName": "C. Montes",
+         "fullName": "C\u00e9sar Montes",
+         "jersey": "3",
+         "team": {
+          "id": "203"
+         },
+         "links": [
+          {
+           "rel": [
+            "playercard",
+            "desktop",
+            "athlete"
+           ],
+           "href": "https://www.espn.com/soccer/player/_/id/224323/cesar-montes",
+           "isHidden": false
+          }
+         ],
+         "position": "CD-R"
+        }
+       ]
       }
+     ],
+     "odds": [
+      null
      ],
      "wasSuspended": false,
      "playByPlayAvailable": true,
@@ -767,17 +844,17 @@
     }
    ],
    "status": {
-    "clock": 1080.0,
-    "displayClock": "18'",
-    "period": 1,
+    "clock": 5400.0,
+    "displayClock": "90'+8'",
+    "period": 2,
     "type": {
-     "id": "25",
-     "name": "STATUS_FIRST_HALF",
-     "state": "in",
-     "completed": false,
-     "description": "First Half",
-     "detail": "18'",
-     "shortDetail": "18'"
+     "id": "28",
+     "name": "STATUS_FULL_TIME",
+     "state": "post",
+     "completed": true,
+     "description": "Full Time",
+     "detail": "FT",
+     "shortDetail": "FT"
     }
    },
    "venue": {
@@ -787,13 +864,13 @@
     {
      "language": "en-US",
      "rel": [
-      "live",
+      "summary",
       "desktop",
       "event"
      ],
-     "href": "https://www.espn.com/soccer/match/_/gameId/760415",
-     "text": "Gamecast",
-     "shortText": "Live",
+     "href": "https://www.espn.com/soccer/match/_/gameId/760415/south-africa-mexico",
+     "text": "Summary",
+     "shortText": "Summary",
      "isExternal": false,
      "isPremium": false,
      "isHidden": false
@@ -1112,7 +1189,22 @@
        "provider": {
         "id": "100",
         "name": "DraftKings",
-        "priority": 1
+        "priority": 1,
+        "displayName": "DraftKings",
+        "logos": [
+         {
+          "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+          "rel": [
+           "light"
+          ]
+         },
+         {
+          "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+          "rel": [
+           "dark"
+          ]
+         }
+        ]
        },
        "drawOdds": {
         "moneyLine": 205,
@@ -1202,7 +1294,7 @@
          },
          "close": {
           "line": "-0.5",
-          "odds": "+150",
+          "odds": "+145",
           "link": {
            "rel": [
             "homeSpread",
@@ -1230,7 +1322,7 @@
          },
          "close": {
           "line": "+0.5",
-          "odds": "-210",
+          "odds": "-205",
           "link": {
            "rel": [
             "awaySpread",
@@ -1260,7 +1352,7 @@
           "odds": "+155"
          },
          "close": {
-          "odds": "+170",
+          "odds": "+165",
           "link": {
            "rel": [
             "home",
@@ -1285,7 +1377,7 @@
           "odds": "+170"
          },
          "close": {
-          "odds": "+195",
+          "odds": "+200",
           "link": {
            "rel": [
             "away",
@@ -1331,7 +1423,7 @@
          }
         }
        },
-       "details": "KOR +170"
+       "details": "KOR +165"
       }
      ],
      "wasSuspended": false,
