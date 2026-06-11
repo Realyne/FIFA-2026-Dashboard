@@ -6,18 +6,28 @@ Reads cached MatchDetails from Redis (wc:match:*), takes every lineup row
 by normalized name within the same national team; falls back to
 (shirt_number, last name). Run after the first real lineups publish
 (June 11+); safe to re-run any time.
+
+When Redis has no lineups (e.g. dev runs with fakeredis://, which is
+process-local), falls back to fetching today's summaries straight from
+ESPN; --date YYYYMMDD overrides which scoreboard day is fetched.
 """
 from __future__ import annotations
 
+import argparse
 import asyncio
 import sys
 import unicodedata
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from wc2026 import cache  # noqa: E402
 from wc2026.config import settings  # noqa: E402
 from wc2026.players_db import connect  # noqa: E402
+from wc2026.providers.espn import ESPNProvider  # noqa: E402
 
 
 def norm(s: str) -> str:
@@ -45,9 +55,41 @@ async def collect_lineups() -> list[dict]:
     return rows
 
 
+async def fetch_lineups_from_espn(date: str) -> list[dict]:
+    rows = []
+    async with httpx.AsyncClient(
+        timeout=20,
+        headers={"User-Agent": "wc2026-dashboard (zangjiucheng@gmail.com)"},
+    ) as client:
+        prov = ESPNProvider(client)
+        for state in await prov.get_scoreboard(date):
+            detail = await prov.get_match_detail(state.espn_event_id, state)
+            for side in ("home", "away"):
+                lineup = (detail.lineups or {}).get(side)
+                code = getattr(state, side).fifa_code
+                if not lineup or not code:
+                    continue
+                for p in lineup.starters + lineup.bench:
+                    if p.player_espn_id:
+                        rows.append({"fifa_code": code, "name": p.name,
+                                     "shirt_number": p.shirt_number,
+                                     "espn_id": p.player_espn_id})
+    return rows
+
+
 def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date", default=None,
+                    help="YYYYMMDD scoreboard day for the ESPN fallback (default: today US/Eastern)")
+    args = ap.parse_args()
+
     lineup_rows = asyncio.run(collect_lineups())
     print(f"{len(lineup_rows)} lineup rows from Redis")
+    if not lineup_rows:
+        date = args.date or datetime.now(ZoneInfo("America/New_York")).strftime("%Y%m%d")
+        print(f"falling back to ESPN summaries for {date}")
+        lineup_rows = asyncio.run(fetch_lineups_from_espn(date))
+        print(f"{len(lineup_rows)} lineup rows from ESPN")
     conn = connect()
     players = conn.execute(
         "SELECT player_id, name, fifa_code, shirt_number FROM players").fetchall()

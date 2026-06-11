@@ -150,11 +150,21 @@ class Poller:
                 await self.redis.publish(cache.CHANNEL, json.dumps({"type": "bracket"}))
         return states
 
-    async def poll_summaries(self, states: dict[int, MatchState], now: datetime) -> None:
+    async def poll_summaries(self, states: dict[int, MatchState], now: datetime,
+                             window_nums: set[int] | None = None) -> None:
+        window_nums = window_nums or set()
         for n, st in states.items():
-            if st.status not in ("live", "ht", "et", "pens"):
-                continue
             if not st.espn_event_id:
+                continue
+            # in-window upcoming matches too: lineups publish before kickoff
+            if st.status in ("live", "ht", "et", "pens") or n in window_nums:
+                pass
+            elif st.status == "finished":
+                # one final poll so the full-time detail survives for recaps
+                cached = await cache.get_json(self.redis, f"wc:match:{n}")
+                if cached is not None and cached.get("status") == "finished":
+                    continue
+            else:
                 continue
             last = self._last_summary.get(n, 0.0)
             if now.timestamp() - last < POLL_SUMMARY:
@@ -162,8 +172,15 @@ class Poller:
             self._last_summary[n] = now.timestamp()
             try:
                 detail = await self.provider.get_match_detail(st.espn_event_id, st)
+                # ESPN's summary header can lag the scoreboard around status
+                # flips (kickoff/FT) — never let it move the status backwards
+                if (st.status != "upcoming" and detail.status == "upcoming") or \
+                   (st.status == "finished" and detail.status != "finished"):
+                    detail.status = st.status
+                    detail.minute_display = detail.minute_display or st.minute_display
+                ttl = cache.TTL_MATCH_FINAL if detail.status == "finished" else cache.TTL_MATCH
                 await cache.store_json(self.redis, f"wc:match:{n}",
-                                       detail.model_dump(), cache.TTL_MATCH)
+                                       detail.model_dump(), ttl)
                 # summary may carry fresher status/score than the scoreboard
                 new_state = MatchState(**{k: v for k, v in detail.model_dump().items()
                                           if k in MatchState.model_fields})
@@ -181,9 +198,11 @@ class Poller:
             now = datetime.now(timezone.utc)
             try:
                 states = await self.poll_scoreboard(now)
-                await self.poll_summaries(states, now)
+                windows = live_windows(now, states)
+                await self.poll_summaries(states, now,
+                                          {m["match_number"] for m in windows})
                 await self._record_success()
-                in_window = bool(live_windows(now, states))
+                in_window = bool(windows)
                 delay = POLL_LIVE if in_window else POLL_IDLE
                 # leaving idle: wake up for the next window opening
                 if not in_window:

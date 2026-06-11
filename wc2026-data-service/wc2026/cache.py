@@ -2,7 +2,7 @@
 
 Keys:
   wc:states              hash  match_number -> MatchState JSON (no TTL)
-  wc:match:{n}           str   MatchDetail JSON (TTL 90s)
+  wc:match:{n}           str   MatchDetail JSON (TTL 90s live, 7d once finished)
   wc:scoreboard:{date}   str   scoreboard response JSON (TTL 60s)
   wc:bracket_resolved    str   resolved bracket JSON (TTL 300s)
   wc:standings           str   standings JSON (TTL 300s)
@@ -23,6 +23,7 @@ CHANNEL = "wc:updates"
 
 TTL_SCOREBOARD = 60
 TTL_MATCH = 90
+TTL_MATCH_FINAL = 7 * 24 * 3600  # finished matches keep their detail for the recap page
 TTL_BRACKET = 300
 
 
