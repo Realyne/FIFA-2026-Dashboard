@@ -2,7 +2,8 @@
 
 Keys:
   wc:states              hash  match_number -> MatchState JSON (no TTL)
-  wc:match:{n}           str   MatchDetail JSON (TTL 90s live, 7d once finished)
+  wc:match:{n}           str   MatchDetail JSON (TTL 90s live; finished matches
+                               are kept forever so past timelines stay visible)
   wc:scoreboard:{date}   str   scoreboard response JSON (TTL 60s)
   wc:bracket_resolved    str   resolved bracket JSON (TTL 300s)
   wc:standings           str   standings JSON (TTL 300s)
@@ -23,7 +24,7 @@ CHANNEL = "wc:updates"
 
 TTL_SCOREBOARD = 60
 TTL_MATCH = 90
-TTL_MATCH_FINAL = 7 * 24 * 3600  # finished matches keep their detail for the recap page
+TTL_MATCH_FINAL = None  # finished: no expiry — recap/history pages need it forever
 TTL_BRACKET = 300
 
 
@@ -68,8 +69,8 @@ async def store_state(r: aioredis.Redis, new: MatchState,
     return patch
 
 
-async def store_json(r: aioredis.Redis, key: str, value: Any, ttl: int) -> None:
-    await r.set(key, json.dumps(value), ex=ttl)
+async def store_json(r: aioredis.Redis, key: str, value: Any, ttl: int | None) -> None:
+    await r.set(key, json.dumps(value), ex=ttl)  # ex=None -> no expiry
 
 
 async def get_json(r: aioredis.Redis, key: str) -> Any | None:
