@@ -93,8 +93,14 @@ set -euo pipefail
 cd '${REMOTE_DIR}'
 export API_PORT='${API_PORT}'
 # ubuntu is not in the docker group on this host — sudo is required.
+# The 6.8GB root disk fills with dangling layers after a few rebuilds —
+# clear them before and after every build.
+sudo docker image prune -f >/dev/null
+sudo docker builder prune -f >/dev/null
 sudo docker compose -f docker-compose.prod.yml up --build -d
+sudo docker image prune -f >/dev/null
 sudo docker compose -f docker-compose.prod.yml ps
+df -h / | tail -1
 EOF
 
 if [[ "${SETUP_SSL}" -eq 1 ]]; then
