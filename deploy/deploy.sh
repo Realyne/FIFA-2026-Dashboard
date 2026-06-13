@@ -93,12 +93,16 @@ set -euo pipefail
 cd '${REMOTE_DIR}'
 export API_PORT='${API_PORT}'
 # ubuntu is not in the docker group on this host — sudo is required.
-# The 6.8GB root disk fills with dangling layers after a few rebuilds —
-# clear them before and after every build.
-sudo docker image prune -f >/dev/null
+# The 6.8GB root disk fills after a few rebuilds. -f only prunes
+# *dangling* (untagged) images; the previous api build can linger as a
+# tagged image and never get reclaimed (1.2GB seen in the wild). -a
+# prunes every image not used by a running container, so the old build
+# is always cleared. The pre-build pass keeps the running image (still
+# in use); the post-build pass drops it once the new container is up.
+sudo docker image prune -af >/dev/null
 sudo docker builder prune -f >/dev/null
 sudo docker compose -f docker-compose.prod.yml up --build -d
-sudo docker image prune -f >/dev/null
+sudo docker image prune -af >/dev/null
 sudo docker compose -f docker-compose.prod.yml ps
 df -h / | tail -1
 EOF
