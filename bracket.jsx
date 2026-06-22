@@ -11,6 +11,7 @@ const NODE_W = 178;
 const COL_GAP = 26;
 const ROW_H = 122;        // R32 rows
 const CENTER_W = 250;
+const MOBILE_BREAKPOINT = 700;
 
 function sourcesOf(m) {
   const out = [];
@@ -98,6 +99,214 @@ function ColTitle({ children }) {
   return <div className="label" style={{ fontSize: 9, textAlign: "center", letterSpacing: ".12em", marginBottom: 6 }}>{children}</div>;
 }
 
+function roundTitle(round) {
+  if (round === "r32") return "Round of 32";
+  if (round === "r16") return "Round of 16";
+  if (round === "qf") return "Quarterfinal";
+  if (round === "sf") return "Semifinal";
+  if (round === "third_place") return "Third place";
+  if (round === "final") return "Final";
+  return WC.ROUNDS && WC.ROUNDS[round] ? WC.ROUNDS[round] : round;
+}
+
+function mobileRoundConfigs(halves) {
+  const [left, right] = halves;
+  return [
+    {
+      key: "r32",
+      short: "R32",
+      title: "Round of 32",
+      dek: "The first knockout wave, split into the two sides of the draw.",
+      groups: [
+        { title: "Left side", note: "Feeds Semifinal M101", nums: left.r32 },
+        { title: "Right side", note: "Feeds Semifinal M102", nums: right.r32 },
+      ],
+    },
+    {
+      key: "r16",
+      short: "R16",
+      title: "Round of 16",
+      dek: "Winners from the opening knockout round start converging.",
+      groups: [
+        { title: "Left side", note: "Road to M101", nums: left.r16 },
+        { title: "Right side", note: "Road to M102", nums: right.r16 },
+      ],
+    },
+    {
+      key: "qf",
+      short: "QF",
+      title: "Quarterfinals",
+      dek: "Eight teams remain, four matches decide the semifinalists.",
+      groups: [
+        { title: "Left side", note: "Winner paths into M101", nums: left.qf },
+        { title: "Right side", note: "Winner paths into M102", nums: right.qf },
+      ],
+    },
+    {
+      key: "sf",
+      short: "Semi",
+      title: "Semifinals",
+      dek: "The last two gates before MetLife.",
+      groups: [
+        { title: "Semifinal lane", note: "Winners to M104 · losers to M103", nums: [...left.sf, ...right.sf] },
+      ],
+    },
+    {
+      key: "finals",
+      short: "Finals",
+      title: "Final weekend",
+      dek: "The trophy match and third-place playoff.",
+      groups: [
+        { title: "Medal matches", note: "Jul 18-19", nums: [104, 103] },
+      ],
+    },
+  ];
+}
+
+function mobileRoundStatus(nums) {
+  const matches = nums.map((n) => WC.getMatch(n)).filter(Boolean);
+  const live = matches.filter((m) => isLiveStatus(m.status)).length;
+  const finished = matches.filter((m) => m.status === "finished").length;
+  const total = matches.length;
+  const upcoming = Math.max(0, total - live - finished);
+  const label = live ? `${live} live` : finished === total ? "Complete" : `${upcoming} upcoming`;
+  return { total, live, finished, upcoming, label };
+}
+
+function defaultMobileRound(rounds) {
+  const liveRound = rounds.find((r) => mobileRoundStatus(r.groups.flatMap((g) => g.nums)).live > 0);
+  if (liveRound) return liveRound.key;
+  const nextRound = rounds.find((r) => mobileRoundStatus(r.groups.flatMap((g) => g.nums)).finished < mobileRoundStatus(r.groups.flatMap((g) => g.nums)).total);
+  return nextRound ? nextRound.key : "finals";
+}
+
+function MobileMatchCard({ num, onOpen }) {
+  const m = WC.getMatch(num);
+  if (!m) return null;
+  const live = isLiveStatus(m.status);
+  const [winA, winB] = matchWinnerSides(m);
+  const venue = WC.store.venues[m.venue_id] || {};
+  const city = (venue.city || "").split("(")[0].trim();
+  const feeds = m.feeds_into ? `Winner to M${m.feeds_into}` : (m.round === "final" ? "Trophy match" : "Tap for details");
+  const open = () => onOpen(num);
+  const onKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      open();
+    }
+  };
+
+  return (
+    <div
+      className={"sticker lift mobile-match-card" + (live ? " live" : "") + (m.round === "final" ? " final" : "")}
+      onClick={open}
+      onKeyDown={onKeyDown}
+      role="button"
+      tabIndex={0}
+      title={`${WC.sideLabel(m.home)} v ${WC.sideLabel(m.away)}`}
+    >
+      <div className="mobile-match-head">
+        <span className="label">{roundTitle(m.round)} · M{m.match_number}</span>
+        <StatusBadge match={m} />
+      </div>
+      <TeamLine side={m.home} winner={winA} live={live} />
+      <div className="mobile-match-divider"></div>
+      <TeamLine side={m.away} winner={winB} live={live} />
+      <div className="mobile-match-meta">
+        <span><ZPin size={12} /> {city || "Venue TBD"}</span>
+        <span>{WC.kickoffLocal(m)}</span>
+      </div>
+      <div className="mobile-match-path">
+        <span>{feeds}</span>
+        <span aria-hidden="true">→</span>
+      </div>
+    </div>
+  );
+}
+
+function MobileBracket({ halves, go }) {
+  const rounds = mobileRoundConfigs(halves);
+  const [pickedRound, setPickedRound] = useState(null);
+  const activeKey = pickedRound || defaultMobileRound(rounds);
+  const active = rounds.find((r) => r.key === activeKey) || rounds[0];
+  const activeNums = active.groups.flatMap((g) => g.nums);
+  const activeStatus = mobileRoundStatus(activeNums);
+  const final = WC.getMatch(104);
+
+  return (
+    <div className="rise mobile-bracket">
+      <div className="wrap mobile-bracket-wrap">
+        <ZineHeading kicker="Mobile knockout tracker" title="Road to MetLife" color="var(--sun)" />
+        <p className="mobile-bracket-intro">
+          Browse by round instead of pinching around the full desktop graph. Tap any card for match details, lineups, and live events.
+        </p>
+
+        <div className="sticker mobile-bracket-hero" role="button" tabIndex={0}
+          onClick={() => go("match", { num: 104 })}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              go("match", { num: 104 });
+            }
+          }}>
+          <div>
+            <span className="label">Final destination</span>
+            <div className="display"><ZTrophy size={22} /> Match 104</div>
+          </div>
+          <div className="mobile-bracket-hero-copy">
+            <strong>{final ? `${WC.sideLabel(final.home)} v ${WC.sideLabel(final.away)}` : "The Final"}</strong>
+            <span>Jul 19 · MetLife Stadium</span>
+          </div>
+        </div>
+
+        <div className="mobile-round-tabs" role="tablist" aria-label="Knockout rounds">
+          {rounds.map((round) => {
+            const status = mobileRoundStatus(round.groups.flatMap((g) => g.nums));
+            const selected = round.key === active.key;
+            return (
+              <button
+                key={round.key}
+                className={"mobile-round-tab" + (selected ? " active" : "")}
+                onClick={() => setPickedRound(round.key)}
+                role="tab"
+                aria-selected={selected}
+              >
+                <span>{round.short}</span>
+                <small>{status.label}</small>
+              </button>
+            );
+          })}
+        </div>
+
+        <section className="mobile-round-panel" aria-live="polite">
+          <div className="mobile-round-title">
+            <div>
+              <span className="label">{activeStatus.total} matches · {activeStatus.label}</span>
+              <h3 className="display">{active.title}</h3>
+            </div>
+            <span className={"chip " + (activeStatus.live ? "live" : activeStatus.finished === activeStatus.total ? "finished" : "upcoming")}>
+              {activeStatus.label}
+            </span>
+          </div>
+          <p>{active.dek}</p>
+
+          {active.groups.map((group) => (
+            <div className="mobile-round-group" key={group.title}>
+              <div className="mobile-group-heading">
+                <span>{group.title}</span>
+                <small>{group.note}</small>
+              </div>
+              <div className="mobile-match-list">
+                {group.nums.map((num) => <MobileMatchCard key={num} num={num} onOpen={(n) => go("match", { num: n })} />)}
+              </div>
+            </div>
+          ))}
+        </section>
+      </div>
+    </div>
+  );
+}
+
 /* ============================================================
    Canvas viewport: defaults to fit-to-screen; wheel / pinch zooms
    toward the pointer, drag pans, buttons for −/fit/+.
@@ -115,6 +324,7 @@ function Bracket({ go }) {
   const [dims, setDims] = useState({ w: 2000, h: 1000 });
   const [zoomPct, setZoomPct] = useState(100);
   const [viewH, setViewH] = useState(520);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= MOBILE_BREAKPOINT);
 
   const cam = useRef({ s: 1, tx: 0, ty: 0, fit: 1, w: 2000, h: 1000 });
   const pointers = useRef(new Map()); // active pointers (pan/pinch)
@@ -282,10 +492,18 @@ function Bracket({ go }) {
     return () => { clearTimeout(t1); clearTimeout(t2); window.removeEventListener("resize", tick); };
   }, []);
 
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   // live re-renders replace the transformed node — re-apply the camera
   useEffect(() => { apply(); });
 
   if (!halves) return null;
+  if (isMobile) return <MobileBracket halves={halves} go={go} />;
 
   const colH = 8 * ROW_H;
   const column = (nums, key) => (
