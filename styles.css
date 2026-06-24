@@ -288,234 +288,134 @@ a { color: var(--sun-d); }
   .match-hero { padding: 20px 12px !important; }
 }
 
-/* ---------- mobile bracket redesign ---------- */
-.mobile-bracket .mobile-bracket-wrap {
-  padding-top: 22px;
+/* ============================================================
+   Mobile bracket — "Road to MetLife"
+   A continuous vertical road: rounds are stations on a dashed
+   spine (echoing the desktop's marching-ants connectors) that
+   climbs to the Final. Feeder / onward references are buttons
+   that scroll-and-spotlight their target match.
+   ============================================================ */
+.mobile-road .road-wrap { padding-top: 20px; }
+
+.road-head { margin-bottom: 14px; }
+.road-head .label { display: block; }
+.road-head .road-title { font-size: 34px; margin: 5px 0 0; line-height: .9; }
+
+/* ---- focus card: what matters now (live / next / destination) ---- */
+.road-focus {
+  display: block; width: 100%; text-align: left;
+  padding: 13px 15px 12px; margin-bottom: 18px; cursor: pointer; outline: none;
+  background: var(--card); border-width: 3px;
 }
-.mobile-bracket-intro {
-  margin: -4px 0 16px;
-  font-size: 14px;
-  line-height: 1.55;
-  color: var(--ink-soft);
+.road-focus.live { border-color: var(--sun-d); background: #fff6ee; }
+.road-focus.final { border-color: var(--sun-d); background: #f6e3b0; }
+.road-focus:focus-visible { box-shadow: 0 0 0 4px rgba(232,93,42,.28), var(--shadow-sticker); }
+.road-focus-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.road-focus-title { font-size: 20px; margin: 7px 0 3px; }
+.road-focus-meta {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px;
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint);
 }
-.mobile-bracket-hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 14px;
-  margin-bottom: 16px;
-  cursor: pointer;
-  background: #f6e3b0;
-  border-color: var(--sun-d);
-  box-shadow: 2px 3px 0 rgba(44,32,22,.25);
-}
-.mobile-bracket-hero .display {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 4px;
-  font-size: 24px;
-}
-.mobile-bracket-hero-copy {
-  min-width: 0;
-  text-align: right;
-  font-size: 12.5px;
-  color: var(--ink-soft);
-}
-.mobile-bracket-hero-copy strong,
-.mobile-bracket-hero-copy span {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.mobile-bracket-hero-copy strong {
-  color: var(--ink);
-  font-size: 14px;
-}
-.mobile-round-tabs {
-  position: sticky;
-  top: 55px;
-  z-index: 20;
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 8px 0 11px;
-  margin: 0 -16px 14px;
-  padding-left: 16px;
-  padding-right: 16px;
-  background: linear-gradient(var(--paper) 72%, rgba(243,231,207,0));
-  scrollbar-width: none;
-}
-.mobile-round-tabs::-webkit-scrollbar {
-  display: none;
-}
-.mobile-round-tab {
-  flex: 0 0 auto;
-  min-width: 82px;
-  border: 2.5px solid var(--ink);
-  border-radius: 16px;
-  background: var(--card);
-  color: var(--ink);
-  padding: 9px 11px;
-  text-align: left;
-  box-shadow: 2px 2px 0 rgba(44,32,22,.2);
-  font-family: var(--font-mono);
-  cursor: pointer;
-}
-.mobile-round-tab span,
-.mobile-round-tab small {
-  display: block;
-}
-.mobile-round-tab span {
-  font-weight: 800;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-.mobile-round-tab small {
-  margin-top: 2px;
-  font-size: 9px;
-  color: var(--ink-soft);
-  white-space: nowrap;
-}
-.mobile-round-tab.active {
-  background: var(--ink);
-  color: var(--paper);
-  transform: translateY(-1px);
-}
-.mobile-round-tab.active small {
-  color: var(--amber);
-}
-.mobile-round-panel {
-  display: grid;
-  gap: 18px;
-}
-.mobile-round-title {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-}
-.mobile-round-title h3 {
-  margin: 4px 0 0;
-  font-size: 30px;
-}
-.mobile-round-panel > p {
-  margin: -8px 0 0;
-  color: var(--ink-soft);
-  font-size: 13.5px;
-  line-height: 1.5;
-}
-.mobile-round-group {
-  display: grid;
-  gap: 10px;
-}
-.mobile-group-heading {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: baseline;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: .09em;
-}
-.mobile-group-heading span {
-  font-weight: 800;
-  font-size: 12px;
-}
-.mobile-group-heading small {
-  color: var(--ink-faint);
-  font-size: 9px;
-  text-align: right;
-}
-.mobile-match-list {
-  display: grid;
-  gap: 12px;
-}
-.mobile-match-card {
-  width: 100%;
-  padding: 12px 13px 11px;
-  cursor: pointer;
-  outline: none;
-  background: var(--card);
-}
-.mobile-match-card.live {
-  border-color: var(--sun-d);
-  background: #fff6ee;
-}
-.mobile-match-card.final {
-  border-color: var(--sun-d);
-  background: #f6e3b0;
-}
-.mobile-match-card:focus-visible {
-  box-shadow: 0 0 0 4px rgba(232,93,42,.28), var(--shadow-sticker);
-}
-.mobile-match-head,
-.mobile-match-meta,
-.mobile-match-path {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-.mobile-match-head {
-  margin-bottom: 5px;
-}
-.mobile-match-head .label {
-  font-size: 9px;
-  letter-spacing: .08em;
-}
-.mobile-match-divider {
-  height: 1px;
-  background: repeating-linear-gradient(90deg,var(--ink-faint) 0 5px,transparent 5px 10px);
-}
-.mobile-match-meta {
-  margin-top: 8px;
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
-  font-size: 10px;
-}
-.mobile-match-meta span {
-  min-width: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.mobile-match-path {
-  margin-top: 9px;
-  padding-top: 8px;
-  border-top: 2px solid rgba(44,32,22,.08);
-  color: var(--sun-d);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .08em;
+.road-focus-meta span {
+  display: inline-flex; align-items: center; gap: 4px; min-width: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-@media (max-width: 420px) {
-  .mobile-bracket-hero {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .mobile-bracket-hero-copy {
-    width: 100%;
-    text-align: left;
-  }
-  .mobile-round-title {
-    flex-direction: column;
-  }
-  .mobile-group-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .mobile-group-heading small {
-    text-align: left;
-  }
+.road-rule { height: 1px; background: repeating-linear-gradient(90deg,var(--ink-faint) 0 5px,transparent 5px 10px); }
+
+/* ---- sticky round jump bar (scroll-to, with scrollspy highlight) ---- */
+.road-jump {
+  position: sticky; top: 55px; z-index: 20;
+  display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none;
+  margin: 0 -16px 6px; padding: 8px 16px 10px;
+  background: linear-gradient(var(--paper) 74%, rgba(243,231,207,0));
+}
+.road-jump::-webkit-scrollbar { display: none; }
+.road-chip {
+  flex: 0 0 auto; border: 2.5px solid var(--ink); border-radius: 30px;
+  background: var(--card); color: var(--ink); padding: 7px 15px; cursor: pointer;
+  font-family: var(--font-mono); font-weight: 700; font-size: 12px;
+  text-transform: uppercase; letter-spacing: .08em;
+  box-shadow: 2px 2px 0 rgba(44,32,22,.2);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.road-chip.active { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+.road-chip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sun); }
+.road-chip.active .road-chip-dot { background: var(--amber); }
+
+/* ---- the road + dashed spine ---- */
+.road { position: relative; }
+.road::before {
+  content: ""; position: absolute; top: 4px; bottom: 56px; left: 9.5px; width: 0;
+  border-left: 3px dashed var(--ink); opacity: .45;
+}
+.road-section { position: relative; padding-left: 32px; padding-bottom: 22px; }
+.road-station { display: flex; align-items: center; gap: 11px; margin: 4px 0 12px -32px; }
+.road-dot {
+  flex: 0 0 auto; width: 22px; height: 22px; border-radius: 50%;
+  border: 3px solid var(--ink); background: var(--card);
+  box-shadow: 2px 2px 0 rgba(44,32,22,.22);
+  display: flex; align-items: center; justify-content: center;
+}
+.road-dot.live { background: var(--sun); }
+.road-dot.final {
+  width: 30px; height: 30px; background: #f6e3b0;
+  border-color: var(--sun-d); box-shadow: 2px 3px 0 rgba(44,32,22,.25);
+}
+.road-station-label { display: flex; flex-direction: column; line-height: 1.1; }
+.road-station-label .label { font-size: 12.5px; letter-spacing: .12em; color: var(--ink); }
+.road-station-label small { font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-faint); margin-top: 3px; }
+.road-station-label small.is-live { color: var(--sun-d); font-weight: 700; }
+
+.road-cards { display: grid; gap: 11px; }
+
+/* ---- match node ---- */
+.road-match { padding: 11px 13px 9px; cursor: pointer; outline: none; background: var(--card); scroll-margin-top: 112px; }
+.road-match.live { border-color: var(--sun-d); background: #fff6ee; }
+.road-match.final { border-color: var(--sun-d); border-width: 3px; background: #f6e3b0; }
+.road-match:focus-visible { box-shadow: 0 0 0 4px rgba(232,93,42,.28), var(--shadow-sticker); }
+.road-match-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.road-match-head .label { font-size: 9px; letter-spacing: .1em; }
+
+/* ---- trace footer: feeders (left) + onward (right), both tappable ---- */
+.road-trace {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin-top: 9px; padding-top: 8px; border-top: 2px solid rgba(44,32,22,.08);
+}
+.road-trace-side { display: inline-flex; align-items: center; gap: 5px; min-width: 0; flex-wrap: wrap; }
+.road-trace-side.onward { flex: 0 0 auto; justify-content: flex-end; }
+.trace-dir { font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint); }
+.trace-dot { color: var(--ink-faint); font-size: 11px; }
+.trace-link {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--sun-d);
+  background: transparent; border: none; padding: 1px 1px; cursor: pointer;
+  border-bottom: 2px dotted var(--sun-d);
+}
+.trace-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.trace-link:focus-visible { outline: 2px solid var(--sun-d); outline-offset: 2px; border-radius: 2px; }
+.trace-link.onward { color: var(--ink); border-bottom-color: var(--ink); white-space: nowrap; display: inline-flex; align-items: center; gap: 3px; }
+.trace-static {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.trace-static.onward { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-soft); }
+
+/* ---- spotlight pulse when a trace lands on a node ---- */
+.road-match.spotlight { border-color: var(--sun-d); animation: road-spot 1.7s ease-out; }
+@keyframes road-spot {
+  0%   { box-shadow: 0 0 0 0 rgba(232,93,42,.55), var(--shadow-sticker); }
+  28%  { box-shadow: 0 0 0 6px rgba(232,93,42,.30), var(--shadow-sticker); }
+  100% { box-shadow: 0 0 0 0 rgba(232,93,42,0), var(--shadow-sticker); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .road-match.spotlight { animation: none; box-shadow: 0 0 0 4px rgba(232,93,42,.4), var(--shadow-sticker); }
+}
+
+@media (max-width: 380px) {
+  .road-head .road-title { font-size: 30px; }
+  .road-focus-meta { font-size: 10px; }
+  .road-section { padding-left: 28px; }
+  .road-station { margin-left: -28px; }
 }

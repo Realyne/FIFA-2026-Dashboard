@@ -109,199 +109,272 @@ function roundTitle(round) {
   return WC.ROUNDS && WC.ROUNDS[round] ? WC.ROUNDS[round] : round;
 }
 
-function mobileRoundConfigs(halves) {
-  const [left, right] = halves;
+/* ============================================================
+   Mobile bracket — "Road to MetLife"
+   One continuous vertical road instead of a pinch-zoom graph.
+   A bracket's whole point is the path: who feeds whom, where the
+   winner goes. That connective tissue is what a flat round-list
+   throws away — so here every feeder / onward reference is a button
+   that flies to that match and spotlights it. The rounds are
+   stations on a dashed road (echoing the desktop connectors) that
+   climbs to the Final. We lead with what matters now, not a Final
+   that reads "TBD v TBD" for five weeks.
+   ============================================================ */
+
+const KO_SHORT = { r32: "R32", r16: "R16", qf: "QF", sf: "Semis", final: "Final" };
+
+function koSections(halves) {
+  const [L, R] = halves;
   return [
-    {
-      key: "r32",
-      short: "R32",
-      title: "Round of 32",
-      dek: "The first knockout wave, split into the two sides of the draw.",
-      groups: [
-        { title: "Left side", note: "Feeds Semifinal M101", nums: left.r32 },
-        { title: "Right side", note: "Feeds Semifinal M102", nums: right.r32 },
-      ],
-    },
-    {
-      key: "r16",
-      short: "R16",
-      title: "Round of 16",
-      dek: "Winners from the opening knockout round start converging.",
-      groups: [
-        { title: "Left side", note: "Road to M101", nums: left.r16 },
-        { title: "Right side", note: "Road to M102", nums: right.r16 },
-      ],
-    },
-    {
-      key: "qf",
-      short: "QF",
-      title: "Quarterfinals",
-      dek: "Eight teams remain, four matches decide the semifinalists.",
-      groups: [
-        { title: "Left side", note: "Winner paths into M101", nums: left.qf },
-        { title: "Right side", note: "Winner paths into M102", nums: right.qf },
-      ],
-    },
-    {
-      key: "sf",
-      short: "Semi",
-      title: "Semifinals",
-      dek: "The last two gates before MetLife.",
-      groups: [
-        { title: "Semifinal lane", note: "Winners to M104 · losers to M103", nums: [...left.sf, ...right.sf] },
-      ],
-    },
-    {
-      key: "finals",
-      short: "Finals",
-      title: "Final weekend",
-      dek: "The trophy match and third-place playoff.",
-      groups: [
-        { title: "Medal matches", note: "Jul 18-19", nums: [104, 103] },
-      ],
-    },
+    { key: "r32", title: "Round of 32", nums: [...L.r32, ...R.r32] },
+    { key: "r16", title: "Round of 16", nums: [...L.r16, ...R.r16] },
+    { key: "qf", title: "Quarterfinals", nums: [...L.qf, ...R.qf] },
+    { key: "sf", title: "Semifinals", nums: [...L.sf, ...R.sf] },
+    { key: "final", title: "Final", nums: [104], coda: 103 },
   ];
 }
 
-function mobileRoundStatus(nums) {
-  const matches = nums.map((n) => WC.getMatch(n)).filter(Boolean);
-  const live = matches.filter((m) => isLiveStatus(m.status)).length;
-  const finished = matches.filter((m) => m.status === "finished").length;
-  const total = matches.length;
-  const upcoming = Math.max(0, total - live - finished);
-  const label = live ? `${live} live` : finished === total ? "Complete" : `${upcoming} upcoming`;
-  return { total, live, finished, upcoming, label };
+function roundProgress(nums) {
+  const ms = nums.map((n) => WC.getMatch(n)).filter(Boolean);
+  const live = ms.filter((m) => isLiveStatus(m.status)).length;
+  const done = ms.filter((m) => m.status === "finished").length;
+  return { total: ms.length, live, done };
 }
 
-function defaultMobileRound(rounds) {
-  const liveRound = rounds.find((r) => mobileRoundStatus(r.groups.flatMap((g) => g.nums)).live > 0);
-  if (liveRound) return liveRound.key;
-  const nextRound = rounds.find((r) => mobileRoundStatus(r.groups.flatMap((g) => g.nums)).finished < mobileRoundStatus(r.groups.flatMap((g) => g.nums)).total);
-  return nextRound ? nextRound.key : "finals";
+function progressLabel(p) {
+  if (p.live) return p.live + " live now";
+  if (p.total && p.done === p.total) return "All played";
+  if (p.done) return p.done + " of " + p.total + " played";
+  return p.total + " to play";
 }
 
-function MobileMatchCard({ num, onOpen }) {
+/* the single most relevant match right now: live > next up > the Final */
+function focusMatch(sections) {
+  const all = sections.flatMap((s) => [...s.nums, ...(s.coda ? [s.coda] : [])]);
+  const ms = all.map((n) => WC.getMatch(n)).filter(Boolean);
+  const live = ms.find((m) => isLiveStatus(m.status));
+  if (live) return { m: live, mode: "live" };
+  const now = Date.now();
+  const up = ms
+    .filter((m) => m.status === "upcoming" && m.kickoff_utc)
+    .sort((a, b) => Date.parse(a.kickoff_utc) - Date.parse(b.kickoff_utc));
+  const next = up.find((m) => Date.parse(m.kickoff_utc) >= now - 2 * 3600e3) || up[0];
+  if (next) return { m: next, mode: "next" };
+  const fin = WC.getMatch(104);
+  return fin ? { m: fin, mode: "final" } : null;
+}
+
+function FocusCard({ pick, onOpen }) {
+  const { m, mode } = pick;
+  const live = isLiveStatus(m.status);
+  const [winA, winB] = matchWinnerSides(m);
+  const v = WC.store.venues[m.venue_id] || {};
+  const city = (v.city || "").split("(")[0].trim();
+  const kicker = mode === "live" ? "Live right now" : mode === "next" ? "Up next" : "The destination";
+  const open = () => onOpen(m.match_number);
+  return (
+    <div
+      className={"sticker road-focus" + (live ? " live" : "") + (mode === "final" ? " final" : "")}
+      role="button"
+      tabIndex={0}
+      onClick={open}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } }}
+      title={`${WC.sideLabel(m.home)} v ${WC.sideLabel(m.away)}`}
+    >
+      <div className="road-focus-top">
+        <span className="label">{kicker}</span>
+        <StatusBadge match={m} />
+      </div>
+      <div className="road-focus-title display">{roundTitle(m.round)}</div>
+      <TeamLine side={m.home} winner={winA} live={live} />
+      <div className="road-rule"></div>
+      <TeamLine side={m.away} winner={winB} live={live} />
+      <div className="road-focus-meta">
+        <span><ZPin size={12} /> {city || "Venue TBD"}</span>
+        <span className="road-focus-cta">Tap for details →</span>
+      </div>
+    </div>
+  );
+}
+
+/* a match node on the road; its feeder + onward references are buttons */
+function RoadMatch({ num, spotlight, onOpen, onTrace, registerRef }) {
   const m = WC.getMatch(num);
   if (!m) return null;
   const live = isLiveStatus(m.status);
   const [winA, winB] = matchWinnerSides(m);
-  const venue = WC.store.venues[m.venue_id] || {};
-  const city = (venue.city || "").split("(")[0].trim();
-  const feeds = m.feeds_into ? `Winner to M${m.feeds_into}` : (m.round === "final" ? "Trophy match" : "Tap for details");
+  const feeders = sourcesOf(m); // match_winner feeders — empty for R32 (group stage)
+  const onward = m.feeds_into || null;
+  const fromStatic = m.round === "r32" ? "Group stage" : m.round === "third_place" ? "Semi-final losers" : null;
   const open = () => onOpen(num);
-  const onKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      open();
-    }
-  };
-
   return (
     <div
-      className={"sticker lift mobile-match-card" + (live ? " live" : "") + (m.round === "final" ? " final" : "")}
-      onClick={open}
-      onKeyDown={onKeyDown}
+      ref={registerRef(num)}
+      className={"sticker lift road-match" + (live ? " live" : "") + (m.round === "final" ? " final" : "") + (spotlight ? " spotlight" : "")}
       role="button"
       tabIndex={0}
+      onClick={open}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } }}
       title={`${WC.sideLabel(m.home)} v ${WC.sideLabel(m.away)}`}
     >
-      <div className="mobile-match-head">
-        <span className="label">{roundTitle(m.round)} · M{m.match_number}</span>
+      <div className="road-match-head">
+        <span className="label">M{m.match_number}</span>
         <StatusBadge match={m} />
       </div>
       <TeamLine side={m.home} winner={winA} live={live} />
-      <div className="mobile-match-divider"></div>
+      <div className="road-rule"></div>
       <TeamLine side={m.away} winner={winB} live={live} />
-      <div className="mobile-match-meta">
-        <span><ZPin size={12} /> {city || "Venue TBD"}</span>
-        <span>{WC.kickoffLocal(m)}</span>
-      </div>
-      <div className="mobile-match-path">
-        <span>{feeds}</span>
-        <span aria-hidden="true">→</span>
+
+      <div className="road-trace">
+        <span className="road-trace-side">
+          <span className="trace-dir">↑</span>
+          {fromStatic ? (
+            <span className="trace-static">{fromStatic}</span>
+          ) : feeders.length ? (
+            feeders.map((f, i) => (
+              <React.Fragment key={f}>
+                {i > 0 && <span className="trace-dot">·</span>}
+                <button
+                  className="trace-link"
+                  onClick={(e) => { e.stopPropagation(); onTrace(f); }}
+                  aria-label={`Jump to match ${f}, which feeds this match`}
+                >M{f}</button>
+              </React.Fragment>
+            ))
+          ) : (
+            <span className="trace-static">TBD</span>
+          )}
+        </span>
+
+        <span className="road-trace-side onward">
+          {onward ? (
+            <button
+              className="trace-link onward"
+              onClick={(e) => { e.stopPropagation(); onTrace(onward); }}
+              aria-label={`Jump to match ${onward}, where the winner advances`}
+            >M{onward} <span className="trace-dir">↓</span></button>
+          ) : m.round === "final" ? (
+            <span className="trace-static onward"><ZTrophy size={13} /> Champion</span>
+          ) : (
+            <span className="trace-static onward">Medal match</span>
+          )}
+        </span>
       </div>
     </div>
   );
 }
 
 function MobileBracket({ halves, go }) {
-  const rounds = mobileRoundConfigs(halves);
-  const [pickedRound, setPickedRound] = useState(null);
-  const activeKey = pickedRound || defaultMobileRound(rounds);
-  const active = rounds.find((r) => r.key === activeKey) || rounds[0];
-  const activeNums = active.groups.flatMap((g) => g.nums);
-  const activeStatus = mobileRoundStatus(activeNums);
-  const final = WC.getMatch(104);
+  const sections = koSections(halves);
+  const [spotlight, setSpotlight] = useState(null);
+  const [activeKey, setActiveKey] = useState(sections[0].key);
+  const nodeRefs = useRef({});
+  const sectionRefs = useRef({});
+  const spotTimer = useRef(null);
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const registerRef = (num) => (el) => { if (el) nodeRefs.current[num] = el; };
+  const open = (n) => go("match", { num: n });
+
+  const trace = (num) => {
+    const el = nodeRefs.current[num];
+    if (!el) return;
+    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    setSpotlight(num);
+    if (spotTimer.current) clearTimeout(spotTimer.current);
+    spotTimer.current = setTimeout(() => setSpotlight(null), 1700);
+  };
+
+  const jump = (key) => {
+    const el = sectionRefs.current[key];
+    if (el) el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  };
+
+  // scrollspy: light up the round chip for whichever station is in view
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const vis = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (vis[0]) setActiveKey(vis[0].target.dataset.key);
+      },
+      { rootMargin: "-42% 0px -52% 0px", threshold: 0 }
+    );
+    Object.values(sectionRefs.current).forEach((el) => el && obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  useEffect(() => () => { if (spotTimer.current) clearTimeout(spotTimer.current); }, []);
+
+  const pick = focusMatch(sections);
 
   return (
-    <div className="rise mobile-bracket">
-      <div className="wrap mobile-bracket-wrap">
-        <ZineHeading kicker="Mobile knockout tracker" title="Road to MetLife" color="var(--sun)" />
-        <p className="mobile-bracket-intro">
-          Browse by round instead of pinching around the full desktop graph. Tap any card for match details, lineups, and live events.
-        </p>
-
-        <div className="sticker mobile-bracket-hero" role="button" tabIndex={0}
-          onClick={() => go("match", { num: 104 })}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              go("match", { num: 104 });
-            }
-          }}>
-          <div>
-            <span className="label">Final destination</span>
-            <div className="display"><ZTrophy size={22} /> Match 104</div>
-          </div>
-          <div className="mobile-bracket-hero-copy">
-            <strong>{final ? `${WC.sideLabel(final.home)} v ${WC.sideLabel(final.away)}` : "The Final"}</strong>
-            <span>Jul 19 · MetLife Stadium</span>
-          </div>
+    <div className="rise mobile-road">
+      <div className="wrap road-wrap">
+        <div className="road-head">
+          <span className="label">Knockout tracker · 32 matches</span>
+          <h2 className="display road-title">Road to MetLife</h2>
         </div>
 
-        <div className="mobile-round-tabs" role="tablist" aria-label="Knockout rounds">
-          {rounds.map((round) => {
-            const status = mobileRoundStatus(round.groups.flatMap((g) => g.nums));
-            const selected = round.key === active.key;
+        {pick && <FocusCard pick={pick} onOpen={open} />}
+
+        <div className="road-jump" role="tablist" aria-label="Jump to a round">
+          {sections.map((s) => {
+            const p = roundProgress([...s.nums, ...(s.coda ? [s.coda] : [])]);
+            const selected = activeKey === s.key;
             return (
               <button
-                key={round.key}
-                className={"mobile-round-tab" + (selected ? " active" : "")}
-                onClick={() => setPickedRound(round.key)}
+                key={s.key}
                 role="tab"
                 aria-selected={selected}
+                className={"road-chip" + (selected ? " active" : "")}
+                onClick={() => jump(s.key)}
               >
-                <span>{round.short}</span>
-                <small>{status.label}</small>
+                {KO_SHORT[s.key]}
+                {p.live ? <span className="road-chip-dot" aria-hidden="true"></span> : null}
               </button>
             );
           })}
         </div>
 
-        <section className="mobile-round-panel" aria-live="polite">
-          <div className="mobile-round-title">
-            <div>
-              <span className="label">{activeStatus.total} matches · {activeStatus.label}</span>
-              <h3 className="display">{active.title}</h3>
-            </div>
-            <span className={"chip " + (activeStatus.live ? "live" : activeStatus.finished === activeStatus.total ? "finished" : "upcoming")}>
-              {activeStatus.label}
-            </span>
-          </div>
-          <p>{active.dek}</p>
-
-          {active.groups.map((group) => (
-            <div className="mobile-round-group" key={group.title}>
-              <div className="mobile-group-heading">
-                <span>{group.title}</span>
-                <small>{group.note}</small>
-              </div>
-              <div className="mobile-match-list">
-                {group.nums.map((num) => <MobileMatchCard key={num} num={num} onOpen={(n) => go("match", { num: n })} />)}
-              </div>
-            </div>
-          ))}
-        </section>
+        <div className="road">
+          {sections.map((s) => {
+            const nums = [...s.nums, ...(s.coda ? [s.coda] : [])];
+            const p = roundProgress(nums);
+            const isFinal = s.key === "final";
+            return (
+              <section
+                key={s.key}
+                className={"road-section" + (isFinal ? " final" : "")}
+                ref={(el) => { if (el) sectionRefs.current[s.key] = el; }}
+                data-key={s.key}
+              >
+                <div className="road-station">
+                  <span className={"road-dot" + (p.live ? " live" : "") + (isFinal ? " final" : "")} aria-hidden="true">
+                    {isFinal ? <ZTrophy size={15} /> : null}
+                  </span>
+                  <div className="road-station-label">
+                    <span className="label">{s.title}</span>
+                    <small className={p.live ? "is-live" : ""}>{progressLabel(p)}</small>
+                  </div>
+                </div>
+                <div className="road-cards">
+                  {nums.map((n) => (
+                    <RoadMatch
+                      key={n}
+                      num={n}
+                      spotlight={spotlight === n}
+                      onOpen={open}
+                      onTrace={trace}
+                      registerRef={registerRef}
+                    />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
