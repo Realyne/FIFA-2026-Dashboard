@@ -110,28 +110,59 @@ function roundTitle(round) {
 }
 
 /* ============================================================
-   Mobile bracket — "Road to MetLife"
-   One continuous vertical road instead of a pinch-zoom graph.
-   A bracket's whole point is the path: who feeds whom, where the
-   winner goes. That connective tissue is what a flat round-list
-   throws away — so here every feeder / onward reference is a button
-   that flies to that match and spotlights it. The rounds are
-   stations on a dashed road (echoing the desktop connectors) that
-   climbs to the Final. We lead with what matters now, not a Final
-   that reads "TBD v TBD" for five weeks.
+   Mobile bracket — two complementary lenses on the same 32 matches,
+   chosen with a switch at the top:
+
+   • "By date"  — the default. A bracket graph answers "who plays
+     whom"; it does not answer "what's on, and when." So this lens
+     orders every knockout chronologically into a vertical road whose
+     stations are match-days. We still lead with what matters now and
+     keep every feeder / onward reference tappable (it flies to that
+     match and spotlights it) so the path isn't lost to the calendar.
+
+   • "Bracket"  — the desktop promotion chart (pan / pinch-zoom graph),
+     brought to the phone for people who want the structural tree.
    ============================================================ */
 
 const KO_SHORT = { r32: "R32", r16: "R16", qf: "QF", sf: "Semis", final: "Final" };
+const KO_ROUND_ORDER = ["r32", "r16", "qf", "sf", "final"];
+const ROUND_LONG = { r32: "Round of 32", r16: "Round of 16", qf: "Quarterfinals", sf: "Semifinals", third_place: "Third place", final: "Final" };
 
-function koSections(halves) {
-  const [L, R] = halves;
-  return [
-    { key: "r32", title: "Round of 32", nums: [...L.r32, ...R.r32] },
-    { key: "r16", title: "Round of 16", nums: [...L.r16, ...R.r16] },
-    { key: "qf", title: "Quarterfinals", nums: [...L.qf, ...R.qf] },
-    { key: "sf", title: "Semifinals", nums: [...L.sf, ...R.sf] },
-    { key: "final", title: "Final", nums: [104], coda: 103 },
-  ];
+/* third place rides with the Final under one jump chip / one climax */
+function chipRound(round) { return round === "third_place" ? "final" : round; }
+
+/* every knockout match (#73–104) */
+function koMatches() {
+  return Object.keys(WC.store.bracket)
+    .map((k) => WC.store.bracket[k])
+    .filter((m) => m.match_number >= 73);
+}
+
+/* the 32 knockouts, chronological, grouped into match-day stations */
+function dateSections() {
+  const ms = koMatches().sort((a, b) => {
+    const ta = a.kickoff_utc ? Date.parse(a.kickoff_utc) : Infinity;
+    const tb = b.kickoff_utc ? Date.parse(b.kickoff_utc) : Infinity;
+    return (ta - tb) || (a.match_number - b.match_number);
+  });
+  const out = [];
+  const byKey = {};
+  ms.forEach((m) => {
+    const d = m.kickoff_utc ? new Date(m.kickoff_utc) : null;
+    const key = d ? d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate() : "tbd";
+    if (!byKey[key]) {
+      byKey[key] = {
+        key,
+        weekday: d ? d.toLocaleDateString([], { weekday: "short" }) : "Date",
+        date: d ? d.toLocaleDateString([], { month: "short", day: "numeric" }) : "TBD",
+        round: m.round,
+        nums: [],
+      };
+      out.push(byKey[key]);
+    }
+    byKey[key].nums.push(m.match_number);
+  });
+  return out;
 }
 
 function roundProgress(nums) {
@@ -149,9 +180,8 @@ function progressLabel(p) {
 }
 
 /* the single most relevant match right now: live > next up > the Final */
-function focusMatch(sections) {
-  const all = sections.flatMap((s) => [...s.nums, ...(s.coda ? [s.coda] : [])]);
-  const ms = all.map((n) => WC.getMatch(n)).filter(Boolean);
+function focusMatch() {
+  const ms = koMatches();
   const live = ms.find((m) => isLiveStatus(m.status));
   if (live) return { m: live, mode: "live" };
   const now = Date.now();
@@ -164,6 +194,26 @@ function focusMatch(sections) {
   return fin ? { m: fin, mode: "final" } : null;
 }
 
+/* segmented switch: chronological list vs. structural graph */
+function ViewToggle({ mode, setMode }) {
+  return (
+    <div className="brk-toggle" role="tablist" aria-label="Bracket view">
+      <button
+        role="tab"
+        aria-selected={mode === "date"}
+        className={"brk-toggle-btn" + (mode === "date" ? " active" : "")}
+        onClick={() => setMode("date")}
+      >By date</button>
+      <button
+        role="tab"
+        aria-selected={mode === "graph"}
+        className={"brk-toggle-btn" + (mode === "graph" ? " active" : "")}
+        onClick={() => setMode("graph")}
+      >Bracket</button>
+    </div>
+  );
+}
+
 function FocusCard({ pick, onOpen }) {
   const { m, mode } = pick;
   const live = isLiveStatus(m.status);
@@ -171,6 +221,7 @@ function FocusCard({ pick, onOpen }) {
   const v = WC.store.venues[m.venue_id] || {};
   const city = (v.city || "").split("(")[0].trim();
   const kicker = mode === "live" ? "Live right now" : mode === "next" ? "Up next" : "The destination";
+  const when = m.kickoff_utc ? WC.kickoffLocal(m, { weekday: "short" }) : null;
   const open = () => onOpen(m.match_number);
   return (
     <div
@@ -182,15 +233,14 @@ function FocusCard({ pick, onOpen }) {
       title={`${WC.sideLabel(m.home)} v ${WC.sideLabel(m.away)}`}
     >
       <div className="road-focus-top">
-        <span className="label">{kicker}</span>
+        <span className="label">{kicker} · {roundTitle(m.round)}</span>
         <StatusBadge match={m} />
       </div>
-      <div className="road-focus-title display">{roundTitle(m.round)}</div>
       <TeamLine side={m.home} winner={winA} live={live} />
       <div className="road-rule"></div>
       <TeamLine side={m.away} winner={winB} live={live} />
       <div className="road-focus-meta">
-        <span><ZPin size={12} /> {city || "Venue TBD"}</span>
+        <span>{!live && when ? when + " · " : ""}<ZPin size={12} /> {city || "Venue TBD"}</span>
         <span className="road-focus-cta">Tap for details →</span>
       </div>
     </div>
@@ -218,7 +268,10 @@ function RoadMatch({ num, spotlight, onOpen, onTrace, registerRef }) {
       title={`${WC.sideLabel(m.home)} v ${WC.sideLabel(m.away)}`}
     >
       <div className="road-match-head">
-        <span className="label">M{m.match_number}</span>
+        <span className="road-match-id">
+          <span className="label">M{m.match_number}</span>
+          <span className="road-match-round">{roundTitle(m.round)}</span>
+        </span>
         <StatusBadge match={m} />
       </div>
       <TeamLine side={m.home} winner={winA} live={live} />
@@ -264,10 +317,11 @@ function RoadMatch({ num, spotlight, onOpen, onTrace, registerRef }) {
   );
 }
 
-function MobileBracket({ halves, go }) {
-  const sections = koSections(halves);
+function MobileBracket({ go, toggle }) {
+  const sections = dateSections();
+  const roundsPresent = KO_ROUND_ORDER.filter((r) => sections.some((s) => chipRound(s.round) === r));
   const [spotlight, setSpotlight] = useState(null);
-  const [activeKey, setActiveKey] = useState(sections[0].key);
+  const [activeRound, setActiveRound] = useState(roundsPresent[0] || "r32");
   const nodeRefs = useRef({});
   const sectionRefs = useRef({});
   const spotTimer = useRef(null);
@@ -285,19 +339,21 @@ function MobileBracket({ halves, go }) {
     spotTimer.current = setTimeout(() => setSpotlight(null), 1700);
   };
 
-  const jump = (key) => {
-    const el = sectionRefs.current[key];
+  // jump chips are rounds; scroll to the first match-day of that round
+  const jumpToRound = (r) => {
+    const sec = sections.find((s) => chipRound(s.round) === r);
+    const el = sec && sectionRefs.current[sec.key];
     if (el) el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
   };
 
-  // scrollspy: light up the round chip for whichever station is in view
+  // scrollspy: light up the round chip for whichever match-day is in view
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entries) => {
         const vis = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (vis[0]) setActiveKey(vis[0].target.dataset.key);
+        if (vis[0]) setActiveRound(chipRound(vis[0].target.dataset.round));
       },
       { rootMargin: "-42% 0px -52% 0px", threshold: 0 }
     );
@@ -307,32 +363,33 @@ function MobileBracket({ halves, go }) {
 
   useEffect(() => () => { if (spotTimer.current) clearTimeout(spotTimer.current); }, []);
 
-  const pick = focusMatch(sections);
+  const pick = focusMatch();
 
   return (
     <div className="rise mobile-road">
       <div className="wrap road-wrap">
+        {toggle}
         <div className="road-head">
-          <span className="label">Knockout tracker · 32 matches</span>
+          <span className="label">Knockout schedule · 32 matches</span>
           <h2 className="display road-title">Road to MetLife</h2>
         </div>
 
         {pick && <FocusCard pick={pick} onOpen={open} />}
 
         <div className="road-jump" role="tablist" aria-label="Jump to a round">
-          {sections.map((s) => {
-            const p = roundProgress([...s.nums, ...(s.coda ? [s.coda] : [])]);
-            const selected = activeKey === s.key;
+          {roundsPresent.map((r) => {
+            const selected = activeRound === r;
+            const live = sections.some((s) => chipRound(s.round) === r && roundProgress(s.nums).live > 0);
             return (
               <button
-                key={s.key}
+                key={r}
                 role="tab"
                 aria-selected={selected}
                 className={"road-chip" + (selected ? " active" : "")}
-                onClick={() => jump(s.key)}
+                onClick={() => jumpToRound(r)}
               >
-                {KO_SHORT[s.key]}
-                {p.live ? <span className="road-chip-dot" aria-hidden="true"></span> : null}
+                {KO_SHORT[r]}
+                {live ? <span className="road-chip-dot" aria-hidden="true"></span> : null}
               </button>
             );
           })}
@@ -340,27 +397,27 @@ function MobileBracket({ halves, go }) {
 
         <div className="road">
           {sections.map((s) => {
-            const nums = [...s.nums, ...(s.coda ? [s.coda] : [])];
-            const p = roundProgress(nums);
-            const isFinal = s.key === "final";
+            const p = roundProgress(s.nums);
+            const isFinalDay = s.round === "final";
+            const live = p.live > 0;
             return (
               <section
                 key={s.key}
-                className={"road-section" + (isFinal ? " final" : "")}
+                className={"road-section" + (isFinalDay ? " final" : "")}
                 ref={(el) => { if (el) sectionRefs.current[s.key] = el; }}
-                data-key={s.key}
+                data-round={s.round}
               >
                 <div className="road-station">
-                  <span className={"road-dot" + (p.live ? " live" : "") + (isFinal ? " final" : "")} aria-hidden="true">
-                    {isFinal ? <ZTrophy size={15} /> : null}
+                  <span className={"road-dot" + (live ? " live" : "") + (isFinalDay ? " final" : "")} aria-hidden="true">
+                    {isFinalDay ? <ZTrophy size={15} /> : null}
                   </span>
                   <div className="road-station-label">
-                    <span className="label">{s.title}</span>
-                    <small className={p.live ? "is-live" : ""}>{progressLabel(p)}</small>
+                    <span className="label">{s.weekday} · {s.date}</span>
+                    <small className={live ? "is-live" : ""}>{ROUND_LONG[s.round] || roundTitle(s.round)} · {progressLabel(p)}</small>
                   </div>
                 </div>
                 <div className="road-cards">
-                  {nums.map((n) => (
+                  {s.nums.map((n) => (
                     <RoadMatch
                       key={n}
                       num={n}
@@ -381,14 +438,15 @@ function MobileBracket({ halves, go }) {
 }
 
 /* ============================================================
-   Canvas viewport: defaults to fit-to-screen; wheel / pinch zooms
+   Promotion chart: defaults to fit-to-screen; wheel / pinch zooms
    toward the pointer, drag pans, buttons for −/fit/+.
    Transform lives in a ref and is applied imperatively so live
-   SSE re-renders never fight an in-flight gesture.
+   SSE re-renders never fight an in-flight gesture. Shared by desktop
+   and the mobile "Bracket" lens.
    ============================================================ */
 const MAX_ZOOM = 3;
 
-function Bracket({ go }) {
+function BracketGraph({ go, halves, isMobile, toggle }) {
   const viewRef = useRef(null);    // clipping viewport
   const contentRef = useRef(null); // transformed world
   const graphRef = useRef(null);
@@ -397,14 +455,12 @@ function Bracket({ go }) {
   const [dims, setDims] = useState({ w: 2000, h: 1000 });
   const [zoomPct, setZoomPct] = useState(100);
   const [viewH, setViewH] = useState(520);
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= MOBILE_BREAKPOINT);
 
   const cam = useRef({ s: 1, tx: 0, ty: 0, fit: 1, w: 2000, h: 1000 });
   const pointers = useRef(new Map()); // active pointers (pan/pinch)
   const gesture = useRef(null);       // {mode:'pan'|'pinch', ...}
   const suppressClick = useRef(false);
 
-  const halves = bracketHalves();
   const setRef = (num) => (el) => { if (el) nodeRefs.current[num] = el; };
   const open = (num) => { if (!suppressClick.current) go("match", { num }); };
 
@@ -565,18 +621,10 @@ function Bracket({ go }) {
     return () => { clearTimeout(t1); clearTimeout(t2); window.removeEventListener("resize", tick); };
   }, []);
 
-  useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-    onResize();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
-
   // live re-renders replace the transformed node — re-apply the camera
   useEffect(() => { apply(); });
 
   if (!halves) return null;
-  if (isMobile) return <MobileBracket halves={halves} go={go} />;
 
   const colH = 8 * ROW_H;
   const column = (nums, key) => (
@@ -640,10 +688,11 @@ function Bracket({ go }) {
   return (
     <div className="rise">
       <div className="wrap" style={{ paddingBottom: 12 }}>
+        {toggle}
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 14 }}>
           <ZineHeading kicker="The knockout graph · 32 matches" title="Road to MetLife" color="var(--sun)" />
           <span className="mono" style={{ fontSize: 10, color: "var(--ink-faint)", marginBottom: 22 }}>
-            drag to pan · scroll or pinch to zoom · tap a match →
+            {isMobile ? "pinch to zoom · drag to pan · tap a match →" : "drag to pan · scroll or pinch to zoom · tap a match →"}
           </span>
         </div>
       </div>
@@ -714,6 +763,36 @@ function Bracket({ go }) {
       </div>
     </div>
   );
+}
+
+/* ============================================================
+   Bracket — picks the lens. Desktop always gets the graph; mobile
+   gets a "By date / Bracket" switch (choice remembered).
+   ============================================================ */
+function Bracket({ go }) {
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= MOBILE_BREAKPOINT);
+  const [mode, setMode] = useState(() => {
+    try { return localStorage.getItem("wc-bracket-mode") || "date"; } catch (e) { return "date"; }
+  });
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    try { localStorage.setItem("wc-bracket-mode", mode); } catch (e) {}
+  }, [mode]);
+
+  const halves = bracketHalves();
+  if (!halves) return null;
+
+  const toggle = isMobile ? <ViewToggle mode={mode} setMode={setMode} /> : null;
+
+  if (isMobile && mode === "date") return <MobileBracket go={go} toggle={toggle} />;
+  return <BracketGraph go={go} halves={halves} isMobile={isMobile} toggle={toggle} />;
 }
 
 window.Bracket = Bracket;

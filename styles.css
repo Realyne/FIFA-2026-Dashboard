@@ -289,13 +289,29 @@ a { color: var(--sun-d); }
 }
 
 /* ============================================================
-   Mobile bracket — "Road to MetLife"
-   A continuous vertical road: rounds are stations on a dashed
-   spine (echoing the desktop's marching-ants connectors) that
-   climbs to the Final. Feeder / onward references are buttons
-   that scroll-and-spotlight their target match.
+   Mobile bracket — "Road to MetLife" (the "By date" lens)
+   A continuous vertical road ordered chronologically: each station
+   is a match-day on a dashed spine (echoing the desktop connectors)
+   that climbs to the Final. Feeder / onward references are buttons
+   that scroll-and-spotlight their target match. A switch at the top
+   flips to the desktop promotion-chart graph.
    ============================================================ */
 .mobile-road .road-wrap { padding-top: 20px; }
+
+/* ---- view switch: chronological list vs. structural graph ---- */
+.brk-toggle {
+  display: inline-flex; margin-bottom: 16px;
+  border: 3px solid var(--ink); border-radius: 30px; overflow: hidden;
+  background: var(--card); box-shadow: 2px 2px 0 rgba(44,32,22,.3);
+}
+.brk-toggle-btn {
+  appearance: none; -webkit-appearance: none; border: none; background: transparent;
+  cursor: pointer; padding: 8px 18px; color: var(--ink);
+  font-family: var(--font-mono); font-weight: 700; font-size: 12px;
+  text-transform: uppercase; letter-spacing: .08em;
+}
+.brk-toggle-btn.active { background: var(--ink); color: var(--paper); }
+.brk-toggle-btn:focus-visible { outline: 2px solid var(--sun-d); outline-offset: -4px; }
 
 .road-head { margin-bottom: 14px; }
 .road-head .label { display: block; }
@@ -376,6 +392,14 @@ a { color: var(--sun-d); }
 .road-match:focus-visible { box-shadow: 0 0 0 4px rgba(232,93,42,.28), var(--shadow-sticker); }
 .road-match-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
 .road-match-head .label { font-size: 9px; letter-spacing: .1em; }
+.road-match-id { display: inline-flex; align-items: center; gap: 7px; min-width: 0; }
+.road-match-round {
+  font-family: var(--font-mono); font-size: 8.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em; color: var(--ink-soft);
+  border: 1.5px solid rgba(44,32,22,.22); border-radius: 20px; padding: 1.5px 7px;
+  white-space: nowrap;
+}
+.road-match.final .road-match-round { border-color: var(--sun-d); color: var(--sun-d); }
 
 /* ---- trace footer: feeders (left) + onward (right), both tappable ---- */
 .road-trace {
