@@ -45,7 +45,6 @@ function SlimLine({ side, winner, live }) {
       {code ? (
         <span className="mono" style={{ flex: 1, fontSize: 13, fontWeight: winner ? 800 : 600, letterSpacing: ".03em" }}>
           {code}
-          {side.pen_score != null && <span style={{ fontSize: 9.5, color: "var(--ink-soft)", fontWeight: 600 }}> ({side.pen_score})</span>}
         </span>
       ) : (
         <span style={{ flex: 1, fontSize: 10.5, fontStyle: "italic", color: "var(--ink-soft)",
@@ -53,6 +52,7 @@ function SlimLine({ side, winner, live }) {
           {(side && side.label) || "TBD"}
         </span>
       )}
+      {side && side.pen_score != null && <PenPill value={side.pen_score} win={winner} compact />}
       <span className="mono" style={{ fontSize: 15, fontWeight: 700, minWidth: 16, textAlign: "right",
         color: live ? "var(--sun-d)" : "var(--ink)" }}>
         {side && side.score != null ? side.score : "–"}

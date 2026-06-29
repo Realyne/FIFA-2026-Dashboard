@@ -202,8 +202,14 @@ function MatchDetail({ num, go }) {
               </div>
             )}
             {m.home.pen_score != null && m.away.pen_score != null && (
-              <div className="mono" style={{ fontSize: 12, color: "var(--ink-soft)" }}>
-                {m.home.pen_score}–{m.away.pen_score} on penalties
+              <div className="pen-banner">
+                <ZBall size={13} />
+                <span className="pen-banner-label">Penalties</span>
+                <span className="pen-banner-score">
+                  <b className={m.home.pen_score > m.away.pen_score ? "w" : ""}>{m.home.pen_score}</b>
+                  <i>–</i>
+                  <b className={m.away.pen_score > m.home.pen_score ? "w" : ""}>{m.away.pen_score}</b>
+                </span>
               </div>
             )}
             <StatusBadge match={m} />

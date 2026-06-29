@@ -204,6 +204,15 @@ function isLiveStatus(s) {
   return s === "live" || s === "ht" || s === "et" || s === "pens";
 }
 
+/* ---- Penalty-shootout score badge (winner accented) ---- */
+function PenPill({ value, win, compact }) {
+  return (
+    <span className={"pen-pill" + (win ? " win" : "") + (compact ? " sm" : "")} aria-label={"Shootout " + value}>
+      {value}
+    </span>
+  );
+}
+
 /* ---- One team line inside a match node ---- */
 function TeamLine({ side, winner, live }) {
   const code = side && side.fifa_code;
@@ -221,8 +230,8 @@ function TeamLine({ side, winner, live }) {
         overflow: "hidden", textOverflow: "ellipsis",
         fontStyle: code ? "normal" : "italic" }}>
         {name}
-        {side && side.pen_score != null && <span className="mono" style={{ fontSize: 11, color: "var(--ink-soft)" }}> ({side.pen_score})</span>}
       </span>
+      {side && side.pen_score != null && <PenPill value={side.pen_score} win={winner} />}
       <span className="mono" style={{
         fontSize: 20, fontWeight: 700, minWidth: 22, textAlign: "right",
         color: live ? "var(--sun-d)" : "var(--ink)",
@@ -312,7 +321,7 @@ function LoadingSplash() {
 }
 
 Object.assign(window, {
-  Tape, Sticker, Flag, PlayerAvatar, PhotoPlaceholder, StatusBadge, TeamLine,
+  Tape, Sticker, Flag, PlayerAvatar, PhotoPlaceholder, StatusBadge, TeamLine, PenPill,
   MatchNode, ZineHeading, LoadingSplash, isLiveStatus, matchWinnerSides,
   ZBall, ZSun, ZStar, ZBolt, ZTrophy, ZPennant, ZPin, ZClock, ZCardIcon, ZSubArrows,
 });
