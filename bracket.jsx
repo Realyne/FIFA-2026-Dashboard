@@ -459,10 +459,10 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
   const cam = useRef({ s: 1, tx: 0, ty: 0, fit: 1, w: 2000, h: 1000 });
   const pointers = useRef(new Map()); // active pointers (pan/pinch)
   const gesture = useRef(null);       // {mode:'pan'|'pinch', ...}
-  const suppressClick = useRef(false);
+  const action = useRef(null);        // the in-flight interaction, for tap detection
 
   const setRef = (num) => (el) => { if (el) nodeRefs.current[num] = el; };
-  const open = (num) => { if (!suppressClick.current) go("match", { num }); };
+  const openMatch = (num) => go("match", { num });
 
   /* ---------------- camera ---------------- */
   const apply = () => {
@@ -542,15 +542,27 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
     setDims({ w: wrap.offsetWidth, h: wrap.offsetHeight });
   };
 
-  /* ---------------- gestures ---------------- */
+  /* ---------------- gestures ----------------
+     A tap opens a match; pan/pinch never should. We decide on pointerup:
+     a tap is one finger only (no second finger ever joined), barely moved,
+     released quickly, on a match node. The moment a second pointer touches,
+     the whole interaction is a gesture — which kills the accidental opens
+     that used to slip through after a pinch. Synthetic clicks are swallowed
+     unconditionally below, so opening flows solely through here. */
+  const TAP_SLOP = 10;   // px of total travel still counts as a tap
+  const TAP_MS = 600;    // max press duration for a tap
+
   const onPointerDown = (e) => {
     const view = viewRef.current;
     if (!view) return;
     view.setPointerCapture(e.pointerId);
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pointers.current.size === 1) {
-      gesture.current = { mode: "pan", x: e.clientX, y: e.clientY, moved: 0 };
-    } else if (pointers.current.size === 2) {
+      const node = e.target instanceof Element ? e.target.closest("[data-match]") : null;
+      action.current = { moved: 0, maxPointers: 1, t0: e.timeStamp, node };
+      gesture.current = { mode: "pan", x: e.clientX, y: e.clientY };
+    } else {
+      if (action.current) action.current.maxPointers = Math.max(action.current.maxPointers, pointers.current.size);
       const [p1, p2] = [...pointers.current.values()];
       gesture.current = { mode: "pinch", d: Math.hypot(p1.x - p2.x, p1.y - p2.y) };
     }
@@ -561,19 +573,19 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     const g = gesture.current;
     const c = cam.current;
-    const rect = viewRef.current.getBoundingClientRect();
-    if (g && g.mode === "pan" && pointers.current.size === 1) {
+    const view = viewRef.current;
+    if (!g || !view) return;
+    const rect = view.getBoundingClientRect();
+    if (g.mode === "pan" && pointers.current.size === 1) {
       const dx = e.clientX - g.x, dy = e.clientY - g.y;
       g.x = e.clientX; g.y = e.clientY;
-      g.moved += Math.abs(dx) + Math.abs(dy);
-      if (g.moved > 6) suppressClick.current = true;
+      if (action.current) action.current.moved += Math.abs(dx) + Math.abs(dy);
       c.tx += dx; c.ty += dy;
       clamp(); apply();
-    } else if (g && g.mode === "pinch" && pointers.current.size === 2) {
+    } else if (g.mode === "pinch" && pointers.current.size === 2) {
       const [p1, p2] = [...pointers.current.values()];
       const d = Math.hypot(p1.x - p2.x, p1.y - p2.y);
       if (g.d > 0 && d > 0) {
-        suppressClick.current = true;
         const cx = (p1.x + p2.x) / 2 - rect.left;
         const cy = (p1.y + p2.y) / 2 - rect.top;
         zoomAt(cx, cy, d / g.d);
@@ -584,12 +596,24 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
 
   const onPointerUp = (e) => {
     pointers.current.delete(e.pointerId);
+    if (pointers.current.size >= 2) {
+      const [p1, p2] = [...pointers.current.values()];
+      gesture.current = { mode: "pinch", d: Math.hypot(p1.x - p2.x, p1.y - p2.y) };
+      return;
+    }
     if (pointers.current.size === 1) {
+      // dropped from a pinch to one finger: keep panning (no longer a tap)
       const [p] = [...pointers.current.values()];
-      gesture.current = { mode: "pan", x: p.x, y: p.y, moved: 7 }; // pinch ended mid-drag
-    } else if (pointers.current.size === 0) {
-      gesture.current = null;
-      setTimeout(() => { suppressClick.current = false; }, 0);
+      gesture.current = { mode: "pan", x: p.x, y: p.y };
+      return;
+    }
+    // all fingers up — was this a clean single-finger tap on a node?
+    const a = action.current;
+    action.current = null;
+    gesture.current = null;
+    if (a && a.node && a.maxPointers === 1 && a.moved < TAP_SLOP && (e.timeStamp - a.t0) < TAP_MS) {
+      const num = parseInt(a.node.dataset.match, 10);
+      if (num) openMatch(num);
     }
   };
 
@@ -630,7 +654,7 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
   const column = (nums, key) => (
     <div key={key} style={{ display: "flex", flexDirection: "column", justifyContent: "space-around",
       height: colH, width: NODE_W, flexShrink: 0 }}>
-      {nums.map((n) => <div ref={setRef(n)} key={n}><SlimNode num={n} onOpen={open} /></div>)}
+      {nums.map((n) => <div ref={setRef(n)} key={n} data-match={n}><SlimNode num={n} onOpen={openMatch} /></div>)}
     </div>
   );
 
@@ -639,8 +663,8 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
   const centerCol = (
     <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: 26,
       height: colH, width: CENTER_W, flexShrink: 0 }}>
-      <div ref={setRef(104)}>
-        <div className="sticker lift" onClick={() => open(104)} style={{
+      <div ref={setRef(104)} data-match={104}>
+        <div className="sticker lift" onClick={() => openMatch(104)} style={{
           width: CENTER_W, padding: "14px 16px", cursor: "pointer", background: "#f6e3b0",
           borderColor: "var(--sun-d)", borderWidth: 3, transform: "rotate(-0.5deg)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
@@ -657,8 +681,8 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
           </div>
         </div>
       </div>
-      <div ref={setRef(103)}>
-        <div className="sticker lift" onClick={() => open(103)} style={{
+      <div ref={setRef(103)} data-match={103}>
+        <div className="sticker lift" onClick={() => openMatch(103)} style={{
           width: CENTER_W - 30, margin: "0 auto", padding: "8px 12px", cursor: "pointer",
           opacity: 0.92, transform: "rotate(0.6deg)" }}>
           <div className="label" style={{ fontSize: 8.5, marginBottom: 2 }}>3rd place · Jul 18 · Miami</div>
@@ -714,7 +738,7 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}
             onPointerCancel={onPointerUp}
-            onClickCapture={(e) => { if (suppressClick.current) { e.stopPropagation(); e.preventDefault(); } }}
+            onClickCapture={(e) => { e.stopPropagation(); e.preventDefault(); }}
             style={{
               height: viewH, overflow: "hidden", position: "relative",
               touchAction: "none", cursor: "grab",
