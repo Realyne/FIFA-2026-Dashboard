@@ -13,7 +13,7 @@ from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
-from . import cache, resolver, static_data
+from . import cache, resolver, scorers as scorers_mod, static_data
 from .config import settings
 from .players_db import connect as players_connect
 from .scheduler import Poller
@@ -234,6 +234,33 @@ async def get_player(request: Request, player_id: str):
         row = rows[0]
         await cache.store_json(r, key, row, 3600)
     return etag_response(request, row, 3600)
+
+
+# ----------------------------------------------------------------- scorers --
+async def _aggregate_scorers(r) -> list[dict]:
+    # single MGET, not 104 concurrent GETs (that exhausts the redis pool -> 500)
+    keys = [f"wc:match:{m['match_number']}" for m in static_data.bracket()]
+    raw = await r.mget(keys)
+    details = []
+    for blob in raw:
+        if not blob:
+            continue
+        try:
+            details.append(json.loads(blob))
+        except (ValueError, TypeError):
+            continue
+    return scorers_mod.tournament_scorers(details)
+
+
+@app.get("/api/wc/scorers")
+async def get_scorers(request: Request):
+    """Tournament Golden Boot — players ranked by goals scored in WC2026."""
+    r = request.app.state.redis
+    rows = await cache.get_json(r, "wc:scorers")
+    if rows is None:
+        rows = await _aggregate_scorers(r)
+        await cache.store_json(r, "wc:scorers", rows, 30)
+    return etag_response(request, rows, 30)
 
 
 # ------------------------------------------------------------------ health --

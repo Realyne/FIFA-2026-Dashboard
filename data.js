@@ -46,6 +46,7 @@
     players: [],
     playersById: {},
     playersByTeam: {},
+    scorers: [],      // tournament top scorers (Golden Boot), lazily loaded
     connection: "connecting", // connecting | live | polling | down
   };
 
@@ -95,6 +96,7 @@
       store.ready = true;
       emit();
       connectSSE();
+      fetchScorers(); // non-blocking: never gate app load on it
     }).catch(function (err) {
       console.error("WC init failed", err);
       store.error = String(err);
@@ -112,7 +114,15 @@
     return Promise.all([
       getJSON("/api/wc/bracket").then(applyBracket),
       getJSON("/api/wc/standings").then(function (s) { store.standings = s; }),
+      // goals move the scorer board; tolerate a missing endpoint (pre-deploy)
+      getJSON("/api/wc/scorers").then(function (s) { store.scorers = s; }, function () {}),
     ]);
+  }
+
+  function fetchScorers() {
+    return getJSON("/api/wc/scorers").then(function (s) {
+      store.scorers = s; emit();
+    }, function () {});
   }
 
   function applyMatchPatch(patch) {
@@ -278,6 +288,7 @@
     subscribe: subscribe,
     init: init,
     fetchDetail: fetchDetail,
+    fetchScorers: fetchScorers,
     getMatch: getMatch,
     getMatchView: getMatchView,
     liveMatches: liveMatches,
