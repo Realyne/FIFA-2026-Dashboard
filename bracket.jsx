@@ -445,6 +445,7 @@ function MobileBracket({ go, toggle }) {
    and the mobile "Bracket" lens.
    ============================================================ */
 const MAX_ZOOM = 3;
+const FIT_PAD = 24;   // breathing room around the graph so edge nodes aren't flush to the border
 
 function BracketGraph({ go, halves, isMobile, toggle }) {
   const viewRef = useRef(null);    // clipping viewport
@@ -480,9 +481,10 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
     const vw = view.clientWidth, vh = view.clientHeight;
     const cw = c.w * c.s, ch = c.h * c.s;
     // content smaller than viewport on an axis -> lock centered; otherwise
-    // keep edges from drifting inside the viewport
-    c.tx = cw <= vw ? (vw - cw) / 2 : Math.min(0, Math.max(vw - cw, c.tx));
-    c.ty = ch <= vh ? (vh - ch) / 2 : Math.min(0, Math.max(vh - ch, c.ty));
+    // keep edges from drifting inside the viewport, but allow FIT_PAD of
+    // overscroll so edge nodes can be pulled off the border to read/tap them
+    c.tx = cw <= vw ? (vw - cw) / 2 : Math.min(FIT_PAD, Math.max(vw - cw - FIT_PAD, c.tx));
+    c.ty = ch <= vh ? (vh - ch) / 2 : Math.min(FIT_PAD, Math.max(vh - ch - FIT_PAD, c.ty));
   };
 
   const zoomAt = (px, py, factor) => {
@@ -503,7 +505,7 @@ function BracketGraph({ go, halves, isMobile, toggle }) {
     c.w = content.offsetWidth || 1;
     c.h = content.offsetHeight || 1;
     const vw = view.clientWidth, vh = view.clientHeight;
-    c.fit = Math.min(vw / c.w, vh / c.h, 1);
+    c.fit = Math.min((vw - FIT_PAD * 2) / c.w, (vh - FIT_PAD * 2) / c.h, 1);
     c.s = c.fit;
     c.tx = (vw - c.w * c.s) / 2;
     c.ty = (vh - c.h * c.s) / 2;
