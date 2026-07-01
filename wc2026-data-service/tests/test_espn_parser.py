@@ -117,6 +117,31 @@ def test_parse_summary_total_garbage(provider):
     detail = provider.parse_summary({"weird": True}, base_state())
     assert detail.match_number == 50
     assert detail.events == [] and detail.lineups == {} and detail.stats == {}
+    assert detail.shootout == {}
+
+
+def test_no_shootout_on_regular_match(provider):
+    detail = provider.parse_summary(load("summary_fifa_friendly_401856622.json"), base_state())
+    assert detail.shootout == {}  # no phantom shootout for a normal result
+
+
+def test_parse_shootout_sequence(provider):
+    """Per-kick shootout detail: who took each kick and whether it scored."""
+    home = base_state(home=SideState(fifa_code="ARG"), away=SideState(fifa_code="FRA"))
+    detail = provider.parse_summary(load("summary_synthetic_shootout.json"), home)
+    assert set(detail.shootout) == {"home", "away"}
+    arg = detail.shootout["home"]  # team id 202 == home in the fixture header
+    fra = detail.shootout["away"]  # team id 478 == away
+    # kept in kick order
+    assert [k.shot_number for k in arg] == [1, 2, 3, 4]
+    assert [k.shot_number for k in fra] == [1, 2, 3, 4]
+    # scored/missed captured exactly
+    assert [k.scored for k in arg] == [True, True, True, True]
+    assert [k.scored for k in fra] == [True, False, False, True]
+    assert sum(k.scored for k in arg) == 4 and sum(k.scored for k in fra) == 2
+    # takers named
+    assert fra[0].player_name == "Kylian Mbappé" and fra[0].player_espn_id == "231388"
+    assert arg[3].player_name == "Gonzalo Montiel"
 
 
 # ---------------------------------------------------------------- units ----

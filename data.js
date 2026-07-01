@@ -195,6 +195,7 @@
       events: d ? d.events || [] : [],
       lineups: d ? d.lineups || {} : {},
       stats: d ? d.stats || {} : {},
+      shootout: d ? d.shootout || {} : {},
     };
   }
 

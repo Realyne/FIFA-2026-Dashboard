@@ -1,0 +1,36 @@
+{
+  "header": {
+    "competitions": [
+      {
+        "competitors": [
+          {"homeAway": "home", "score": "3", "shootoutScore": 4, "team": {"id": "202", "abbreviation": "ARG"}},
+          {"homeAway": "away", "score": "3", "shootoutScore": 2, "team": {"id": "478", "abbreviation": "FRA"}}
+        ],
+        "status": {"type": {"name": "STATUS_FINAL_PEN", "state": "post", "completed": true}}
+      }
+    ]
+  },
+  "keyEvents": [],
+  "shootout": [
+    {
+      "id": "478",
+      "team": "France",
+      "shots": [
+        {"id": "1", "playerId": "231388", "player": "Kylian Mbappé", "shotNumber": 1, "didScore": true},
+        {"id": "2", "playerId": "184012", "player": "Kingsley Coman", "shotNumber": 2, "didScore": false},
+        {"id": "3", "playerId": "265919", "player": "Aurélien Tchouaméni", "shotNumber": 3, "didScore": false},
+        {"id": "4", "playerId": "252971", "player": "Randal Kolo Muani", "shotNumber": 4, "didScore": true}
+      ]
+    },
+    {
+      "id": "202",
+      "team": "Argentina",
+      "shots": [
+        {"id": "5", "playerId": "45843", "player": "Lionel Messi", "shotNumber": 1, "didScore": true},
+        {"id": "6", "playerId": "164839", "player": "Paulo Dybala", "shotNumber": 2, "didScore": true},
+        {"id": "7", "playerId": "153115", "player": "Leandro Paredes", "shotNumber": 3, "didScore": true},
+        {"id": "8", "playerId": "228262", "player": "Gonzalo Montiel", "shotNumber": 4, "didScore": true}
+      ]
+    }
+  ]
+}

@@ -22,7 +22,7 @@ import httpx
 from .. import static_data
 from ..config import settings
 from ..models import (
-    LineupPlayer, MatchDetail, MatchEvent, MatchState, SideState, TeamLineup,
+    LineupPlayer, MatchDetail, MatchEvent, MatchState, ShootoutKick, SideState, TeamLineup,
     TeamStats,
 )
 from .base import MatchDataProvider
@@ -243,6 +243,7 @@ class ESPNProvider(MatchDataProvider):
         detail = MatchDetail(**state.model_dump())
 
         # fresher status/score may ride along in header.competitions[0]
+        id_to_ha: dict[str, str] = {}
         comp = g(data, "header", "competitions", 0)
         if comp is not None:
             espn_to_fifa = static_data.espn_id_to_fifa()
@@ -250,6 +251,9 @@ class ESPNProvider(MatchDataProvider):
                 ha = g(c, "homeAway")
                 if ha not in ("home", "away"):
                     continue
+                team_id = g(c, "team", "id")
+                if team_id is not None:
+                    id_to_ha[str(team_id)] = ha
                 side: SideState = getattr(detail, ha)
                 score = to_int(g(c, "score"))
                 if score is not None:
@@ -273,7 +277,29 @@ class ESPNProvider(MatchDataProvider):
         detail.events = self._parse_key_events(data)
         detail.lineups = self._parse_rosters(data)
         detail.stats = self._parse_boxscore(data)
+        detail.shootout = self._parse_shootout(data, id_to_ha)
         return detail
+
+    def _parse_shootout(self, data: Any, id_to_ha: dict[str, str]) -> dict[str, list[ShootoutKick]]:
+        """ESPN's top-level `shootout` array -> ordered kicks per side.
+        Each team block: {id, team, shots:[{player, shotNumber, didScore}]}."""
+        out: dict[str, list[ShootoutKick]] = {}
+        for team in g(data, "shootout", default=[]) or []:
+            ha = id_to_ha.get(str(g(team, "id")))
+            if ha not in ("home", "away"):
+                continue
+            kicks = []
+            for s in g(team, "shots", default=[]) or []:
+                pid = g(s, "playerId")
+                kicks.append(ShootoutKick(
+                    shot_number=to_int(g(s, "shotNumber")),
+                    player_name=g(s, "player"),
+                    player_espn_id=str(pid) if pid is not None else None,
+                    scored=bool(g(s, "didScore")),
+                ))
+            if kicks:
+                out[ha] = sorted(kicks, key=lambda k: k.shot_number or 0)
+        return out
 
     def _team_fifa(self, espn_team_id: Any) -> str | None:
         return static_data.espn_id_to_fifa().get(str(espn_team_id))

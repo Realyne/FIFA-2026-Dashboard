@@ -18,6 +18,50 @@ function evNote(ev) {
   return null;
 }
 
+function soShort(name) {
+  if (!name) return "Penalty";
+  const parts = name.trim().split(/\s+/);
+  return parts[parts.length - 1];
+}
+
+/* Penalty shootout: each team's kicks in order, who scored / who missed. */
+function ShootoutPanel({ shootout, home, away }) {
+  const rows = [["home", home], ["away", away]];
+  return (
+    <div className="sticker so-panel">
+      <div className="so-head">
+        <ZBall size={16} />
+        <span className="display so-title">Penalty shootout</span>
+      </div>
+      {rows.map(([side, team]) => {
+        const kicks = shootout[side] || [];
+        const scored = kicks.filter((k) => k.scored).length;
+        return (
+          <div className="so-row" key={side}>
+            <div className="so-team">
+              <Flag code={team.fifa_code} badge size={22} />
+              <span className="so-code mono">{team.fifa_code || "—"}</span>
+            </div>
+            <div className="so-kicks">
+              {kicks.map((k, i) => (
+                <span
+                  key={i}
+                  className={"so-kick" + (k.scored ? " in" : " out")}
+                  title={(k.player_name || "Penalty") + " — " + (k.scored ? "scored" : "missed")}
+                >
+                  <span className="so-mark">{k.scored ? "✓" : "✗"}</span>
+                  <span className="so-name">{soShort(k.player_name)}</span>
+                </span>
+              ))}
+            </div>
+            <span className="so-agg mono">{scored}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function StatBar({ label, a, b, pct }) {
   if (a == null && b == null) return null;
   a = a || 0; b = b || 0;
@@ -228,6 +272,10 @@ function MatchDetail({ num, go }) {
           </>)}
         </div>
       </div>
+
+      {((view.shootout.home || []).length || (view.shootout.away || []).length) ? (
+        <ShootoutPanel shootout={view.shootout} home={m.home} away={m.away} />
+      ) : null}
 
       {/* two columns: timeline + stats */}
       <div style={{ display: "grid", gridTemplateColumns: hasStats ? "1.4fr 1fr" : "1fr", gap: 26, alignItems: "start" }} className="md-grid">

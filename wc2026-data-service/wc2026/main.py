@@ -133,7 +133,7 @@ async def get_match(request: Request, match_number: int):
         states = await _states(request)
         st = states.get(match_number)
         if st is not None:
-            detail = {**st.model_dump(), "events": [], "lineups": {}, "stats": {}}
+            detail = {**st.model_dump(), "events": [], "lineups": {}, "stats": {}, "shootout": {}}
         else:
             home = m["home_slot"] if isinstance(m["home_slot"], str) else None
             away = m["away_slot"] if isinstance(m["away_slot"], str) else None
@@ -144,7 +144,7 @@ async def get_match(request: Request, match_number: int):
                 "away": {"fifa_code": away, "score": None, "pen_score": None},
                 "kickoff_utc": m["kickoff_utc"], "venue_id": m["venue_id"],
                 "round": m["round"], "group": m["group"],
-                "events": [], "lineups": {}, "stats": {},
+                "events": [], "lineups": {}, "stats": {}, "shootout": {},
             }
     return etag_response(request, detail, 30)
 

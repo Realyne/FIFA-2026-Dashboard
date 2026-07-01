@@ -317,6 +317,34 @@ a { color: var(--sun-d); }
 .pen-banner-score b.w { color: var(--ink); font-size: 16px; }
 .pen-banner-score i { font-style: normal; color: rgba(44,32,22,.4); }
 
+/* shootout detail panel (match page): each kick, who took it, in/out */
+.so-panel { padding: 16px 18px; margin-bottom: 28px; }
+.so-head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.so-title { font-size: 18px; }
+.so-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; }
+.so-row + .so-row { border-top: 1px dashed var(--ink-faint); }
+.so-team { display: flex; align-items: center; gap: 7px; flex: 0 0 auto; width: 64px; }
+.so-code { font-size: 13px; font-weight: 700; }
+.so-kicks { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; }
+.so-agg { flex: 0 0 auto; font-size: 22px; font-weight: 700; min-width: 20px; text-align: right; }
+.so-kick {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px 2px 5px; border-radius: 20px; border: 1.5px solid;
+  font-family: var(--font-mono);
+}
+.so-kick .so-mark { font-weight: 800; font-size: 11px; line-height: 1; }
+.so-kick .so-name { font-size: 10.5px; letter-spacing: .01em; }
+.so-kick.in { border-color: var(--sun-d); background: #fff0e6; color: var(--ink); }
+.so-kick.in .so-mark { color: var(--sun-d); }
+.so-kick.out { border-color: rgba(44,32,22,.22); background: transparent; color: var(--ink-soft); }
+.so-kick.out .so-mark { color: #b23b28; }
+.so-kick.out .so-name { text-decoration: line-through; text-decoration-color: rgba(44,32,22,.3); }
+
+@media (max-width: 560px) {
+  .so-team { width: 52px; }
+  .so-kick .so-name { max-width: 66px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
 /* ============================================================
    Mobile bracket — "Road to MetLife" (the "By date" lens)
    A continuous vertical road ordered chronologically: each station

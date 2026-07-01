@@ -38,6 +38,13 @@ class MatchEvent(BaseModel):
     assist_name: Optional[str] = None
 
 
+class ShootoutKick(BaseModel):
+    shot_number: Optional[int] = None
+    player_name: Optional[str] = None
+    player_espn_id: Optional[str] = None
+    scored: bool = False
+
+
 class LineupPlayer(BaseModel):
     shirt_number: Optional[int] = None
     name: str
@@ -65,3 +72,4 @@ class MatchDetail(MatchState):
     events: list[MatchEvent] = []
     lineups: dict[str, TeamLineup] = {}  # "home" / "away"
     stats: dict[str, TeamStats] = {}     # "home" / "away"
+    shootout: dict[str, list[ShootoutKick]] = {}  # "home" / "away", in kick order
