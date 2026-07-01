@@ -76,7 +76,7 @@ function Topbar({ route, go, back, onSearch }) {
       )}
       <div className="crumbs">{crumbs}</div>
       <div className="spacer"></div>
-      {onSearch && (
+      {onSearch && typeof ZSearch !== "undefined" && (
         <button className="srch-trigger" onClick={onSearch} aria-label="Search" title="Search ( / )">
           <ZSearch size={16} />
           <span className="srch-trigger-label">Search</span>
@@ -219,7 +219,7 @@ function App() {
       {body}
       <Footer />
       <BottomBar route={route} go={go} />
-      {searchOpen && <SearchOverlay go={go} onClose={() => setSearchOpen(false)} />}
+      {searchOpen && typeof SearchOverlay !== "undefined" && <SearchOverlay go={go} onClose={() => setSearchOpen(false)} />}
     </div>
   );
 }

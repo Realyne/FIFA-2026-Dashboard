@@ -63,6 +63,7 @@ rsync -az --delete \
   "${root}/matchdetail.jsx" \
   "${root}/players.jsx" \
   "${root}/playerdetail.jsx" \
+  "${root}/search.jsx" \
   "${HOST}:${REMOTE_DIR}/www-staging/"
 ssh "$HOST" bash -s <<EOF
 set -euo pipefail
