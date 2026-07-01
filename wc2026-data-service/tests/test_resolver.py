@@ -112,3 +112,28 @@ def test_thirds_assignment_unique_and_in_pool():
                 by_num[m["match_number"]] = slot["groups"]
     for num, code in assignment.items():
         assert code_to_group[code] in by_num[num]
+
+
+def test_thirds_pinned_live_slot_is_not_reused():
+    """Regression: a third-placed team the live feed already placed in one R32
+    slot must not also be projected into another (the 'SWE appears in two R32
+    matches' bug). Group F's third (SWE) is pinned to M77 by the feed, so the
+    projection for the remaining third-place slots must exclude it."""
+    thirds_by_group = {"B": "BIH", "D": "PAR", "E": "ECU", "F": "SWE",
+                       "I": "SEN", "J": "ALG", "K": "COD", "L": "GHA"}
+    slots, pools = [], {}
+    for m in static_data.bracket():
+        for side in ("home_slot", "away_slot"):
+            slot = m[side]
+            if isinstance(slot, dict) and slot["type"] == "third_place_pool":
+                slots.append({"match_number": m["match_number"], "groups": slot["groups"]})
+                pools[m["match_number"]] = slot["groups"]
+
+    assignment = resolver._assign_thirds(slots, thirds_by_group, pinned={77: "SWE"})
+    assert assignment is not None
+    assert assignment[77] == "SWE"                       # live-known slot kept
+    assert list(assignment.values()).count("SWE") == 1   # never reused
+    assert len(set(assignment.values())) == 8            # still a full bijection
+    code_to_group = {v: k for k, v in thirds_by_group.items()}
+    for num, code in assignment.items():
+        assert code_to_group[code] in pools[num]

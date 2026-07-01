@@ -106,17 +106,40 @@ def qualified_thirds(standings: dict[str, dict]) -> list[str] | None:
     return [r["fifa_code"] for r in thirds[:8]]
 
 
-def _assign_thirds(slots: list[dict], thirds_by_group: dict[str, str]) -> dict[int, str] | None:
+def _assign_thirds(
+    slots: list[dict],
+    thirds_by_group: dict[str, str],
+    pinned: dict[int, str] | None = None,
+) -> dict[int, str] | None:
     """Backtracking assignment: R32 slot -> third-placed team fifa_code.
-    slots: [{match_number, groups:[...]}]; deterministic (sorted choices)."""
-    slots = sorted(slots, key=lambda s: len([g_ for g_ in s["groups"] if g_ in thirds_by_group]))
+    slots: [{match_number, groups:[...]}]; deterministic (sorted choices).
+
+    pinned: {match_number: fifa_code} for slots the live feed has already
+    named. The feed is authoritative, so those slots are fixed and consume
+    their group up front — otherwise the backtracker could hand the same
+    third-placed team to a second, still-projected match (a team appearing in
+    two R32 slots at once)."""
+    pinned = pinned or {}
+    group_of = {code: grp for grp, code in thirds_by_group.items()}
+
     assignment: dict[int, str] = {}
     used: set[str] = set()
+    remaining: list[dict] = []
+    for slot in slots:
+        code = pinned.get(slot["match_number"])
+        grp = group_of.get(code) if code else None
+        if grp and grp not in used:
+            assignment[slot["match_number"]] = code
+            used.add(grp)
+        else:
+            remaining.append(slot)
+
+    remaining.sort(key=lambda s: len([g_ for g_ in s["groups"] if g_ in thirds_by_group and g_ not in used]))
 
     def backtrack(i: int) -> bool:
-        if i == len(slots):
+        if i == len(remaining):
             return True
-        slot = slots[i]
+        slot = remaining[i]
         for grp in sorted(slot["groups"]):
             code = thirds_by_group.get(grp)
             if code and grp not in used:
@@ -177,10 +200,24 @@ def resolve_bracket(states: dict[int, MatchState]) -> list[dict]:
     bracket = static_data.bracket()
     third_slots = []
     for m in bracket:
-        for slot in (m["home_slot"], m["away_slot"]):
+        for side in ("home", "away"):
+            slot = m[side + "_slot"]
             if isinstance(slot, dict) and slot["type"] == "third_place_pool":
-                third_slots.append({"match_number": m["match_number"], "groups": slot["groups"]})
-    thirds_assignment = _assign_thirds(third_slots, thirds_by_group) if thirds_by_group else None
+                third_slots.append({"match_number": m["match_number"], "side": side, "groups": slot["groups"]})
+
+    # The live feed is authoritative: pin any third-place slot it has already
+    # named so the projected assignment can't reuse that team elsewhere.
+    group_of_third = {code: grp for grp, code in thirds_by_group.items()}
+    pinned: dict[int, str] = {}
+    for ts in third_slots:
+        st = states.get(ts["match_number"])
+        if st is None:
+            continue
+        code = getattr(st, ts["side"]).fifa_code
+        if code and code in group_of_third:
+            pinned[ts["match_number"]] = code
+
+    thirds_assignment = _assign_thirds(third_slots, thirds_by_group, pinned) if thirds_by_group else None
 
     def resolve_slot(match_number: int, slot, side: str) -> dict:
         # 1. live feed already names the team
