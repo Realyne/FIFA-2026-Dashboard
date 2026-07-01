@@ -35,6 +35,19 @@ NAME_TO_FIFA = {
     "Uruguay": "URU", "USA": "USA", "Uzbekistan": "UZB",
 }
 
+# Display name override: openfootball's common names -> FIFA.com's official
+# naming (see SOURCES.md). Codes not listed keep their openfootball name.
+FIFA_NAME = {
+    "BIH": "Bosnia and Herzegovina",
+    "CIV": "Côte d'Ivoire",
+    "COD": "Congo DR",
+    "CPV": "Cabo Verde",
+    "CZE": "Czechia",
+    "IRN": "IR Iran",
+    "KOR": "Korea Republic",
+    "TUR": "Türkiye",
+}
+
 # FIFA code -> ISO 3166-1 alpha-2 (flagcdn.com code). Explicit, no guessing.
 # Codes that differ from a naive prefix match are the whole reason this map exists:
 # GER->de, NED->nl, SUI->ch, KSA->sa, CRO->hr, POR->pt, RSA->za, KOR->kr,
@@ -183,7 +196,7 @@ def build():
         c1, c2 = TEAM_COLORS[code]
         teams.append({
             "fifa_code": code,
-            "name": name,
+            "name": FIFA_NAME.get(code, name),
             "group": group,
             "iso2": iso,
             "flag_url": f"https://flagcdn.com/w80/{iso}.png",

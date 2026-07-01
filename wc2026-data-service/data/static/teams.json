@@ -1,7 +1,7 @@
 [
  {
   "fifa_code": "CZE",
-  "name": "Czech Republic",
+  "name": "Czechia",
   "group": "A",
   "iso2": "cz",
   "flag_url": "https://flagcdn.com/w80/cz.png",
@@ -37,7 +37,7 @@
  },
  {
   "fifa_code": "KOR",
-  "name": "South Korea",
+  "name": "Korea Republic",
   "group": "A",
   "iso2": "kr",
   "flag_url": "https://flagcdn.com/w80/kr.png",
@@ -49,7 +49,7 @@
  },
  {
   "fifa_code": "BIH",
-  "name": "Bosnia & Herzegovina",
+  "name": "Bosnia and Herzegovina",
   "group": "B",
   "iso2": "ba",
   "flag_url": "https://flagcdn.com/w80/ba.png",
@@ -169,7 +169,7 @@
  },
  {
   "fifa_code": "TUR",
-  "name": "Turkey",
+  "name": "Türkiye",
   "group": "D",
   "iso2": "tr",
   "flag_url": "https://flagcdn.com/w80/tr.png",
@@ -229,7 +229,7 @@
  },
  {
   "fifa_code": "CIV",
-  "name": "Ivory Coast",
+  "name": "Côte d'Ivoire",
   "group": "E",
   "iso2": "ci",
   "flag_url": "https://flagcdn.com/w80/ci.png",
@@ -313,7 +313,7 @@
  },
  {
   "fifa_code": "IRN",
-  "name": "Iran",
+  "name": "IR Iran",
   "group": "G",
   "iso2": "ir",
   "flag_url": "https://flagcdn.com/w80/ir.png",
@@ -337,7 +337,7 @@
  },
  {
   "fifa_code": "CPV",
-  "name": "Cape Verde",
+  "name": "Cabo Verde",
   "group": "H",
   "iso2": "cv",
   "flag_url": "https://flagcdn.com/w80/cv.png",
@@ -493,7 +493,7 @@
  },
  {
   "fifa_code": "COD",
-  "name": "DR Congo",
+  "name": "Congo DR",
   "group": "K",
   "iso2": "cd",
   "flag_url": "https://flagcdn.com/w80/cd.png",
