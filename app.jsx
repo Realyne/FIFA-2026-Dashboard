@@ -38,7 +38,7 @@ function ConnectionDot() {
   );
 }
 
-function Topbar({ route, go, back }) {
+function Topbar({ route, go, back, onSearch }) {
   const headline = WC.headline();
   const headlineLive = headline && isLiveStatus(headline.status);
   const crumbs = [];
@@ -76,6 +76,12 @@ function Topbar({ route, go, back }) {
       )}
       <div className="crumbs">{crumbs}</div>
       <div className="spacer"></div>
+      {onSearch && (
+        <button className="srch-trigger" onClick={onSearch} aria-label="Search" title="Search ( / )">
+          <ZSearch size={16} />
+          <span className="srch-trigger-label">Search</span>
+        </button>
+      )}
       <div className="topnav">
         <span className={"navlink " + (route.view === "landing" ? "active" : "")} onClick={() => go("landing")}>Home</span>
         <span className={"navlink " + (route.view === "groups" ? "active" : "")} onClick={() => go("groups")}>Groups</span>
@@ -144,12 +150,27 @@ function Footer() {
 function App() {
   const [route, setRoute] = useState(parseHash());
   const [, force] = useState(0);
+  const [searchOpen, setSearchOpen] = useState(false);
   const histRef = React.useRef([]);
 
   useEffect(() => {
     const onHash = () => { setRoute(parseHash()); window.scrollTo(0, 0); };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  // global shortcut: "/" or Cmd/Ctrl+K opens search (ignored while typing)
+  useEffect(() => {
+    const onKey = (e) => {
+      const el = document.activeElement;
+      const typing = el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable);
+      if (((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") || (e.key === "/" && !typing)) {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   // store updates (SSE patches, fetches) + 1s clock tick for "next kickoff" countdowns
@@ -194,10 +215,11 @@ function App() {
 
   return (
     <div className="app">
-      <Topbar route={route} go={go} back={back} />
+      <Topbar route={route} go={go} back={back} onSearch={() => setSearchOpen(true)} />
       {body}
       <Footer />
       <BottomBar route={route} go={go} />
+      {searchOpen && <SearchOverlay go={go} onClose={() => setSearchOpen(false)} />}
     </div>
   );
 }
